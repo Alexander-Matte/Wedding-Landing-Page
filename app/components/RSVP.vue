@@ -1,11 +1,11 @@
 <template>
-  <section id="rsvp" class="py-20 px-4 bg-purple-50" style="background-image: url('https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+  <section id="rsvp" class="py-20 px-4 bg--50">
     <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
       <div class="md:flex">
-        <div class="md:w-1/3 bg-purple-700 text-white p-8 flex flex-col justify-center">
+        <div class="md:w-1/3 p-8 flex flex-col justify-center">
           <h2 class="text-3xl font-serif italic mb-4">RSVP</h2>
           <p class="mb-6">Please let us know if you'll be joining us on our special day.</p>
-          <p class="text-purple-200">Kindly respond by July 15, 2023</p>
+          <p class="-200">Kindly respond by July 15, 2023</p>
         </div>
         <div class="md:w-2/3 p-8">
           <UForm :schema="schema" :state="state" @submit="onSubmit" class="space-y-6">
@@ -125,7 +125,7 @@ const toggleEdit = (index: number) => {
 
   if (!guest.saved) {
     if (guest.name.trim() === '') {
-      toast.add({ title: 'Guest name is empty', description: 'Please enter a name before saving.', color: 'red' })
+      toast.add({ title: 'Guest name is empty', description: 'Please enter a name before saving.', color: 'error' })
       return
     }
 

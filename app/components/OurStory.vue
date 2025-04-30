@@ -1,7 +1,7 @@
 <template>
-    <section id="our-story" class="py-20 px-4 bg-white">
+    <section id="our-story" class="py-20 px-4">
       <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl md:text-4xl text-center font-serif italic text-purple-700 mb-12">
+        <h2 class="text-3xl md:text-4xl text-center font-serif italic mb-12">
           Our Story
         </h2>
         <div class="grid md:grid-cols-2 gap-10 items-center">
@@ -38,7 +38,7 @@
   
         <!-- Quote -->
         <div class="mt-16 text-center">
-          <p class="italic text-xl text-purple-600">
+          <p class="italic text-xl -600">
             "True love is like wildflowers... it's often found in the most
             unlikely places."
           </p>

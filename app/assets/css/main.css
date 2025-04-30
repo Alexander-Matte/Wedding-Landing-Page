@@ -1,2 +1,14 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+:root {
+  --text-color-default: black; /* dark gray (or any other color you want) */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+  

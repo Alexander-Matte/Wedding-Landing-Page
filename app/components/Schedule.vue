@@ -1,13 +1,13 @@
 <template>
-    <section id="schedule" class="py-20 px-4 bg-white">
+    <section id="schedule" class="py-20 px-4">
       <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl md:text-4xl text-center font-serif italic text-purple-700 mb-12">
+        <h2 class="text-3xl md:text-4xl text-center font-serif italic mb-12">
           Wedding Day Schedule
         </h2>
   
         <div class="relative">
           <!-- Timeline line -->
-          <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-purple-200 -ml-0.5"></div>
+          <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-green-700 -ml-0.5"></div>
   
           <!-- Timeline items -->
           <div class="space-y-12">

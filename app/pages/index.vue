@@ -1,23 +1,37 @@
 <template>
-    <div className="w-full min-h-screen font-sans bg-white">
-      <Navbar />
-      <main>
+  <div class="w-full min-h-screen font-sans bg-[#fffaf4]">
+    <Navbar />
+    <main>
+      <section class="bg-[#FAF9F6]">
         <Hero />
+      </section>
+
+      <section class="bg-[#FAF9F6]">
         <OurStory />
+      </section>
+
+      <section class="bg-[#a3b18a]">
         <EventDetails />
+      </section>
+
+      <section class="bg-[#FAF9F6]">
         <Schedule />
+      </section>
+
+      <section class="bg-[#a3b18a]">
         <RSVP />
-        <UToaster />
+      </section>
+
+      <UToaster />
+
+      <section class="bg-[#FAF9F6]">
         <Registry />
-      </main>
+      </section>
+    </main>
+
+    <section class="bg-[#a3b18a]">
       <Footer />
-    </div>
+    </section>
+   
+  </div>
 </template>
-
-<script setup>
-// Your page-specific logic here (if needed)
-</script>
-
-<style scoped>
-/* Page-specific styles */
-</style>
