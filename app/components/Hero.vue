@@ -1,16 +1,16 @@
 <template>
     <section
-      class="relative h-screen w-full bg-cover bg-center flex items-center justify-center z-0"
+      class="relative h-screen w-full bg-cover bg-bottom flex items-center justify-center z-0"
       :style="{ backgroundImage: `url(${oceanRing})` }"
     >
 
     <!-- Overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
+    <div class="absolute inset-0 bg-opacity-30 z-10"></div>
 
     <!-- Content -->
     <div class="relative z-20 text-center text-white px-4">
       <h1 class="font-serif italic text-4xl md:text-6xl mb-2">
-        Madeline &amp; Alexander
+        Madeline Fehleisen &amp; Alexander Matte
       </h1>
       <div class="w-24 h-1 bg-white mx-auto my-6"></div>
       <p class="text-xl md:text-2xl mb-6">are getting married</p>
@@ -41,6 +41,9 @@
 
 <script setup>
 import oceanRing from '@/assets/img/ocean-ring.jpeg'
+import oceanRing1 from '@/assets/img/ocean-ring1.jpeg'
+
+
 </script>
 
 <style scoped>

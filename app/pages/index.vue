@@ -7,6 +7,7 @@
         <EventDetails />
         <Schedule />
         <RSVP />
+        <UToaster />
         <Registry />
       </main>
       <Footer />
