@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 :root {
-  --text-color-default: black; /* dark gray (or any other color you want) */
+  --text-color-default: black;
 }
 
 
@@ -11,4 +11,6 @@ html {
 }
 
 
-  
+input, textarea {
+  color: inherit;
+}

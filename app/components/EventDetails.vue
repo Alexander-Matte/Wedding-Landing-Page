@@ -66,29 +66,162 @@
       </div>
 
       <!-- Accommodations -->
-      <div class="mt-12 bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-2xl font-serif -700 mb-6">Accommodations</h3>
-        <div class="space-y-6">
-          <div>
-            <h4 class="font-medium text-lg">Meadowville Inn</h4>
-            <p class="text-gray-600">456 Main Street, Meadowville, CA 95476</p>
-            <p class="text-gray-600">Phone: (555) 123-4567</p>
-            <p class="mt-2">
-              We've reserved a block of rooms under "Madeline & Alexander Wedding". Please book by
-              July 12th for the special rate.
+      <div class="mt-12">
+        <h3 class="text-2xl font-serif font-semibold mb-6 text-center">Accommodations</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <UCard class="bg-white">
+            <template #header>
+              <h4 class="text-lg font-medium">Paulushaus Neuwirth - Lodging at the venue
+                <template>
+                  <ClientOnly>
+                    <UPopover mode="hover" :close-delay="300" arrow>
+                      <UIcon name="lucide:info" class="mx-4 text-yellow-500" size="24" />
+                      <template #content>
+                        <div class="max-w-xs text-sm text-gray-700">
+                          The venue is 4 km from town, so transport will be needed to get there and back. Taxis are available if you haven’t rented a car. There’s also a nearby bus stop within walking distance if you prefer public transport.
+                        </div>
+                      </template>
+                    </UPopover>
+                  </ClientOnly>
+                </template>
+                
+              </h4>
+            </template>
+            
+            <a
+              href="https://paulushaus-neuwirth.de/"
+              target="_blank"
+              rel="noopener"
+              class="text-blue-600 hover:underline"
+            >
+              Visit Website
+            </a>
+            <p class="text-gray-600 mt-2">
+              Group-style retreat house perfect for larger self-catering groups. Kitchen, outdoor area with
+              sports/playground, basic amenities. No restaurant. ~0 km from venue; ~4 km to city center. Free parking.
             </p>
-          </div>
-          <div>
-            <h4 class="font-medium text-lg">Wildflower Cottage B&amp;B</h4>
-            <p class="text-gray-600">789 Garden Lane, Meadowville, CA 95476</p>
-            <p class="text-gray-600">Phone: (555) 987-6543</p>
-            <p class="mt-2">
-              A charming B&amp;B just 5 minutes from our venue. Mention our wedding for a 10%
-              discount.
+          </UCard>
+
+          <UCard class="bg-white">
+            <template #header>
+              <h4 class="text-lg font-medium">Hotel am Remspark</h4>
+            </template>
+            <a
+              href="https://hotelamremspark.de/"
+              target="_blank"
+              rel="noopener"
+              class="text-blue-600 hover:underline"
+            >
+              Visit Website
+            </a>
+            <p class="text-gray-600 mt-2">
+              Modern 4-star hotel near the city center. Fitness area, rooftop restaurant/bar, breakfast buffet.
+              ~7–8 km to venue. On-site paid parking. Bike rentals at cost and Wi-Fi.
             </p>
-          </div>
+          </UCard>
+
+          <UCard class="bg-white">
+            <template #header>
+              <h4 class="text-lg font-medium">Hotel Schwäbisch Gmünd</h4>
+            </template>
+            <a
+              href="https://hotel-schwaebisch-gmuend.de/"
+              target="_blank"
+              rel="noopener"
+              class="text-blue-600 hover:underline"
+            >
+              Visit Website
+            </a>
+            <p class="text-gray-600 mt-2">
+              Comfortable 4-star hotel with wellness area (pool, sauna, fitness), breakfast buffet, and regional cuisine.
+              ~6–7 km to venue. Garage parking (~€10/day). Right near train station.
+            </p>
+          </UCard>
+
+          <UCard class="bg-white">
+            <template #header>
+              <h4 class="text-lg font-medium">Tagungszentrum Schönblick</h4>
+            </template>
+            <a
+              href="https://www.schoenblick.de/de"
+              target="_blank"
+              rel="noopener"
+              class="text-blue-600 hover:underline"
+            >
+              Visit Website
+            </a>
+            <p class="text-gray-600 mt-2">
+              Peaceful guesthouse with forest surroundings. Breakfast included, basic amenities, park grounds,
+              and free parking. ~1–2 km to venue; ~2.5 km to city center.
+            </p>
+          </UCard>
+
+          <UCard class="bg-white">
+            <template #header>
+              <h4 class="text-lg font-medium">Hotel Mutlanger Hof</h4>
+            </template>
+            <a
+              href="https://www.mutlangerhof.de/"
+              target="_blank"
+              rel="noopener"
+              class="text-blue-600 hover:underline"
+            >
+              Visit Website
+            </a>
+            <p class="text-gray-600 mt-2">
+              Simple and quiet guesthouse in Mutlangen. Free Wi-Fi, continental breakfast, and bike rental.
+              ~5 km to venue; ~3.5 km to city center. Free parking on site.
+            </p>
+          </UCard>
         </div>
       </div>
+
+      <!-- Transportation -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-serif font-semibold mb-6 text-center">Transportation</h3>
+        <div class="space-y-6 text-gray-700">
+          <p>
+            The nearest major cities with international airports to the wedding venue are <strong>Stuttgart</strong>, <strong>Frankfurt</strong>, and <strong>Munich (München)</strong>. 
+            <strong>Stuttgart Airport (STR)</strong> is closer and more convenient, but <strong>Frankfurt Airport (FRA)</strong> and <strong>Munich Airport (MUC)</strong> are also good options with more international flight availability.
+          </p>
+
+          <p>
+            From either airport, you have three main options for getting to the region:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li><strong>Train:</strong> All three airports have train connections to <strong>Schwäbisch Gmünd</strong>, the nearest city to the venue. You may need to transfer once, typically in Stuttgart or Göppingen, depending on the route.</li>
+            <li><strong>Car Rental:</strong> Renting a car is a convenient option and allows flexibility, especially if you're staying in the countryside or want to explore the region. Highways connect all three airports to Schwäbisch Gmünd (approx. 45 minutes from Stuttgart, 2.5 hours from Frankfurt, and 2.5 hours from Munich).</li>
+          </ul>
+
+          <p>
+            Once you arrive in <strong>Schwäbisch Gmünd</strong>, the wedding venue is located in a nearby rural area approximately 4 km outside the city.
+          </p>
+
+          <p>
+            From Schwäbisch Gmünd, you can reach the venue and surrounding areas in several ways:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li><strong>Bus:</strong> Local bus 72 stop near the venue The bus stop is called <strong>Lindach, Paulushaus</strong> *Please inform the bus driver where you want to get off and they should be able to ensure you get off at the correct spot.</li>
+            <li><strong>Taxi:</strong> Taxis are available at the train station and around the city. You can contact the following taxi services:
+              <ul class="list-inside list-disc">
+                <li><strong>Taxi Schwäbisch Gmünd:</strong>FILL IN</li>
+                <li><strong>Taxi Gmünd:</strong>FILL IN</li>
+              </ul>
+            </li>
+            <li><strong>Car:</strong> If you're staying outside the city or have a rental, driving is the most flexible option. Parking is available at the venue and most accommodations.</li>
+          </ul>
+
+          <p>
+            Please plan accordingly depending on your arrival airport and whether you’ll be using public transport or a rental car. We’re happy to help coordinate if you’re unsure!
+          </p>
+        </div>
+      </div>
+
+
+
+
     </div>
   </section>
 </template>

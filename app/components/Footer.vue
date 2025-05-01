@@ -14,7 +14,7 @@
       <p class="mb-8">We can't wait to celebrate with you!</p>
 
       <div class="text-gray-500 text-sm">
-        <p>August 12, 2023 • Wildflower Meadows • Meadowville, CA</p>
+        <p>June 6th, 2026 • Freizeithaus – Neuwirth • Schwäbisch Gmünd, DE</p>
       </div>
     </div>
   </footer>

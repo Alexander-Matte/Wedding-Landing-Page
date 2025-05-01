@@ -13,9 +13,21 @@
               <UInput v-model="state.name" placeholder="Enter your full name" />
             </UFormField>
 
-            <UFormField label="Email" name="email" required error="Please enter a valid email address.">
-              <UInput v-model="state.email" type="email" placeholder="Enter your email" />
+            <UFormField 
+              label="Email" 
+              name="email" 
+              required 
+              :error="emailError ? 'Please enter a valid email address.' : ''"
+            >
+              <UInput 
+                v-model="state.email" 
+                type="email" 
+                placeholder="Enter your email" 
+                @blur="checkEmail"
+                :class="{'border-red-500': emailError, 'focus:ring-red-500': emailError}"
+              />
             </UFormField>
+
 
             <UFormField label="Will you be attending?" name="attending">
               <URadioGroup v-model="state.attending" :items="items" />
@@ -23,7 +35,7 @@
 
             <template v-if="state.attending === 'yes'">
               <UFormField label="Number of Guests (Including Yourself)" name="guests">
-                <USelect v-model="state.guests" color="neutral" variant="subtle" :items="['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']" />
+                <USelect v-model="state.guests" arrow color="neutral" variant="subtle" :items="['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']" />
               </UFormField>
               <template v-if="state.attending === 'yes' && Number(state.guests) > 1">
                 <div class="space-y-4">
@@ -41,10 +53,6 @@
                   </div>
                 </div>
               </template>
-
-              <UFormField label="Dietary Restrictions" name="dietaryRestrictions">
-                <UTextarea v-model="state.dietaryRestrictions" placeholder="Please list any allergies or dietary restrictions" />
-              </UFormField>
             </template>
 
             <UFormField label="Message for the Couple" hint="Optional" name="message">
@@ -69,7 +77,6 @@ const schema = z.object({
   email: z.string().email('Invalid email address'),
   attending: z.enum(['yes', 'no']),
   guests: z.string().optional(),
-  dietaryRestrictions: z.string().optional(),
   message: z.string().optional()
 })
 
@@ -80,9 +87,11 @@ const state = reactive<Schema>({
   email: '',
   attending: 'no',
   guests: '',
-  dietaryRestrictions: '',
   message: ''
 })
+
+const emailError = ref('')
+const formSubmitted = ref(false)
 
 const items = ref([
   { label: 'Joyfully Accept', value: 'yes' },
@@ -90,6 +99,8 @@ const items = ref([
 ])
 
 const additionalGuests = ref<{ name: string; saved: boolean }[]>([])
+
+const toast = useToast()
 
 // Watch when user selects "yes"
 watch(() => state.attending, (newVal) => {
@@ -137,16 +148,49 @@ const toggleEdit = (index: number) => {
       })
       return
     }
+
+    // Check if the name is already used by another guest
+    const isDuplicate = additionalGuests.value.some((g, i) => i !== index && g.name.trim().toLowerCase() === guestName)
+
+    if (isDuplicate) {
+      toast.add({ 
+        title: 'Duplicate Guest Name Detected', 
+        description: 'This guest name is already used by another guest.', 
+        color: 'error' 
+      })
+      return
+    }
   }
 
   guest.saved = !guest.saved
 }
 
 
+const checkEmail = () => {
+  if (!state.email) {
+    emailError.value = 'Email is required.'
+  } else if (!isValidEmail(state.email)) {
+    emailError.value = 'Invalid email address.'
+  } else {
+    emailError.value = ''
+  }
+}
 
-const toast = useToast()
+const isValidEmail = (email: string) => {
+  // Simple email regex for basic validation
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
+  return emailRegex.test(email)
+}
 
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
+  formSubmitted.value = true
+  checkEmail()
+
+  if (emailError.value) {
+    toast.add({ title: 'Invalid Input', description: emailError.value, color: 'error' })
+    return
+  }
+
   const mainName = event.data.name.trim().toLowerCase()
   const duplicates = additionalGuests.value.some(g => g.name.trim().toLowerCase() === mainName)
 
@@ -154,6 +198,23 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     toast.add({ 
       title: 'Duplicate Name Detected', 
       description: 'The name in the Full Name input cannot match any of the additional guest names.', 
+      color: 'error' 
+    })
+    return
+  }
+
+  // Check if there are any duplicate guest names
+  const duplicateGuests = additionalGuests.value.some((guest, index) => {
+    const guestName = guest.name.trim().toLowerCase()
+    return additionalGuests.value.some((otherGuest, otherIndex) => 
+      otherIndex !== index && otherGuest.name.trim().toLowerCase() === guestName
+    )
+  })
+
+  if (duplicateGuests) {
+    toast.add({ 
+      title: 'Duplicate Guest Name Detected', 
+      description: 'There are duplicate additional guest names. Please ensure each guest has a unique name.', 
       color: 'error' 
     })
     return
@@ -171,8 +232,8 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
   })
 }
 
-
 </script>
+
 
 <style scoped>
 
