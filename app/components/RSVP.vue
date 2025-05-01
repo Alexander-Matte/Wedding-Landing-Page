@@ -1,5 +1,5 @@
 <template>
-  <section id="rsvp" class="py-20 px-4 bg--50">
+  <section id="rsvp" class="py-20 px-4">
     <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
       <div class="md:flex">
         <div class="md:w-1/3 p-8 flex flex-col justify-center">
@@ -13,7 +13,7 @@
               <UInput v-model="state.name" placeholder="Enter your full name" />
             </UFormField>
 
-            <UFormField label="Email" name="email" required>
+            <UFormField label="Email" name="email" required error="Please enter a valid email address.">
               <UInput v-model="state.email" type="email" placeholder="Enter your email" />
             </UFormField>
 
@@ -23,7 +23,7 @@
 
             <template v-if="state.attending === 'yes'">
               <UFormField label="Number of Guests (Including Yourself)" name="guests">
-                <USelect v-model="state.guests" :items="['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']" />
+                <USelect v-model="state.guests" color="neutral" variant="subtle" :items="['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']" />
               </UFormField>
               <template v-if="state.attending === 'yes' && Number(state.guests) > 1">
                 <div class="space-y-4">
@@ -47,7 +47,7 @@
               </UFormField>
             </template>
 
-            <UFormField label="Message for the Couple (Optional)" name="message">
+            <UFormField label="Message for the Couple" hint="Optional" name="message">
               <UTextarea v-model="state.message" placeholder="Share your well wishes or a memory" />
             </UFormField>
 
@@ -175,5 +175,5 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
 </script>
 
 <style scoped>
-/* Page-specific styles */
+
 </style>

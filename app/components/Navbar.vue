@@ -11,28 +11,28 @@
         </div>
         <!-- Desktop menu -->
         <div class="hidden md:flex items-center space-x-8">
-          <NuxtLink to="#our-story" class="text-gray-700 hover:-600 transition-colors">
+          <NuxtLink to="#our-story" class="text-gray-700 transition-colors">
             Our Story
           </NuxtLink>
-          <NuxtLink to="#details" class="text-gray-700 hover:-600 transition-colors">
+          <NuxtLink to="#details" class="text-gray-700 transition-colors">
             Details
           </NuxtLink>
-          <NuxtLink to="#schedule" class="text-gray-700 hover:-600 transition-colors">
+          <NuxtLink to="#schedule" class="text-gray-700 transition-colors">
             Schedule
           </NuxtLink>
-          <NuxtLink to="#rsvp" class="text-gray-700 hover:-600 transition-colors">
+          <NuxtLink to="#rsvp" class="text-gray-700 transition-colors">
             RSVP
           </NuxtLink>
-          <NuxtLink to="#registry" class="text-gray-700 hover:-600 transition-colors">
+          <NuxtLink to="#registry" class="text-gray-700 transition-colors">
             Registry
           </NuxtLink>
         </div>
 
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
-          <Button @click="toggleMenu" variant="text" class="text-gray-700 hover:-600">
+          <UButton @click="toggleMenu" variant="text" class="text-gray-700"          >
             <UIcon :name="isOpen ? 'lucide:x' : 'i-lucide-menu'" size="24" />
-          </Button>
+          </UButton>
         </div>
       </div>
     </div>
@@ -42,35 +42,35 @@
       <div class="px-2 pt-2 pb-3 space-y-1 bg-[#FAF9F6]">
         <NuxtLink
           to="#our-story"
-          class="block px-3 py-2 text-base font-medium text-gray-700 hover:-600"
+          class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
           Our Story
         </NuxtLink>
         <NuxtLink
           to="#details"
-          class="block px-3 py-2 text-base font-medium text-gray-700 hover:-600"
+          class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
           Details
         </NuxtLink>
         <NuxtLink
           to="#schedule"
-          class="block px-3 py-2 text-base font-medium text-gray-700 hover:-600"
+          class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
           Schedule
         </NuxtLink>
         <NuxtLink
           to="#rsvp"
-          class="block px-3 py-2 text-base font-medium text-gray-700 hover:-600"
+          class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
           RSVP
         </NuxtLink>
         <NuxtLink
           to="#registry"
-          class="block px-3 py-2 text-base font-medium text-gray-700 hover:-600"
+          class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
           Registry

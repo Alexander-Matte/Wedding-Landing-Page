@@ -15,7 +15,7 @@
       </h1>
       <div class="w-24 h-1 bg-white mx-auto my-6"></div>
       <p class="text-xl md:text-2xl mb-6">are getting married</p>
-      <p class="font-light text-2xl md:text-3xl">June 6th, 202</p>
+      <p class="font-light text-2xl md:text-3xl">June 6th, 2026</p>
       <div class="mt-12">
         <a
           href="#rsvp"
