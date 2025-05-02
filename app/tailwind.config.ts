@@ -3,7 +3,10 @@ export default {
       extend: {
         colors: {
           textDefault: 'var(--text-color-default)',
-        }
+        },
+        fontFamily: {
+          custom: ['Inter'],
+        },
       }
     }
   }

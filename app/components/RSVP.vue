@@ -3,7 +3,7 @@
     <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
       <div class="md:flex">
         <div class="md:w-1/3 p-8 flex flex-col justify-center">
-          <h2 class="text-3xl font-serif italic mb-4">RSVP</h2>
+          <h2 class="text-3xl italic mb-4">RSVP</h2>
           <p class="mb-6">Please let us know if you'll be joining us on our special day.</p>
           <p class="-200">Kindly respond by July 15, 2023</p>
         </div>

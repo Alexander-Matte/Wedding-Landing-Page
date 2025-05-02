@@ -76,10 +76,12 @@ export default defineAppConfig({
           content: 'bg-white shadow-lg rounded-md ring ring-default p-4 max-w-xs text-sm text-gray-700 data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-[--reka-popover-content-transform-origin] focus:outline-none pointer-events-auto',
           arrow: 'fill-default'
         }
+      },
+      switch: {
+        slots: {
+          thumb: 'group pointer-events-none rounded-full bg-no-repeat bg-center bg-contain shadow-lg ring-0 transition-transform duration-200 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:rtl:-translate-x-0 flex items-center justify-center'
+        }
       }
-      
-      
-      
     }
   })
   

@@ -5,28 +5,29 @@
     :style="backgroundStyle"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
+      <div class="flex justify-between items-center h-16">
         <div class="flex items-center">
           <span class="text-xl font-medium italic">M & A</span>
         </div>
         <!-- Desktop menu -->
         <div class="hidden md:flex items-center space-x-8">
           <NuxtLink to="#our-story" class="text-gray-700 transition-colors">
-            Our Story
+            <strong>Story</strong> 
           </NuxtLink>
           <NuxtLink to="#details" class="text-gray-700 transition-colors">
-            Details
+            <strong>Details</strong>
           </NuxtLink>
           <NuxtLink to="#schedule" class="text-gray-700 transition-colors">
-            Schedule
+            <strong>Schedule</strong>
           </NuxtLink>
           <NuxtLink to="#rsvp" class="text-gray-700 transition-colors">
-            RSVP
+            <strong>RSVP</strong>
           </NuxtLink>
           <NuxtLink to="#registry" class="text-gray-700 transition-colors">
-            Registry
+            <strong>Registry</strong>
           </NuxtLink>
         </div>
+        <LanguageSelector />
 
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">

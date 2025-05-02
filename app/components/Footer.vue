@@ -1,7 +1,7 @@
 <template>
   <footer class="py-12 px-4 custom-border-top">
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="font-serif italic text-3xl mb-6">
+      <h2 class="italic text-3xl mb-6">
         Madeline &amp; Alexander
       </h2>
 
@@ -14,7 +14,7 @@
       <p class="mb-8">We can't wait to celebrate with you!</p>
 
       <div class="text-gray-500 text-sm">
-        <p>June 6th, 2026 • Freizeithaus – Neuwirth • Schwäbisch Gmünd, DE</p>
+        <p>June 6th, 2026 • Paulushaus-Neuwirth • Schwäbisch Gmünd, DE</p>
       </div>
     </div>
   </footer>
