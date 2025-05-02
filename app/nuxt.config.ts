@@ -14,7 +14,6 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: 'i18n_redirected',
       fallbackLocale: 'en',
-      onlyOnRoot: true, // Avoid redirecting on every route
     },
     locales: [
       {
