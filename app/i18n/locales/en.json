@@ -43,27 +43,32 @@
               "paulushaus": {
                   "header": "Paulushaus Neuwirth – On-Site Lodging",
                   "website": "https://paulushaus-neuwirth.de/",
+                  "img": "paulushaus.jpg",
                   "description": "Group house, ideal for larger self-catering groups. Kitchen, outdoor area with sports/playground, basic amenities. No restaurant. ~0 km to the venue; ~4 km to the city center. Free parking.",
                   "info": "The venue is 4 km outside the city, so transportation is needed to get there and back. Taxis are available if you don’t rent a car. There’s also a nearby bus stop within walking distance if you prefer public transport."
               },
               "hotelRemspark": {
                   "header": "Hotel am Remspark",
                   "website": "https://hotelamremspark.de/",
+                  "img": "Hotel-am-Remspark.jpg",
                   "description": "Modern 4-star hotel near the city center. Fitness area, rooftop restaurant/bar, breakfast buffet. ~7–8 km to the venue. Paid parking on-site. Bike rental available for a fee, and Wi-Fi included."
               },
               "hotelSchwaebischGmuend": {
                   "header": "Hotel Schwäbisch Gmünd",
                   "website": "https://hotel-schwaebisch-gmuend.de/",
+                  "img": "hotel-fortuna.jpg",
                   "description": "Comfortable 4-star hotel with wellness area (pool, sauna, fitness), breakfast buffet, and regional cuisine. ~6–7 km to the venue. Underground parking (~€10/day). Located right at the train station."
               },
               "schoenblick": {
                   "header": "Hotel Schönblick",
                   "website": "https://www.schoenblick.de/de/hotel",
+                  "img": "hotel-schoenblich.jpg",
                   "description": "Quiet guesthouse near the forest. Breakfast included, basic amenities, park area, and free parking. ~1–2 km to the venue; ~2.5 km to the city center."
               },
               "mutlangerHof": {
                   "header": "Hotel Mutlanger Hof",
                   "website": "https://www.mutlangerhof.de/",
+                  "img": "mutlangerhof.jpg",
                   "description": "Simple and quiet guesthouse in Mutlangen. Free Wi-Fi, continental breakfast, and bike rental. ~5 km to the venue; ~3.5 km to the city center. Free parking on-site."
               }
           },
@@ -170,9 +175,11 @@
           },
           "additionalGuests": {
               "header": "Additional Guest Names",
-              "placeholder": "Guest {index} First and Last Name",
+              "label": "Guest {number} First and Last Name",
+              "placeholder": "First and Last Name",
               "edit": "Edit",
-              "save": "Save"
+              "save": "Save",
+              "error": "Bitte geben Sie einen zusätzlichen Gastnamen ein, bevor Sie das Formular absenden"
           },
           "message": {
               "label": "Message to the couple",
@@ -188,27 +195,30 @@
           },
           "duplicateMainName": {
               "title": "Duplicate name",
-              "description": "This name has already been entered above in the Full Name field. Only additional guests in your group need to be listed here."
-          },
-          "duplicateGuest": {
-              "title": "Duplicate guest name",
-              "description": "This guest name is already used by another guest."
-          },
-          "invalidInput": {
-              "title": "Invalid input"
-          },
-          "mainNameDuplicate": {
-              "title": "Duplicate name",
-              "description": "The name in the Full Name field must not match any of the additional guest names."
+              "description": "The name entered in the additional guest field cannot match the Full Name field above."
           },
           "duplicateGuests": {
               "title": "Duplicate guest name",
               "description": "There are duplicate additional guest names. Please make sure each guest has a unique name."
+          },
+          "invalidInput": {
+              "title": "Invalid input"
           },
           "success": {
               "title": "RSVP submitted",
               "description": "Thank you for your response!"
           }
       }
+  },
+  "registry": {
+    "title": "Registry",
+    "paragraph1": "Your presence at our wedding truly means the world to us. We are so grateful to celebrate this special day with the people we love most.",
+    "paragraph2": "As we begin our new life together, we’ve chosen not to create a traditional gift registry. Instead, if you feel inclined to give a gift, we would deeply appreciate a contribution towards our future—whether it's our home, travel, or shared dreams.",
+    "paragraph3": "Most importantly, we’re just so happy to celebrate with you!"
+  },
+  "footer": {
+    "title": "Madeline & Alexander",
+    "celebrationMessage": "We can't wait to celebrate with you!",
+    "eventDetails": "June 6th, 2026 • Paulushaus-Neuwirth • Schwäbisch Gmünd, DE"
   }
 }

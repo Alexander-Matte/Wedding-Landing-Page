@@ -1,5 +1,5 @@
 <template>
-  <section id="details" class="py-20 px-4 bg--50">
+  <section id="details" class="py-20 px-4">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-3xl md:text-4xl text-center italic mb-12">
         {{ $t('weddingDetails.title') }}
@@ -39,41 +39,8 @@
 
 
       <!-- Accommodations -->
-      <div class="mt-12">
-        <h3 class="text-2xl font-semibold mb-6 text-center">{{ $t('weddingDetails.accommodations.title') }}</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-          <UCard v-for="(card, key) in tm('weddingDetails.accommodations.cards')" :key="key" class="bg-white">
-            <template #header>
-              <h4 class="text-lg font-medium">{{ rt(card.header) }}
-                <template>
-                  <ClientOnly>
-                    <UPopover v-if="key === 'paulushaus'" mode="hover" :close-delay="300" arrow>
-                      <UIcon name="lucide:info" class="mx-4 text-yellow-500" size="24" />
-                      <template #content>
-                        <div class="max-w-xs text-sm text-gray-700">
-                          {{ rt(card.info) }}
-                        </div>
-                      </template>
-                    </UPopover>
-                  </ClientOnly>
-                </template>
-              </h4>
-            </template>
-            
-            <a
-              :href="rt(card.website)"
-              target="_blank"
-              rel="noopener"
-              class="text-blue-600 hover:underline"
-            >
-            {{ $t('weddingDetails.accommodations.visitMessage') }}
-            </a>
-            <p class="text-gray-600 mt-2">
-              {{ rt(card.description) }}
-            </p>
-          </UCard>
-        </div>
-      </div>
+      <Accommodations class="mt-12" />
+
 
       <!-- Transportation -->
       <div class="mt-16">
@@ -116,16 +83,14 @@
           </p>
         </div>
       </div>
-
-
-
-
     </div>
   </section>
 </template>
 
 <script setup>
 const { tm, rt } = useI18n();
+
+
 </script>
 
 <style scoped>

@@ -42,5 +42,9 @@ export default defineNuxtConfig({
     config: {
       stylistic: true
     }
+  },
+  image: {
+    dir: 'assets/img'
   }
+  
 })

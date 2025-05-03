@@ -1,8 +1,8 @@
 <template>
-  <footer class="py-12 px-4 custom-border-top">
+  <footer id="footer" class="py-12 px-4 custom-border-top">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="italic text-3xl mb-6">
-        Madeline &amp; Alexander
+        {{ $t('footer.title')}}
       </h2>
 
       <div class="flex justify-center items-center mb-6">
@@ -11,10 +11,10 @@
         <div class="w-12 h-0.5 bg-gray-300"/>
       </div>
 
-      <p class="mb-8">We can't wait to celebrate with you!</p>
+      <p class="mb-8">{{ $t('footer.celebrationMessage')}}</p>
 
       <div class="text-gray-500 text-sm">
-        <p>June 6th, 2026 • Paulushaus-Neuwirth • Schwäbisch Gmünd, DE</p>
+        <p>{{ $t('footer.eventDetails')}}</p>
       </div>
     </div>
   </footer>

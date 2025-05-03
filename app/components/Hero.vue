@@ -1,5 +1,6 @@
 <template>
   <section
+    id="hero"
     class="relative h-screen w-full bg-cover bg-bottom flex items-center justify-center z-0"
     :style="{ backgroundImage: `url(${oceanRing})` }"
   >

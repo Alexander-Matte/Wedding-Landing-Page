@@ -109,13 +109,15 @@ const handleScroll = () => {
 // Background style that fades in white between 200px and 400px
 const backgroundStyle = computed(() => {
   const y = currentScrollY.value;
-  if (!isVisible.value || y <= 200) {
-    return { backgroundColor: 'rgba(250, 249, 246, 0)' }; // #FAF9F6 with 0 opacity
+
+  if (y <= 200) {
+    return { backgroundColor: 'rgba(250, 249, 246, 0)' };
   }
 
   const alpha = Math.min((y - 200) / 200, 1); // fade in between 200–400
-  return { backgroundColor: `rgba(250, 249, 246, ${alpha})` }; // #FAF9F6 with dynamic opacity
+  return { backgroundColor: `rgba(250, 249, 246, ${alpha})` };
 });
+
 
 
 onMounted(() => {

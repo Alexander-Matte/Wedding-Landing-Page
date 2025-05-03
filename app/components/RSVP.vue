@@ -8,9 +8,19 @@
           <p class="-200">{{ $t('rsvp.deadline') }}</p>
         </div>
         <div class="md:w-2/3 p-8">
-          <UForm :schema="schema" :state="state" class="space-y-6" @submit="onSubmit">
+          <UForm 
+          :schema="schema" 
+          :state="state" 
+          class="space-y-6" 
+          @submit="onSubmit"
+          @keydown.enter.prevent
+          >
             <UFormField :label="$t('rsvp.form.name.label')" name="name" required>
-              <UInput v-model="state.name" :placeholder="$t('rsvp.form.name.required')" />
+              <UInput 
+                v-model="state.name" 
+                :placeholder="$t('rsvp.form.name.placeholder')" 
+                class="w-2/3"
+              />
             </UFormField>
 
             <UFormField 
@@ -22,15 +32,16 @@
               <UInput 
                 v-model="state.email" 
                 type="email" 
+                trailing-icon="i-lucide-at-sign"
+                class="w-2/3"
                 :placeholder="$t('rsvp.form.email.placeholder')" 
                 :class="{'border-red-500': emailError, 'focus:ring-red-500': emailError}"
                 @blur="checkEmail"
               />
             </UFormField>
 
-
             <UFormField :label="$t('rsvp.form.attending.label')" name="attending">
-              <URadioGroup v-model="state.attending" :items="items" />
+              <URadioGroup v-model="state.attending" :items="items" class="w-2/3"/>
             </UFormField>
 
             <template v-if="state.attending === 'yes'">
@@ -40,23 +51,31 @@
               <template v-if="state.attending === 'yes' && Number(state.guests) > 1">
                 <div class="space-y-4">
                   <h3 class="text-lg font-semibold">{{ $t('rsvp.form.additionalGuests.header') }}</h3>
-                  <div v-for="(guest, index) in additionalGuests" :key="index" class="flex items-center gap-2">
-                    <UInput
-                      v-model="guest.name"
-                      :disabled="guest.saved"
-                      :placeholder="`Guest ${index + 2} First and Last Name`"
+                  <div v-for="(guest, index) in additionalGuests" :key="index" class="flex flex-col space-y-4">
+                    <UFormField
+                      :label="$t('rsvp.form.additionalGuests.label', { number: index + 2 })"
+                      :error="formSubmitted && guest.name.trim() === '' ? $t('rsvp.form.additionalGuests.error') : ''"
                       class="flex-1"
-                    />
-                    <UButton size="xs" @click="toggleEdit(index)">
-                      {{ guest.saved ? $t('rsvp.additionalGuests.edit') : $t('rsvp.additionalGuests.save') }}
-                    </UButton>
+                    >
+                      <UInput
+                        v-model="guest.name"
+                        :placeholder="$t('rsvp.form.additionalGuests.placeholder', { number: index + 2 })"
+                        class="w-2/3"
+                        @blur="validateGuestName(index)"
+                      />
+                    </UFormField>
                   </div>
                 </div>
               </template>
             </template>
 
             <UFormField :label="$t('rsvp.form.message.label')" :hint="$t('rsvp.form.message.hint')" name="message">
-              <UTextarea v-model="state.message" :placeholder="$t('rsvp.form.message.placeholder')" />
+              <UTextarea 
+              v-model="state.message" 
+              :placeholder="$t('rsvp.form.message.placeholder')" 
+              class="w-2/3"
+              autoresize
+              />
             </UFormField>
 
             <UButton type="submit" color="primary" class="w-full">{{ $t('rsvp.form.submit') }}</UButton>
@@ -67,24 +86,26 @@
   </section>
 </template>
 
+
 <script setup lang="ts">
 import { ref, reactive, watch } from 'vue'
 import { z } from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
 import { useI18n } from 'vue-i18n'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
 const { t } = useI18n()
 
-
 const schema = z.object({
   name: z.string().min(1, t('rsvp.form.name.required')),
-  email: z.string().email(t('rsvp.form.email.invalid')),
+  email: z.string()
+    .nonempty(t('rsvp.form.email.required'))
+    .email(t('rsvp.form.email.invalid')),
   attending: z.enum(['yes', 'no']),
   guests: z.string().optional(),
   message: z.string().optional()
 })
 
-type Schema = z.infer<typeof schema>
+type Schema = z.output<typeof schema>
 
 const state = reactive<Schema>({
   name: '',
@@ -95,6 +116,7 @@ const state = reactive<Schema>({
 })
 
 const emailError = ref('')
+const missingGuestsError = ref('')
 const formSubmitted = ref(false)
 
 const items = ref([
@@ -102,7 +124,7 @@ const items = ref([
   { label: t('rsvp.form.attending.no'), value: 'no' }
 ])
 
-const additionalGuests = ref<{ name: string; saved: boolean }[]>([])
+const additionalGuests = ref<{ name: string }[]>([])
 
 const toast = useToast()
 
@@ -126,53 +148,25 @@ watch(() => state.guests, (newVal) => {
 
   if (count > currentLength) {
     for (let i = currentLength; i < count; i++) {
-      additionalGuests.value.push({ name: '', saved: false })
+      additionalGuests.value.push({ name: '' })
     }
   } else if (count < currentLength) {
     additionalGuests.value.splice(count)
   }
 })
 
-const toggleEdit = (index: number) => {
+const validateGuestName = (index: number) => {
   const guest = additionalGuests.value[index]
-  const mainName = state.name.trim().toLowerCase()
-  const guestName = guest.name.trim().toLowerCase()
 
-  if (!guest.saved) {
-    if (guest.name.trim() === '') {
-      toast.add({ 
-        title: t('rsvp.toast.guest.empty.title'), 
-        description: t('rsvp.toast.guest.empty.description'), 
-        color: 'error' 
-      })
-      return
-    }
-
-    if (guestName === mainName) {
-      toast.add({ 
-        title: t('rsvp.toast.guest.duplicate_main.title'), 
-        description: t('rsvp.toast.guest.duplicate_main.description'), 
-        color: 'error' 
-      })
-      return
-    }
-
-    const isDuplicate = additionalGuests.value.some((g, i) => i !== index && g.name.trim().toLowerCase() === guestName)
-
-    if (isDuplicate) {
-      toast.add({ 
-        title: t('rsvp.toast.guest.duplicate.title'), 
-        description: t('rsvp.toast.guest.duplicate.description'), 
-        color: 'error' 
-      })
-      return
-    }
+  // Validate guest name
+  if (guest.name.trim() === '') {
+    toast.add({
+      title: t('rsvp.toast.emptyGuestName.title'),
+      description: t('rsvp.toast.emptyGuestName.description'),
+      color: 'error'
+    })
   }
-
-  guest.saved = !guest.saved
 }
-
-
 
 const checkEmail = () => {
   if (!state.email) {
@@ -190,7 +184,50 @@ const isValidEmail = (email: string) => {
   return emailRegex.test(email)
 }
 
+const checkAdditionalGuests = (): boolean => {
+  missingGuestsError.value = ''
+
+  const mainName = state.name.trim().toLowerCase()
+  const guestNames = additionalGuests.value.map(g => g.name.trim().toLowerCase())
+
+  // Check for empty guest names
+  const emptyGuest = additionalGuests.value.find(g => g.name.trim() === '')
+  if (emptyGuest) {
+    missingGuestsError.value = t('rsvp.form.additionalGuests.error')
+    toast.add({ 
+      title: t('rsvp.toast.emptyGuestName.title'), 
+      description: t('rsvp.toast.emptyGuestName.description'), 
+      color: 'error' 
+    })
+    return false
+  }
+
+  // Check for guest name matching main name
+  if (guestNames.includes(mainName)) {
+    toast.add({ 
+      title: t('rsvp.toast.duplicateMainName.title'), 
+      description: t('rsvp.toast.duplicateMainName.description'), 
+      color: 'error' 
+    })
+    return false
+  }
+
+  // Check for duplicate guest names
+  const nameSet = new Set(guestNames)
+  if (nameSet.size !== guestNames.length) {
+    toast.add({ 
+      title: t('rsvp.toast.duplicateGuests.title'), 
+      description: t('rsvp.toast.duplicateGuests.description'), 
+      color: 'error' 
+    })
+    return false
+  }
+
+  return true
+}
+
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
+  event.preventDefault()
   formSubmitted.value = true
   checkEmail()
 
@@ -199,48 +236,28 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     return
   }
 
-  const mainName = event.data.name.trim().toLowerCase()
-  const duplicates = additionalGuests.value.some(g => g.name.trim().toLowerCase() === mainName)
+  const mainName = event.data.name.trim()
+  const guestsValid = checkAdditionalGuests()
 
-  if (duplicates) {
-    toast.add({ 
-      title: 'Duplicate Name Detected', 
-      description: 'The name in the Full Name input cannot match any of the additional guest names.', 
-      color: 'error' 
-    })
-    return
+  if (guestsValid) {
+    const payload = {
+      name: mainName,
+      email: event.data.email,
+      attending: event.data.attending,
+      message: event.data.message,
+      guests: additionalGuests.value
+    }
+    console.log('Form payload', payload)
   }
-
-  // Check if there are any duplicate guest names
-  const duplicateGuests = additionalGuests.value.some((guest, index) => {
-    const guestName = guest.name.trim().toLowerCase()
-    return additionalGuests.value.some((otherGuest, otherIndex) => 
-      otherIndex !== index && otherGuest.name.trim().toLowerCase() === guestName
-    )
-  })
-
-  if (duplicateGuests) {
-    toast.add({ 
-      title: 'Duplicate Guest Name Detected', 
-      description: 'There are duplicate additional guest names. Please ensure each guest has a unique name.', 
-      color: 'error' 
-    })
-    return
-  }
-
-  console.log('Form submitted:', {
-    ...event.data,
-    additionalGuests: additionalGuests.value.map(g => g.name)
-  })
 
   toast.add({ 
-    title: 'RSVP Submitted', 
-    description: 'Thank you for your response!', 
-    color: 'success' 
-  })
+      title: t('rsvp.toast.success.title'), 
+      description: t('rsvp.toast.success.description'), 
+      color: 'success' 
+    })
 }
-
 </script>
+
 
 
 <style scoped>

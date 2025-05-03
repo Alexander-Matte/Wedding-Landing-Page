@@ -6,7 +6,6 @@
         <Hero />
       </section>
 
-
       <section class="bg-[#FAF9F6]">
         <OurStory />
       </section>
