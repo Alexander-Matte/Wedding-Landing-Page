@@ -2,7 +2,14 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxt/ui', '@nuxtjs/i18n' ],
+  modules: [
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/ui',
+    '@nuxtjs/i18n',
+    '@nuxt/eslint',
+  ],
   css: ['~/assets/css/main.css'],
   router: {
     options: {
@@ -31,4 +38,9 @@ export default defineNuxtConfig({
     langDir: 'locales/',
     defaultLocale: 'en',
   },
+  eslint: {
+    config: {
+      stylistic: true
+    }
+  }
 })

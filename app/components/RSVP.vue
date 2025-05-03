@@ -3,43 +3,43 @@
     <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
       <div class="md:flex">
         <div class="md:w-1/3 p-8 flex flex-col justify-center">
-          <h2 class="text-3xl italic mb-4">RSVP</h2>
-          <p class="mb-6">Please let us know if you'll be joining us on our special day.</p>
-          <p class="-200">Kindly respond by July 15, 2023</p>
+          <h2 class="text-3xl italic mb-4">{{ $t('rsvp.title') }}</h2>
+          <p class="mb-6">{{ $t('rsvp.description') }}</p>
+          <p class="-200">{{ $t('rsvp.deadline') }}</p>
         </div>
         <div class="md:w-2/3 p-8">
-          <UForm :schema="schema" :state="state" @submit="onSubmit" class="space-y-6">
-            <UFormField label="Full Name" name="name" required>
-              <UInput v-model="state.name" placeholder="Enter your full name" />
+          <UForm :schema="schema" :state="state" class="space-y-6" @submit="onSubmit">
+            <UFormField :label="$t('rsvp.form.name.label')" name="name" required>
+              <UInput v-model="state.name" :placeholder="$t('rsvp.form.name.required')" />
             </UFormField>
 
             <UFormField 
-              label="Email" 
+              :label="$t('rsvp.form.email.label')" 
               name="email" 
               required 
-              :error="emailError ? 'Please enter a valid email address.' : ''"
+              :error="emailError ? $t('rsvp.form.email.error') : ''"
             >
               <UInput 
                 v-model="state.email" 
                 type="email" 
-                placeholder="Enter your email" 
-                @blur="checkEmail"
+                :placeholder="$t('rsvp.form.email.placeholder')" 
                 :class="{'border-red-500': emailError, 'focus:ring-red-500': emailError}"
+                @blur="checkEmail"
               />
             </UFormField>
 
 
-            <UFormField label="Will you be attending?" name="attending">
+            <UFormField :label="$t('rsvp.form.attending.label')" name="attending">
               <URadioGroup v-model="state.attending" :items="items" />
             </UFormField>
 
             <template v-if="state.attending === 'yes'">
-              <UFormField label="Number of Guests (Including Yourself)" name="guests">
+              <UFormField :label="$t('rsvp.form.guests.label')" name="guests">
                 <USelect v-model="state.guests" arrow color="neutral" variant="subtle" :items="['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']" />
               </UFormField>
               <template v-if="state.attending === 'yes' && Number(state.guests) > 1">
                 <div class="space-y-4">
-                  <h3 class="text-lg font-semibold">Additional Guest Names</h3>
+                  <h3 class="text-lg font-semibold">{{ $t('rsvp.form.additionalGuests.header') }}</h3>
                   <div v-for="(guest, index) in additionalGuests" :key="index" class="flex items-center gap-2">
                     <UInput
                       v-model="guest.name"
@@ -48,18 +48,18 @@
                       class="flex-1"
                     />
                     <UButton size="xs" @click="toggleEdit(index)">
-                      {{ guest.saved ? 'Edit' : 'Save' }}
+                      {{ guest.saved ? $t('rsvp.additionalGuests.edit') : $t('rsvp.additionalGuests.save') }}
                     </UButton>
                   </div>
                 </div>
               </template>
             </template>
 
-            <UFormField label="Message for the Couple" hint="Optional" name="message">
-              <UTextarea v-model="state.message" placeholder="Share your well wishes or a memory" />
+            <UFormField :label="$t('rsvp.form.message.label')" :hint="$t('rsvp.form.message.hint')" name="message">
+              <UTextarea v-model="state.message" :placeholder="$t('rsvp.form.message.placeholder')" />
             </UFormField>
 
-            <UButton type="submit" color="primary" class="w-full">Submit RSVP</UButton>
+            <UButton type="submit" color="primary" class="w-full">{{ $t('rsvp.form.submit') }}</UButton>
           </UForm>
         </div>
       </div>
@@ -71,10 +71,14 @@
 import { ref, reactive, watch } from 'vue'
 import { z } from 'zod'
 import type { FormSubmitEvent } from '@nuxt/ui'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 
 const schema = z.object({
-  name: z.string().min(1, 'Full Name is required'),
-  email: z.string().email('Invalid email address'),
+  name: z.string().min(1, t('rsvp.form.name.required')),
+  email: z.string().email(t('rsvp.form.email.invalid')),
   attending: z.enum(['yes', 'no']),
   guests: z.string().optional(),
   message: z.string().optional()
@@ -94,8 +98,8 @@ const emailError = ref('')
 const formSubmitted = ref(false)
 
 const items = ref([
-  { label: 'Joyfully Accept', value: 'yes' },
-  { label: 'Regretfully Decline', value: 'no' }
+  { label: t('rsvp.form.attending.yes'), value: 'yes' },
+  { label: t('rsvp.form.attending.no'), value: 'no' }
 ])
 
 const additionalGuests = ref<{ name: string; saved: boolean }[]>([])
@@ -136,26 +140,29 @@ const toggleEdit = (index: number) => {
 
   if (!guest.saved) {
     if (guest.name.trim() === '') {
-      toast.add({ title: 'Guest name is empty', description: 'Please enter a name before saving.', color: 'error' })
-      return
-    }
-
-    if (guestName === mainName) {
       toast.add({ 
-        title: 'Duplicate Name Detected', 
-        description: 'This name is already added above in the Full Name field. Only additional guests in your party need to be entered here.', 
+        title: t('rsvp.toast.guest.empty.title'), 
+        description: t('rsvp.toast.guest.empty.description'), 
         color: 'error' 
       })
       return
     }
 
-    // Check if the name is already used by another guest
+    if (guestName === mainName) {
+      toast.add({ 
+        title: t('rsvp.toast.guest.duplicate_main.title'), 
+        description: t('rsvp.toast.guest.duplicate_main.description'), 
+        color: 'error' 
+      })
+      return
+    }
+
     const isDuplicate = additionalGuests.value.some((g, i) => i !== index && g.name.trim().toLowerCase() === guestName)
 
     if (isDuplicate) {
       toast.add({ 
-        title: 'Duplicate Guest Name Detected', 
-        description: 'This guest name is already used by another guest.', 
+        title: t('rsvp.toast.guest.duplicate.title'), 
+        description: t('rsvp.toast.guest.duplicate.description'), 
         color: 'error' 
       })
       return
@@ -166,11 +173,12 @@ const toggleEdit = (index: number) => {
 }
 
 
+
 const checkEmail = () => {
   if (!state.email) {
-    emailError.value = 'Email is required.'
+    emailError.value = t('rsvp.form.email.required')
   } else if (!isValidEmail(state.email)) {
-    emailError.value = 'Invalid email address.'
+    emailError.value = t('rsvp.form.email.invalid')
   } else {
     emailError.value = ''
   }

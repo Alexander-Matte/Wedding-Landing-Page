@@ -6,9 +6,9 @@
       </h2>
 
       <div class="flex justify-center items-center mb-6">
-        <div class="w-12 h-0.5 bg-gray-300"></div>
+        <div class="w-12 h-0.5 bg-gray-300"/>
         <UIcon name="i-heroicons-heart-solid" class="mx-4 text-gray-300" size="24" />
-        <div class="w-12 h-0.5 bg-gray-300"></div>
+        <div class="w-12 h-0.5 bg-gray-300"/>
       </div>
 
       <p class="mb-8">We can't wait to celebrate with you!</p>

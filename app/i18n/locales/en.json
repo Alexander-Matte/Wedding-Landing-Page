@@ -1,197 +1,214 @@
 {
   "navbar": {
-    "story": "Story",
-    "details": "Details",
-    "schedule": "Schedule",
-    "rsvp": "RSVP",
-    "registry": "Registry"
+      "story": "Story",
+      "details": "Details",
+      "schedule": "Schedule",
+      "rsvp": "RSVP",
+      "registry": "Registry"
   },
   "hero": {
-    "names": "Madeline Fehleisen & Alexander Matte",
-    "marrying": "are getting married",
-    "date": "June 6th, 2026",
-    "rsvp": "RSVP"
+      "names": "Madeline Fehleisen & Alexander Matte",
+      "marrying": "are getting married",
+      "date": "June 6, 2026",
+      "rsvp": "RSVP"
   },
   "our_story": {
-    "title": "Our Story",
-    "story": [
-      "In 2019, while traveling through New Zealand, Alex ended up working in the wine vineyards where he met a friendly German guy — spoiler alert: Madeline’s brother. The two hit it off, and the invitation was casually extended: if Alex ever found himself in Germany, he should drop by. On his way back to Canada, Alex made a spontaneous detour to Europe to visit his new friend in Germany and another buddy in the Netherlands.",
-      "While staying with the family in Germany, Alex met Madeline — and it quickly became clear there was something special between them. After leaving, they kept in touch, exchanging voice messages constantly while Alex was working as a spray plane ground crew member in Saskatchewan. The early mornings gave them more time to talk before the time difference pulled them apart each day.",
-      "As their connection deepened, Alex booked a return trip to Germany — this time just to see Madeline. They spent three unforgettable weeks road-tripping through Austria, passing the ultimate relationship test: traveling together nonstop. Not only were they not sick of each other, but by the end of the trip, they decided to give a long-distance relationship a real shot (even if Alex initially said, “Let’s not put a label on it” — classic move).",
-      "After another tough goodbye, Alex returned to Canada and jumped back into oil rig work to save up quickly. Then Madeline made a bold move — visiting him in February — in Saskatchewan — where temperatures regularly drop below -40°C. She stayed with him through the freezing cold and long days on the rig, happy just to be together. That’s when Alex knew she was truly serious.",
-      "Her flight back was canceled as COVID hit, and while part of Alex hoped she might stay longer, they both knew she had to return. That time together solidified their plans: Alex would move to Germany, and they’d build a life together. That was back in 2020, and they haven’t looked back since — despite the challenges of adjusting to a new country, culture, and language.",
-      "After all the years of distance, hard goodbyes, and heartfelt reunions, Alex and Madeline are thrilled to finally say 'I do' and begin the next chapter — together, for good."
-    ],
-    "quote": "True love is like wildflowers... it's often found in the most unlikely places."
+      "title": "Our Story",
+      "story": [
+          "In 2019, during a trip through New Zealand, Alex was working in the vineyards where he met a friendly German — spoiler: Madeline’s brother. The two quickly hit it off, and the invitation was casually extended: if Alex ever found himself in Germany, he should stop by. On his way back to Canada, Alex made a spontaneous detour to Europe to visit his new friend in Germany and another buddy in the Netherlands.",
+          "During his stay with the family in Germany, Alex met Madeline – and it quickly became clear that there was something special between them. After he left, they stayed in touch, constantly exchanging voice messages while Alex worked as a ground crew member for a crop-dusting company in Saskatchewan. The early mornings gave them more time to talk before the time difference pulled them apart each day.",
+          "As their connection deepened, Alex booked a return trip to Germany — this time just to see Madeline. They spent three unforgettable weeks road-tripping through Austria and passed the ultimate relationship test: traveling together nonstop. Not only were they not annoyed with each other, but by the end of the trip, they decided to really try a long-distance relationship (even though Alex initially said, “Let’s not label it” — classic move).",
+          "After another difficult goodbye, Alex returned to Canada and jumped back into oil drilling work to save up quickly. Then Madeline made a bold move — she visited him in February — in Saskatchewan — where temperatures regularly drop below -40°C. She stayed with him through the freezing cold and long days on the oil rig, just happy to be together. That’s when Alex knew she truly meant it.",
+          "Her return flight was canceled due to COVID, and although part of Alex hoped she would stay longer, they both knew she had to go back. That time together solidified their plans: Alex would move to Germany, and they would build a life together. That was in 2020, and they’ve never looked back — despite the challenges of adjusting to a new country, culture, and language.",
+          "After all the years of distance, hard goodbyes, and heartfelt reunions, Alex and Madeline are overjoyed to finally say 'I do' and begin the next chapter — together, forever."
+      ],
+      "quote": "True love is like wildflowers... it’s often found in the most unlikely places."
   },
   "weddingDetails": {
-    "title": "Wedding Details",
-    "reception": {
-      "title": "Reception",
-      "date": "Saturday, June 6th, 2026",
-      "time": "1:00 PM - 6:00 AM :)",
-      "location": {
-        "title": "Freizeithaus – Neuwirth",
-        "addressLine1": "(Am) Appenhaus 1",
-        "addressLine2": "73527 Schw. Gmünd - Herlikofen"
-      },
-      "description": "Join us for dinner, dancing, and celebration under the tent near the ceremony site. Guests will have full access to the surrounding area for lawn games and mingling. Cocktail hour will begin immediately following the ceremony. Learn more about the venue at"
+      "title": "Wedding Details",
+      "reception": {
+          "title": "Reception",
+          "date": "Saturday, June 6, 2026",
+          "time": "1:00 PM – 6:00 AM :)",
+          "location": {
+              "title": "Freizeithaus – Neuwirth",
+              "addressLine1": "(Am) Appenhaus 1",
+              "addressLine2": "73527 Schwäbisch Gmünd - Herlikofen"
+          },
+          "description": "Join us for dinner, dancing, and celebration in a tent near the ceremony site. The surrounding area will be open for guests to enjoy outdoor games and socializing. Cocktail hour will begin immediately after the ceremony. More information about the venue can be found at"
       },
       "accommodations": {
-        "title": "Accommodations",
-        "cards": {
-          "paulushaus": {
-            "header": "Paulushaus Neuwirth - Lodging at the venue",
-            "website": "https://paulushaus-neuwirth.de/",
-            "description": "Group-style retreat house perfect for larger self-catering groups. Kitchen, outdoor area with sports/playground, basic amenities. No restaurant. ~0 km from venue; ~4 km to city center. Free parking.",
-            "info": "The venue is 4 km from town, so transport will be needed to get there and back. Taxis are available if you haven’t rented a car. There’s also a nearby bus stop within walking distance if you prefer public transport."
+          "title": "Accommodations",
+          "cards": {
+              "paulushaus": {
+                  "header": "Paulushaus Neuwirth – On-Site Lodging",
+                  "website": "https://paulushaus-neuwirth.de/",
+                  "description": "Group house, ideal for larger self-catering groups. Kitchen, outdoor area with sports/playground, basic amenities. No restaurant. ~0 km to the venue; ~4 km to the city center. Free parking.",
+                  "info": "The venue is 4 km outside the city, so transportation is needed to get there and back. Taxis are available if you don’t rent a car. There’s also a nearby bus stop within walking distance if you prefer public transport."
+              },
+              "hotelRemspark": {
+                  "header": "Hotel am Remspark",
+                  "website": "https://hotelamremspark.de/",
+                  "description": "Modern 4-star hotel near the city center. Fitness area, rooftop restaurant/bar, breakfast buffet. ~7–8 km to the venue. Paid parking on-site. Bike rental available for a fee, and Wi-Fi included."
+              },
+              "hotelSchwaebischGmuend": {
+                  "header": "Hotel Schwäbisch Gmünd",
+                  "website": "https://hotel-schwaebisch-gmuend.de/",
+                  "description": "Comfortable 4-star hotel with wellness area (pool, sauna, fitness), breakfast buffet, and regional cuisine. ~6–7 km to the venue. Underground parking (~€10/day). Located right at the train station."
+              },
+              "schoenblick": {
+                  "header": "Hotel Schönblick",
+                  "website": "https://www.schoenblick.de/de/hotel",
+                  "description": "Quiet guesthouse near the forest. Breakfast included, basic amenities, park area, and free parking. ~1–2 km to the venue; ~2.5 km to the city center."
+              },
+              "mutlangerHof": {
+                  "header": "Hotel Mutlanger Hof",
+                  "website": "https://www.mutlangerhof.de/",
+                  "description": "Simple and quiet guesthouse in Mutlangen. Free Wi-Fi, continental breakfast, and bike rental. ~5 km to the venue; ~3.5 km to the city center. Free parking on-site."
+              }
           },
-          "hotelRemspark": {
-            "header": "Hotel am Remspark",
-            "website": "https://hotelamremspark.de/",
-            "description": "Modern 4-star hotel near the city center. Fitness area, rooftop restaurant/bar, breakfast buffet. ~7–8 km to venue. On-site paid parking. Bike rentals at cost and Wi-Fi."
-          },
-          "hotelSchwaebischGmuend": {
-            "header": "Hotel Schwäbisch Gmünd",
-            "website": "https://hotel-schwaebisch-gmuend.de/",
-            "description": "Comfortable 4-star hotel with wellness area (pool, sauna, fitness), breakfast buffet, and regional cuisine. ~6–7 km to venue. Garage parking (~€10/day). Right near train station."
-          },
-          "schoenblick": {
-            "header": "Hotel Schönblick",
-            "website": "https://www.schoenblick.de/de/hotel",
-            "description": "Peaceful guesthouse with forest surroundings. Breakfast included, basic amenities, park grounds, and free parking. ~1–2 km to venue; ~2.5 km to city center."
-          },
-          "mutlangerHof": {
-            "header": "Hotel Mutlanger Hof",
-            "website": "https://www.mutlangerhof.de/",
-            "description": "Simple and quiet guesthouse in Mutlangen. Free Wi-Fi, continental breakfast, and bike rental. ~5 km to venue; ~3.5 km to city center. Free parking on site."
-          }
-        },
-        "visitMessage": "Visit Website"
+          "visitMessage": "Visit Website"
       },
       "transportation": {
-        "title": "Transportation",
-        "description": "The nearest major cities with international airports to the wedding venue are Stuttgart, Frankfurt, and Munich (München). Stuttgart Airport (STR) is closer and more convenient, but Frankfurt Airport (FRA) and Munich Airport (MUC) are also good options with more international flight availability.",
-        "notice1": "From either airport, you have three main options for getting to the region: ",
-        "options": {
-          "train": {
-            "title": "Train",
-            "description": "All three airports have train connections to Schwäbisch Gmünd, the nearest city to the venue. You may need to transfer once, typically in Stuttgart or Göppingen, depending on the route."
-          },
-          "carRental": {
-            "title": "Car Rental",
-            "description": "Renting a car is a convenient option and allows flexibility, especially if you're staying in the countryside or want to explore the region. Highways connect all three airports to Schwäbisch Gmünd (approx. 45 minutes from Stuttgart, 2.5 hours from Frankfurt, and 2.5 hours from Munich)."
-          }
-        },
-        "venueDetails": {
-          "description": "Once you arrive in Schwäbisch Gmünd, the wedding venue is located in a nearby rural area approximately 4 km outside the city.",
-          "notice1": "From Schwäbisch Gmünd, you can reach the venue and surrounding areas in several ways:",
-          "transportOptions": {
-            "bus": {
-              "title": "Bus",
-              "description": "Local bus 72 stop near the venue. The bus stop is called Lindach, Paulushaus. *Please inform the bus driver where you want to get off and they should be able to ensure you get off at the correct spot."
-            },
-            "taxi": {
-              "title": "Taxi",
-              "description": "Taxis are available at the train station and around the city. You can contact the following taxi services:",
-              "taxiServices": {
-                "taxiSchwaebischGmuend": "Taxi Schwäbisch Gmünd: FILL IN",
-                "taxiGmuend": "Taxi Gmünd: FILL IN"
+          "title": "Transportation",
+          "description": "The closest major cities with international airports to the venue are Stuttgart, Frankfurt, and Munich. Stuttgart Airport (STR) is closer and more convenient, but Frankfurt (FRA) and Munich (MUC) also offer good options with more international connections.",
+          "notice1": "From each of these airports, you have three main options to reach the area:",
+          "options": {
+              "train": {
+                  "title": "Train",
+                  "description": "All three airports have train connections to Schwäbisch Gmünd, the closest city to the venue. Depending on your route, a transfer may be required, typically in Stuttgart or Göppingen."
+              },
+              "carRental": {
+                  "title": "Car Rental",
+                  "description": "Renting a car is a convenient option and provides flexibility, especially if you’re staying in the countryside or want to explore the region. Highways connect all three airports to Schwäbisch Gmünd (about 45 minutes from Stuttgart, 2.5 hours from Frankfurt or Munich)."
               }
-            },
-            "car": {
-              "title": "Car",
-              "description": "If you're staying outside the city or have a rental, driving is the most flexible option. Parking is available at the venue and most accommodations."
-            }
           },
-          "planningReminder": "Please plan accordingly depending on your arrival airport and whether you’ll be using public transport or a rental car. We’re happy to help coordinate if you’re unsure!"
-        }
+          "venueDetails": {
+              "description": "Once you arrive in Schwäbisch Gmünd, the venue is located in a nearby rural area about 4 km outside the city.",
+              "notice1": "From Schwäbisch Gmünd, you can reach the venue and surrounding areas in a few ways:",
+              "transportOptions": {
+                  "bus": {
+                      "title": "Bus",
+                      "description": "Local bus 72 stops near the venue. The stop is called Lindach, Paulushaus. *Please inform the driver where you need to get off to ensure you exit at the correct location."
+                  },
+                  "taxi": {
+                      "title": "Taxi",
+                      "description": "Taxis are available at the train station and in the city. You can contact the following taxi companies:",
+                      "taxiServices": {
+                          "taxiSchwaebischGmuend": "Taxi Schwäbisch Gmünd: PLEASE INSERT",
+                          "taxiGmuend": "Taxi Gmünd: PLEASE INSERT"
+                      }
+                  },
+                  "car": {
+                      "title": "Car",
+                      "description": "If you’re staying outside the city or have a rental car, driving is the most flexible option. Parking is available at the venue and most accommodations."
+                  }
+              },
+              "planningReminder": "Please plan accordingly based on which airport you arrive at and whether you will use public transportation or rent a car. We’re happy to help coordinate if you're unsure!"
+          }
       }
   },
   "schedule": {
-    "title": "Wedding Day Schedule",
-    "items": [
-      {
-        "title": "Guest Arrival",
-        "time": "1:30 PM",
-        "description": "Please arrive early to be seated before the ceremony begins."
-      },
-      {
-        "title": "Ceremony",
-        "time": "2:00 PM",
-        "description": "Exchange of vows in the Wildflower Garden."
-      },
-      {
-        "title": "Cocktail Hour",
-        "time": "3:00 PM - 4:00 PM",
-        "description": "Enjoy drinks and hors d'oeuvres on the garden terrace."
-      },
-      {
-        "title": "Reception Dinner",
-        "time": "4:00 PM - 6:00 PM",
-        "description": "Farm-to-table dinner in the Wildflower Barn."
-      },
-      {
-        "title": "Toasts & Cake Cutting",
-        "time": "6:00 PM - 6:30 PM",
-        "description": "Speeches from family and friends, followed by cake cutting."
-      },
-      {
-        "title": "Dancing",
-        "time": "6:30 PM - 10:00 PM",
-        "description": "Dance the night away under twinkling lights."
-      }
-    ]
+      "title": "Wedding Day Schedule",
+      "items": [
+          {
+              "title": "Guest Arrival",
+              "time": "1:30 PM",
+              "description": "Please arrive early to be seated before the ceremony."
+          },
+          {
+              "title": "Ceremony",
+              "time": "2:00 PM",
+              "description": "Exchange of vows in the wildflower garden."
+          },
+          {
+              "title": "Cocktail Hour",
+              "time": "3:00 – 4:00 PM",
+              "description": "Enjoy drinks and appetizers on the garden terrace."
+          },
+          {
+              "title": "Reception Dinner",
+              "time": "4:00 – 6:00 PM",
+              "description": "Farm-to-table dinner at the Wildflower Barn."
+          },
+          {
+              "title": "Toasts & Cake Cutting",
+              "time": "6:00 – 6:30 PM",
+              "description": "Speeches from family and friends, followed by the cake cutting."
+          },
+          {
+              "title": "Dancing",
+              "time": "6:30 – 10:00 PM",
+              "description": "Dance the night away under twinkling lights."
+          }
+      ]
   },
-    "rsvp": {
-    "title": "RSVP",
-    "description": "Please let us know if you'll be joining us on our special day.",
-    "deadline": "Kindly respond by July 15, 2023",
-    "form": {
-      "name": {
-        "label": "Full Name",
-        "placeholder": "Enter your full name",
-        "required": "Full Name is required"
+  "rsvp": {
+      "title": "RSVP",
+      "description": "Please let us know if you will be attending our special day.",
+      "deadline": "Please respond by July 15, 2023",
+      "form": {
+          "name": {
+              "label": "Full Name",
+              "placeholder": "Enter your full name",
+              "required": "Full name is required"
+          },
+          "email": {
+              "label": "Email",
+              "placeholder": "Enter your email",
+              "required": "Email is required.",
+              "invalid": "Invalid email address",
+              "error": "Please enter a valid email address."
+          },
+          "attending": {
+              "label": "Will you attend?",
+              "yes": "Joyfully accept",
+              "no": "Regretfully decline"
+          },
+          "guests": {
+              "label": "Number of guests (including yourself)"
+          },
+          "additionalGuests": {
+              "header": "Additional Guest Names",
+              "placeholder": "Guest {index} First and Last Name",
+              "edit": "Edit",
+              "save": "Save"
+          },
+          "message": {
+              "label": "Message to the couple",
+              "hint": "Optional",
+              "placeholder": "Share your well wishes or a memory"
+          },
+          "submit": "Submit RSVP"
       },
-      "email": {
-        "label": "Email",
-        "placeholder": "Enter your email",
-        "required": "Email is required",
-        "invalid": "Please enter a valid email address"
-      },
-      "attending": {
-        "label": "Will you be attending?",
-        "options": {
-          "yes": "Joyfully Accept",
-          "no": "Regretfully Decline"
-        }
-      },
-      "guests": {
-        "label": "Number of Guests (Including Yourself)",
-        "options": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-      },
-      "additionalGuests": {
-        "label": "Additional Guest Names",
-        "placeholder": "Guest {index} First and Last Name",
-        "error": "Please enter a name before saving.",
-        "duplicateName": "This name is already added above in the Full Name field. Only additional guests in your party need to be entered here.",
-        "duplicateGuestName": "This guest name is already used by another guest."
-      },
-      "message": {
-        "label": "Message for the Couple",
-        "hint": "Optional",
-        "placeholder": "Share your well wishes or a memory"
-      },
-      "submit": "Submit RSVP",
-      "success": {
-        "title": "RSVP Submitted",
-        "description": "Thank you for your response!"
-      },
-      "error": {
-        "invalidInput": "Invalid Input",
-        "duplicateNameDetected": "The name in the Full Name input cannot match any of the additional guest names.",
-        "duplicateGuests": "There are duplicate additional guest names. Please ensure each guest has a unique name."
+      "toast": {
+          "emptyGuestName": {
+              "title": "Guest name is empty",
+              "description": "Please enter a name before saving."
+          },
+          "duplicateMainName": {
+              "title": "Duplicate name",
+              "description": "This name has already been entered above in the Full Name field. Only additional guests in your group need to be listed here."
+          },
+          "duplicateGuest": {
+              "title": "Duplicate guest name",
+              "description": "This guest name is already used by another guest."
+          },
+          "invalidInput": {
+              "title": "Invalid input"
+          },
+          "mainNameDuplicate": {
+              "title": "Duplicate name",
+              "description": "The name in the Full Name field must not match any of the additional guest names."
+          },
+          "duplicateGuests": {
+              "title": "Duplicate guest name",
+              "description": "There are duplicate additional guest names. Please make sure each guest has a unique name."
+          },
+          "success": {
+              "title": "RSVP submitted",
+              "description": "Thank you for your response!"
+          }
       }
-    }
   }
 }

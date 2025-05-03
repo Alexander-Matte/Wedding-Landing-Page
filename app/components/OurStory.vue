@@ -11,7 +11,7 @@
             src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80"
             alt="Madeline and Alexander"
             class="rounded-lg shadow-lg w-full h-auto"
-          />
+          >
         </div>
       </div>
       <!-- Story Text -->

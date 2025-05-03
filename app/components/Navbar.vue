@@ -12,26 +12,26 @@
         <!-- Desktop menu -->
         <div class="hidden md:flex items-center space-x-8">
           <NuxtLink to="#our-story" class="text-gray-700 transition-colors">
-            <strong>Story</strong> 
+            <strong>{{ $t('navbar.story') }}</strong> 
           </NuxtLink>
           <NuxtLink to="#details" class="text-gray-700 transition-colors">
-            <strong>Details</strong>
+            <strong>{{ $t('navbar.details') }}</strong>
           </NuxtLink>
           <NuxtLink to="#schedule" class="text-gray-700 transition-colors">
-            <strong>Schedule</strong>
+            <strong>{{ $t('navbar.schedule') }}</strong>
           </NuxtLink>
           <NuxtLink to="#rsvp" class="text-gray-700 transition-colors">
-            <strong>RSVP</strong>
+            <strong>{{ $t('navbar.rsvp') }}</strong>
           </NuxtLink>
           <NuxtLink to="#registry" class="text-gray-700 transition-colors">
-            <strong>Registry</strong>
+            <strong>{{ $t('navbar.registry') }}</strong>
           </NuxtLink>
         </div>
         <LanguageSelector />
 
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
-          <UButton @click="toggleMenu" variant="text" class="text-gray-700"          >
+          <UButton variant="text" class="text-gray-700" @click="toggleMenu"          >
             <UIcon :name="isOpen ? 'lucide:x' : 'i-lucide-menu'" size="24" />
           </UButton>
         </div>

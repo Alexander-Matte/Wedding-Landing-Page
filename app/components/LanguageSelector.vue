@@ -1,7 +1,7 @@
 <template>
   <div class="language-toggle flex items-center gap-4">
     <label :class="{ active: locale === 'en' }" class="flex items-center gap-1">
-      <img src="@/assets/icons/canada.png" alt="Canada Flag" class="w-5 h-5" />
+      <img src="@/assets/icons/canada.png" alt="Canada Flag" class="w-5 h-5" >
     </label>
 
     <USwitch
@@ -14,7 +14,7 @@
     />
 
     <label :class="{ active: locale === 'de' }" class="flex items-center gap-1">
-      <img src="@/assets/icons/germany.png" alt="Germany Flag" class="w-5 h-5" />
+      <img src="@/assets/icons/germany.png" alt="Germany Flag" class="w-5 h-5" >
     </label>
   </div>
 </template>

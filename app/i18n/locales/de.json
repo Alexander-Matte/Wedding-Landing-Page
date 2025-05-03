@@ -1,147 +1,214 @@
 {
   "navbar": {
-    "story": "Geschichte",
-    "details": "Details",
-    "schedule": "Zeitplan",
-    "rsvp": "RSVP",
-    "registry": "Registry"
+      "story": "Geschichte",
+      "details": "Details",
+      "schedule": "Zeitplan",
+      "rsvp": "RSVP",
+      "registry": "Registry"
   },
   "hero": {
-    "names": "Madeline Fehleisen & Alexander Matte",
-    "marrying": "heiraten",
-    "date": "6. Juni 2026",
-    "rsvp": "Zusage"
+      "names": "Madeline Fehleisen & Alexander Matte",
+      "marrying": "heiraten",
+      "date": "6. Juni 2026",
+      "rsvp": "Zusage"
   },
   "our_story": {
-    "title": "Unsere Geschichte",
-    "story": [
-      "2019, während einer Reise durch Neuseeland, arbeitete Alex in den Weinbergen, wo er einen freundlichen Deutschen traf – Spoiler: Madelines Bruder. Die beiden verstanden sich sofort, und die Einladung wurde ganz beiläufig ausgesprochen: Falls Alex jemals in Deutschland wäre, sollte er vorbeikommen. Auf dem Rückweg nach Kanada machte Alex einen spontanen Umweg nach Europa, um seinen neuen Freund in Deutschland und einen weiteren Kumpel in den Niederlanden zu besuchen.",
-      "Während seines Aufenthalts bei der Familie in Deutschland traf Alex Madeline – und es wurde schnell klar, dass zwischen ihnen etwas Besonderes war. Nach seiner Abreise hielten sie den Kontakt und tauschten ständig Sprachnachrichten aus, während Alex als Bodencrew-Mitglied bei einer Sprühflugzeugfirma in Saskatchewan arbeitete. Die frühen Morgenstunden gaben ihnen mehr Zeit zu sprechen, bevor die Zeitverschiebung sie jeden Tag auseinanderzog.",
-      "Als ihre Verbindung immer tiefer wurde, buchte Alex eine Rückkehrreise nach Deutschland – diesmal nur, um Madeline zu sehen. Sie verbrachten drei unvergessliche Wochen mit einer Roadtrip-Reise durch Österreich und bestanden den ultimativen Beziehungstest: nonstop miteinander zu reisen. Sie waren nicht nur nicht genervt voneinander, sondern entschieden sich am Ende der Reise, eine Fernbeziehung wirklich zu versuchen (auch wenn Alex anfangs sagte: “Lass uns das nicht einordnen” – klassischer Zug).",
-      "Nach einem weiteren schweren Abschied kehrte Alex nach Kanada zurück und sprang wieder in die Ölbohrarbeit, um schnell Geld zu sparen. Dann wagte Madeline einen mutigen Schritt – sie besuchte ihn im Februar – in Saskatchewan – wo die Temperaturen regelmäßig unter -40°C fallen. Sie blieb mit ihm durch die eisige Kälte und die langen Arbeitstage auf der Ölbohrinsel, einfach froh, zusammen zu sein. Da wusste Alex, dass sie es wirklich ernst meinte.",
-      "Ihr Rückflug wurde wegen COVID gestrichen, und obwohl ein Teil von Alex hoffte, dass sie länger bleiben würde, wussten sie beide, dass sie zurück musste. Diese gemeinsame Zeit festigte ihre Pläne: Alex würde nach Deutschland ziehen, und sie würden zusammen ein Leben aufbauen. Das war 2020, und seitdem haben sie nie zurückgeschaut – trotz der Herausforderungen, sich an ein neues Land, eine neue Kultur und Sprache anzupassen.",
-      "Nach all den Jahren der Distanz, der schweren Abschiede und herzlichen Wiedersehen sind Alex und Madeline überglücklich, endlich „Ja“ zu sagen und das nächste Kapitel zu beginnen – zusammen, für immer."
-    ],
-    "quote": "Wahre Liebe ist wie Wildblumen... Sie wird oft an den unwahrscheinlichsten Orten gefunden."
+      "title": "Unsere Geschichte",
+      "story": [
+          "2019, während einer Reise durch Neuseeland, arbeitete Alex in den Weinbergen, wo er einen freundlichen Deutschen traf – Spoiler: Madelines Bruder. Die beiden verstanden sich sofort, und die Einladung wurde ganz beiläufig ausgesprochen: Falls Alex jemals in Deutschland wäre, sollte er vorbeikommen. Auf dem Rückweg nach Kanada machte Alex einen spontanen Umweg nach Europa, um seinen neuen Freund in Deutschland und einen weiteren Kumpel in den Niederlanden zu besuchen.",
+          "Während seines Aufenthalts bei der Familie in Deutschland traf Alex Madeline – und es wurde schnell klar, dass zwischen ihnen etwas Besonderes war. Nach seiner Abreise hielten sie den Kontakt und tauschten ständig Sprachnachrichten aus, während Alex als Bodencrew-Mitglied bei einer Sprühflugzeugfirma in Saskatchewan arbeitete. Die frühen Morgenstunden gaben ihnen mehr Zeit zu sprechen, bevor die Zeitverschiebung sie jeden Tag auseinanderzog.",
+          "Als ihre Verbindung immer tiefer wurde, buchte Alex eine Rückkehrreise nach Deutschland – diesmal nur, um Madeline zu sehen. Sie verbrachten drei unvergessliche Wochen mit einer Roadtrip-Reise durch Österreich und bestanden den ultimativen Beziehungstest: nonstop miteinander zu reisen. Sie waren nicht nur nicht genervt voneinander, sondern entschieden sich am Ende der Reise, eine Fernbeziehung wirklich zu versuchen (auch wenn Alex anfangs sagte: “Lass uns das nicht einordnen” – klassischer Zug).",
+          "Nach einem weiteren schweren Abschied kehrte Alex nach Kanada zurück und sprang wieder in die Ölbohrarbeit, um schnell Geld zu sparen. Dann wagte Madeline einen mutigen Schritt – sie besuchte ihn im Februar – in Saskatchewan – wo die Temperaturen regelmäßig unter -40°C fallen. Sie blieb mit ihm durch die eisige Kälte und die langen Arbeitstage auf der Ölbohrinsel, einfach froh, zusammen zu sein. Da wusste Alex, dass sie es wirklich ernst meinte.",
+          "Ihr Rückflug wurde wegen COVID gestrichen, und obwohl ein Teil von Alex hoffte, dass sie länger bleiben würde, wussten sie beide, dass sie zurück musste. Diese gemeinsame Zeit festigte ihre Pläne: Alex würde nach Deutschland ziehen, und sie würden zusammen ein Leben aufbauen. Das war 2020, und seitdem haben sie nie zurückgeschaut – trotz der Herausforderungen, sich an ein neues Land, eine neue Kultur und Sprache anzupassen.",
+          "Nach all den Jahren der Distanz, der schweren Abschiede und herzlichen Wiedersehen sind Alex und Madeline überglücklich, endlich „Ja“ zu sagen und das nächste Kapitel zu beginnen – zusammen, für immer."
+      ],
+      "quote": "Wahre Liebe ist wie Wildblumen... Sie wird oft an den unwahrscheinlichsten Orten gefunden."
   },
   "weddingDetails": {
-    "title": "Hochzeitsdetails",
-    "reception": {
-      "title": "Empfang",
-      "date": "Samstag, 6. Juni 2026",
-      "time": "13:00 Uhr – 6:00 Uhr :)",
-      "location": {
-        "title": "Freizeithaus – Neuwirth",
-        "addressLine1": "(Am) Appenhaus 1",
-        "addressLine2": "73527 Schw. Gmünd - Herlikofen"
-      },
-      "description": "Feiert mit uns bei Abendessen, Tanz und Festlichkeiten im Zelt in der Nähe des Trauungsortes. Den Gästen steht der umliegende Bereich für Spiele im Freien und zum geselligen Beisammensein zur Verfügung. Die Cocktailstunde beginnt unmittelbar nach der Zeremonie. Weitere Informationen zum Veranstaltungsort finden Sie unter"
-    },
-    "accommodations": {
-      "title": "Unterkünfte",
-      "cards": {
-        "paulushaus": {
-          "header": "Paulushaus Neuwirth – Unterkunft am Veranstaltungsort",
-          "website": "https://paulushaus-neuwirth.de/",
-          "description": "Gruppenhaus, ideal für größere Selbstversorgergruppen. Küche, Außenbereich mit Sport-/Spielplatz, grundlegende Ausstattung. Kein Restaurant. ~0 km zum Veranstaltungsort; ~4 km ins Stadtzentrum. Kostenlose Parkplätze.",
-          "info": "Der Veranstaltungsort liegt 4 km außerhalb der Stadt, daher wird ein Transportmittel benötigt, um dorthin und zurück zu gelangen. Taxis sind verfügbar, falls Sie kein Auto gemietet haben. Es gibt auch eine nahegelegene Bushaltestelle in Gehweite, falls Sie öffentliche Verkehrsmittel bevorzugen."
-        },
-        "hotelRemspark": {
-          "header": "Hotel am Remspark",
-          "website": "https://hotelamremspark.de/",
-          "description": "Modernes 4-Sterne-Hotel nahe dem Stadtzentrum. Fitnessbereich, Dachrestaurant/-bar, Frühstücksbuffet. ~7–8 km zum Veranstaltungsort. Kostenpflichtige Parkplätze vor Ort. Fahrradverleih gegen Gebühr und WLAN."
-        },
-        "hotelSchwaebischGmuend": {
-          "header": "Hotel Schwäbisch Gmünd",
-          "website": "https://hotel-schwaebisch-gmuend.de/",
-          "description": "Komfortables 4-Sterne-Hotel mit Wellnessbereich (Pool, Sauna, Fitness), Frühstücksbuffet und regionaler Küche. ~6–7 km zum Veranstaltungsort. Tiefgaragenparkplätze (~10 €/Tag). Direkt am Bahnhof."
-        },
-        "schoenblick": {
-          "header": "Hotel Schönblick",
-          "website": "https://www.schoenblick.de/de/hotel",
-          "description": "Ruhiges Gästehaus in Waldnähe. Frühstück inklusive, grundlegende Ausstattung, Parkanlage und kostenlose Parkplätze. ~1–2 km zum Veranstaltungsort; ~2,5 km ins Stadtzentrum."
-        },
-        "mutlangerHof": {
-          "header": "Hotel Mutlanger Hof",
-          "website": "https://www.mutlangerhof.de/",
-          "description": "Einfache und ruhige Pension in Mutlangen. Kostenloses WLAN, kontinentales Frühstück und Fahrradverleih. ~5 km zum Veranstaltungsort; ~3,5 km ins Stadtzentrum. Kostenlose Parkplätze vor Ort."
-        }
-      },
-      "visitMessage": "Website besuchen"
-    },
-    "transportation": {
-      "title": "Transport",
-      "description": "Die nächstgelegenen Großstädte mit internationalen Flughäfen zum Veranstaltungsort sind Stuttgart, Frankfurt und München. Der Flughafen Stuttgart (STR) ist näher und bequemer, aber auch der Flughafen Frankfurt (FRA) und der Flughafen München (MUC) sind gute Optionen mit mehr internationalen Flugverbindungen.",
-      "notice1": "Von jedem dieser Flughäfen aus haben Sie drei Hauptmöglichkeiten, um in die Region zu gelangen:",
-      "options": {
-        "train": {
-          "title": "Zug",
-          "description": "Alle drei Flughäfen verfügen über Zugverbindungen nach Schwäbisch Gmünd, der nächstgelegenen Stadt zum Veranstaltungsort. Je nach Route ist möglicherweise ein Umstieg erforderlich, typischerweise in Stuttgart oder Göppingen."
-        },
-        "carRental": {
-          "title": "Mietwagen",
-          "description": "Ein Mietwagen ist eine bequeme Option und bietet Flexibilität, insbesondere wenn Sie auf dem Land übernachten oder die Region erkunden möchten. Autobahnen verbinden alle drei Flughäfen mit Schwäbisch Gmünd (ca. 45 Minuten von Stuttgart, 2,5 Stunden von Frankfurt und 2,5 Stunden von München)."
-        }
-      },
-      "venueDetails": {
-        "description": "Nach Ihrer Ankunft in Schwäbisch Gmünd befindet sich der Veranstaltungsort in einer nahegelegenen ländlichen Gegend, etwa 4 km außerhalb der Stadt.",
-        "notice1": "Von Schwäbisch Gmünd aus können Sie den Veranstaltungsort und die umliegenden Gebiete auf verschiedene Weise erreichen:",
-        "transportOptions": {
-          "bus": {
-            "title": "Bus",
-            "description": "Der lokale Bus 72 hält in der Nähe des Veranstaltungsortes. Die Haltestelle heißt Lindach, Paulushaus. *Bitte informieren Sie den Busfahrer, wo Sie aussteigen möchten, damit er sicherstellen kann, dass Sie an der richtigen Stelle aussteigen."
+      "title": "Hochzeitsdetails",
+      "reception": {
+          "title": "Empfang",
+          "date": "Samstag, 6. Juni 2026",
+          "time": "13:00 Uhr – 6:00 Uhr :)",
+          "location": {
+              "title": "Freizeithaus – Neuwirth",
+              "addressLine1": "(Am) Appenhaus 1",
+              "addressLine2": "73527 Schw. Gmünd - Herlikofen"
           },
-          "taxi": {
-            "title": "Taxi",
-            "description": "Taxis sind am Bahnhof und in der Stadt verfügbar. Sie können folgende Taxiunternehmen kontaktieren:",
-            "taxiServices": {
-              "taxiSchwaebischGmuend": "Taxi Schwäbisch Gmünd: BITTE EINFÜGEN",
-              "taxiGmuend": "Taxi Gmünd: BITTE EINFÜGEN"
-            }
+          "description": "Feiert mit uns bei Abendessen, Tanz und Festlichkeiten im Zelt in der Nähe des Trauungsortes. Den Gästen steht der umliegende Bereich für Spiele im Freien und zum geselligen Beisammensein zur Verfügung. Die Cocktailstunde beginnt unmittelbar nach der Zeremonie. Weitere Informationen zum Veranstaltungsort finden Sie unter"
+      },
+      "accommodations": {
+          "title": "Unterkünfte",
+          "cards": {
+              "paulushaus": {
+                  "header": "Paulushaus Neuwirth – Unterkunft am Veranstaltungsort",
+                  "website": "https://paulushaus-neuwirth.de/",
+                  "description": "Gruppenhaus, ideal für größere Selbstversorgergruppen. Küche, Außenbereich mit Sport-/Spielplatz, grundlegende Ausstattung. Kein Restaurant. ~0 km zum Veranstaltungsort; ~4 km ins Stadtzentrum. Kostenlose Parkplätze.",
+                  "info": "Der Veranstaltungsort liegt 4 km außerhalb der Stadt, daher wird ein Transportmittel benötigt, um dorthin und zurück zu gelangen. Taxis sind verfügbar, falls Sie kein Auto gemietet haben. Es gibt auch eine nahegelegene Bushaltestelle in Gehweite, falls Sie öffentliche Verkehrsmittel bevorzugen."
+              },
+              "hotelRemspark": {
+                  "header": "Hotel am Remspark",
+                  "website": "https://hotelamremspark.de/",
+                  "description": "Modernes 4-Sterne-Hotel nahe dem Stadtzentrum. Fitnessbereich, Dachrestaurant/-bar, Frühstücksbuffet. ~7–8 km zum Veranstaltungsort. Kostenpflichtige Parkplätze vor Ort. Fahrradverleih gegen Gebühr und WLAN."
+              },
+              "hotelSchwaebischGmuend": {
+                  "header": "Hotel Schwäbisch Gmünd",
+                  "website": "https://hotel-schwaebisch-gmuend.de/",
+                  "description": "Komfortables 4-Sterne-Hotel mit Wellnessbereich (Pool, Sauna, Fitness), Frühstücksbuffet und regionaler Küche. ~6–7 km zum Veranstaltungsort. Tiefgaragenparkplätze (~10 €/Tag). Direkt am Bahnhof."
+              },
+              "schoenblick": {
+                  "header": "Hotel Schönblick",
+                  "website": "https://www.schoenblick.de/de/hotel",
+                  "description": "Ruhiges Gästehaus in Waldnähe. Frühstück inklusive, grundlegende Ausstattung, Parkanlage und kostenlose Parkplätze. ~1–2 km zum Veranstaltungsort; ~2,5 km ins Stadtzentrum."
+              },
+              "mutlangerHof": {
+                  "header": "Hotel Mutlanger Hof",
+                  "website": "https://www.mutlangerhof.de/",
+                  "description": "Einfache und ruhige Pension in Mutlangen. Kostenloses WLAN, kontinentales Frühstück und Fahrradverleih. ~5 km zum Veranstaltungsort; ~3,5 km ins Stadtzentrum. Kostenlose Parkplätze vor Ort."
+              }
           },
-          "car": {
-            "title": "Auto",
-            "description": "Wenn Sie außerhalb der Stadt übernachten oder einen Mietwagen haben, ist das Fahren die flexibelste Option. Parkplätze sind am Veranstaltungsort und bei den meisten Unterkünften verfügbar."
+          "visitMessage": "Website besuchen"
+      },
+      "transportation": {
+          "title": "Transport",
+          "description": "Die nächstgelegenen Großstädte mit internationalen Flughäfen zum Veranstaltungsort sind Stuttgart, Frankfurt und München. Der Flughafen Stuttgart (STR) ist näher und bequemer, aber auch der Flughafen Frankfurt (FRA) und der Flughafen München (MUC) sind gute Optionen mit mehr internationalen Flugverbindungen.",
+          "notice1": "Von jedem dieser Flughäfen aus haben Sie drei Hauptmöglichkeiten, um in die Region zu gelangen:",
+          "options": {
+              "train": {
+                  "title": "Zug",
+                  "description": "Alle drei Flughäfen verfügen über Zugverbindungen nach Schwäbisch Gmünd, der nächstgelegenen Stadt zum Veranstaltungsort. Je nach Route ist möglicherweise ein Umstieg erforderlich, typischerweise in Stuttgart oder Göppingen."
+              },
+              "carRental": {
+                  "title": "Mietwagen",
+                  "description": "Ein Mietwagen ist eine bequeme Option und bietet Flexibilität, insbesondere wenn Sie auf dem Land übernachten oder die Region erkunden möchten. Autobahnen verbinden alle drei Flughäfen mit Schwäbisch Gmünd (ca. 45 Minuten von Stuttgart, 2,5 Stunden von Frankfurt und 2,5 Stunden von München)."
+              }
+          },
+          "venueDetails": {
+              "description": "Nach Ihrer Ankunft in Schwäbisch Gmünd befindet sich der Veranstaltungsort in einer nahegelegenen ländlichen Gegend, etwa 4 km außerhalb der Stadt.",
+              "notice1": "Von Schwäbisch Gmünd aus können Sie den Veranstaltungsort und die umliegenden Gebiete auf verschiedene Weise erreichen:",
+              "transportOptions": {
+                  "bus": {
+                      "title": "Bus",
+                      "description": "Der lokale Bus 72 hält in der Nähe des Veranstaltungsortes. Die Haltestelle heißt Lindach, Paulushaus. *Bitte informieren Sie den Busfahrer, wo Sie aussteigen möchten, damit er sicherstellen kann, dass Sie an der richtigen Stelle aussteigen."
+                  },
+                  "taxi": {
+                      "title": "Taxi",
+                      "description": "Taxis sind am Bahnhof und in der Stadt verfügbar. Sie können folgende Taxiunternehmen kontaktieren:",
+                      "taxiServices": {
+                          "taxiSchwaebischGmuend": "Taxi Schwäbisch Gmünd: BITTE EINFÜGEN",
+                          "taxiGmuend": "Taxi Gmünd: BITTE EINFÜGEN"
+                      }
+                  },
+                  "car": {
+                      "title": "Auto",
+                      "description": "Wenn Sie außerhalb der Stadt übernachten oder einen Mietwagen haben, ist das Fahren die flexibelste Option. Parkplätze sind am Veranstaltungsort und bei den meisten Unterkünften verfügbar."
+                  }
+              },
+              "planningReminder": "Bitte planen Sie entsprechend, je nachdem, an welchem Flughafen Sie ankommen und ob Sie öffentliche Verkehrsmittel oder einen Mietwagen nutzen. Wir helfen Ihnen gerne bei der Koordination, falls Sie unsicher sind!"
           }
-        },
-        "planningReminder": "Bitte planen Sie entsprechend, je nachdem, an welchem Flughafen Sie ankommen und ob Sie öffentliche Verkehrsmittel oder einen Mietwagen nutzen. Wir helfen Ihnen gerne bei der Koordination, falls Sie unsicher sind!"
       }
-    }
   },
   "schedule": {
-    "title": "Zeitplan des Hochzeitstages",
-    "items": [
-      {
-        "title": "Ankunft der Gäste",
-        "time": "13:30 Uhr",
-        "description": "Bitte kommen Sie frühzeitig, um sich vor der Zeremonie zu setzen."
+      "title": "Zeitplan des Hochzeitstages",
+      "items": [
+          {
+              "title": "Ankunft der Gäste",
+              "time": "13:30 Uhr",
+              "description": "Bitte kommen Sie frühzeitig, um sich vor der Zeremonie zu setzen."
+          },
+          {
+              "title": "Zeremonie",
+              "time": "14:00 Uhr",
+              "description": "Austausch der Gelübde im Wildblumengarten."
+          },
+          {
+              "title": "Cocktailstunde",
+              "time": "15:00 - 16:00 Uhr",
+              "description": "Genießen Sie Getränke und Häppchen auf der Gartenterrasse."
+          },
+          {
+              "title": "Empfangsabendessen",
+              "time": "16:00 - 18:00 Uhr",
+              "description": "Farm-to-Table Abendessen im Wildflower Barn."
+          },
+          {
+              "title": "Trinksprüche & Hochzeitstorte schneiden",
+              "time": "18:00 - 18:30 Uhr",
+              "description": "Reden von Familie und Freunden, gefolgt vom Anschneiden der Hochzeitstorte."
+          },
+          {
+              "title": "Tanzen",
+              "time": "18:30 - 22:00 Uhr",
+              "description": "Tanzen Sie die Nacht unter funkelnden Lichtern."
+          }
+      ]
+  },
+  "rsvp": {
+      "title": "RSVP",
+      "description": "Bitte teilen Sie uns mit, ob Sie an unserem besonderen Tag teilnehmen werden.",
+      "deadline": "Bitte antworten Sie bis zum 15. Juli 2023",
+      "form": {
+          "name": {
+              "label": "Vollständiger Name",
+              "placeholder": "Geben Sie Ihren vollständigen Namen ein",
+              "required": "Der vollständige Name ist erforderlich"
+          },
+          "email": {
+              "label": "E-Mail",
+              "placeholder": "Geben Sie Ihre E-Mail ein",
+              "required": "E-Mail ist erforderlich.",
+              "invalid": "Ungültige E-Mail-Adresse",
+              "error": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+          },
+          "attending": {
+              "label": "Werden Sie teilnehmen?",
+              "yes": "Freudig zusagen",
+              "no": "Bedauerlicherweise ablehnen"
+          },
+          "guests": {
+              "label": "Anzahl der Gäste (einschließlich sich selbst)"
+          },
+          "additionalGuests": {
+              "header": "Zusätzliche Gästennamen",
+              "placeholder": "Gast {index} Vor- und Nachname",
+              "edit": "Bearbeiten",
+              "save": "Speichern"
+          },
+          "message": {
+              "label": "Nachricht für das Paar",
+              "hint": "Optional",
+              "placeholder": "Teilen Sie Ihre guten Wünsche oder eine Erinnerung"
+          },
+          "submit": "RSVP absenden"
       },
-      {
-        "title": "Zeremonie",
-        "time": "14:00 Uhr",
-        "description": "Austausch der Gelübde im Wildblumengarten."
-      },
-      {
-        "title": "Cocktailstunde",
-        "time": "15:00 - 16:00 Uhr",
-        "description": "Genießen Sie Getränke und Häppchen auf der Gartenterrasse."
-      },
-      {
-        "title": "Empfangsabendessen",
-        "time": "16:00 - 18:00 Uhr",
-        "description": "Farm-to-Table Abendessen im Wildflower Barn."
-      },
-      {
-        "title": "Trinksprüche & Hochzeitstorte schneiden",
-        "time": "18:00 - 18:30 Uhr",
-        "description": "Reden von Familie und Freunden, gefolgt vom Anschneiden der Hochzeitstorte."
-      },
-      {
-        "title": "Tanzen",
-        "time": "18:30 - 22:00 Uhr",
-        "description": "Tanzen Sie die Nacht unter funkelnden Lichtern."
+      "toast": {
+          "emptyGuestName": {
+              "title": "Gastname ist leer",
+              "description": "Bitte geben Sie einen Namen ein, bevor Sie speichern."
+          },
+          "duplicateMainName": {
+              "title": "Doppelt gemeldeter Name",
+              "description": "Dieser Name wurde bereits oben im Feld Vollständiger Name eingetragen. Nur zusätzliche Gäste Ihrer Gruppe müssen hier eingetragen werden."
+          },
+          "duplicateGuest": {
+              "title": "Doppelt gemeldeter Gastname",
+              "description": "Dieser Gastname wird bereits von einem anderen Gast verwendet."
+          },
+          "invalidInput": {
+              "title": "Ungültige Eingabe"
+          },
+          "mainNameDuplicate": {
+              "title": "Doppelt gemeldeter Name",
+              "description": "Der Name im Feld Vollständiger Name darf nicht mit einem der zusätzlichen Gästennamen übereinstimmen."
+          },
+          "duplicateGuests": {
+              "title": "Doppelt gemeldeter Gastname",
+              "description": "Es gibt doppelte zusätzliche Gästennamen. Bitte stellen Sie sicher, dass jeder Gast einen einzigartigen Namen hat."
+          },
+          "success": {
+              "title": "RSVP abgesendet",
+              "description": "Vielen Dank für Ihre Antwort!"
+          }
       }
-    ]
   }
-  
 }

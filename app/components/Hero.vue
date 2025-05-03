@@ -5,14 +5,14 @@
   >
 
     <!-- Overlay -->
-    <div class="absolute inset-0 bg-opacity-30 z-2 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-opacity-30 z-2 pointer-events-none"/>
 
     <!-- Content -->
     <div class="relative z-20 text-center px-4">
       <h1 class="italic text-4xl md:text-6xl mb-2">
         {{ $t('hero.names') }}
       </h1>
-      <div class="w-24 h-1 bg-white mx-auto my-6"></div>
+      <div class="w-24 h-1 bg-white mx-auto my-6"/>
       <p class="text-xl md:text-2xl mb-6">{{ $t('hero.marrying') }}</p>
       <p class="font-light text-2xl md:text-3xl">{{ $t('hero.date') }}</p>
       <div class="mt-12">

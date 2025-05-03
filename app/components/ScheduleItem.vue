@@ -13,12 +13,12 @@
       </div>
   
       <!-- Dot -->
-      <div class="hidden md:block absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-green-100 border-2"></div>
+      <div class="hidden md:block absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-green-100 border-2"/>
   
       <!-- Right content -->
       <div class="md:w-1/2 md:pl-12" :class="isEven ? 'md:order-1' : ''">
         <div class="md:hidden mb-2">
-          <div class="w-6 h-6 rounded-full bg--100 border-4 border--400"></div>
+          <div class="w-6 h-6 rounded-full bg--100 border-4 border--400"/>
         </div>
       </div>
     </div>

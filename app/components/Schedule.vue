@@ -8,7 +8,7 @@
 
       <div class="relative">
         <!-- Timeline line -->
-        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-green-700 -ml-0.5"></div>
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-green-700 -ml-0.5"/>
 
         <!-- Timeline items -->
         <div class="space-y-12">
