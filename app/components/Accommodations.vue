@@ -17,7 +17,7 @@
         class="w-full items-stretch"
       >
         <div class="flex flex-col h-full">
-          <div class="flex flex-col h-full bg-white rounded-lg shadow overflow-hidden min-h-[450px]">
+          <div class="flex flex-col h-full bg-white rounded-lg shadow overflow-hidden min-h-[500px]">
             <!-- Image -->
             <NuxtImg
               :src="`/accommodations/${rt(item.img)}`"
