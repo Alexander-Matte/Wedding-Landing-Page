@@ -4,14 +4,17 @@
       <h2 class="text-3xl md:text-4xl text-center italic mb-12">
         {{ $t('our_story.title') }}
       </h2>
-      <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="grid">
         <!-- Image -->
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80"
-            alt="Madeline and Alexander"
-            class="rounded-lg shadow-lg w-full h-auto"
-          >
+        <div class="flex">
+          <NuxtImg
+            src="stock-image-rings.jpeg"
+            alt="Accommodation image"
+            class="flex flex-1 rounded-lg shadow-lg text-center justify-center"
+            width="900"
+            height="400"
+          />
+
         </div>
       </div>
       <!-- Story Text -->
@@ -33,7 +36,6 @@
 
 <script setup>
 const { tm, rt } = useI18n();
-// Your page-specific logic here (if needed)
 </script>
 
 <style scoped>
