@@ -5,16 +5,6 @@
     <!-- Dot timeline and connecting line (Desktop only) -->
     <div class="hidden md:block absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-green-100 border-2 border-green-500 z-10" />
 
-    <!-- Down arrow (Mobile only) -->
-    <div class="md:hidden flex justify-center mb-4">
-      <img
-          src="/wildflowers1.jpeg"
-          alt="Scroll down indicator"
-          class=""
-        />
-    </div>
-
-
     <!-- Left content -->
     <div
       class="md:w-1/2 mb-4 md:mb-0 px-4"
@@ -32,6 +22,15 @@
       <!-- Optional extra content on right if needed -->
     </div>
   </div>
+
+  <!-- Down arrow (Mobile only) -->
+  <div class="md:hidden flex justify-center mb-4">
+  <img
+      src="/wildflowers1.jpeg"
+      alt="Scroll down indicator"
+      class=""
+    />
+</div>
 </template>
 
 <script setup lang="ts">
