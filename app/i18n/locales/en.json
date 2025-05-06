@@ -114,39 +114,37 @@
       }
   },
   "schedule": {
-      "title": "Wedding Day Schedule",
-      "items": [
-          {
-              "title": "Guest Arrival",
-              "time": "1:30 PM",
-              "description": "Please arrive early to be seated before the ceremony."
-          },
-          {
-              "title": "Ceremony",
-              "time": "2:00 PM",
-              "description": "Exchange of vows in the wildflower garden."
-          },
-          {
-              "title": "Cocktail Hour",
-              "time": "3:00 – 4:00 PM",
-              "description": "Enjoy drinks and appetizers on the garden terrace."
-          },
-          {
-              "title": "Reception Dinner",
-              "time": "4:00 – 6:00 PM",
-              "description": "Farm-to-table dinner at the Wildflower Barn."
-          },
-          {
-              "title": "Toasts & Cake Cutting",
-              "time": "6:00 – 6:30 PM",
-              "description": "Speeches from family and friends, followed by the cake cutting."
-          },
-          {
-              "title": "Dancing",
-              "time": "6:30 – 10:00 PM",
-              "description": "Dance the night away under twinkling lights."
-          }
-      ]
+    "title": "Wedding Day Schedule",
+    "item1": {
+      "title": "Guest Arrival",
+      "time": "1:30 PM",
+      "description": "Please arrive early to be seated before the ceremony."
+    },
+    "item2": {
+      "title": "Ceremony",
+      "time": "2:00 PM",
+      "description": "Exchange of vows in the wildflower garden."
+    },
+    "item3": {
+      "title": "Cocktail Hour",
+      "time": "3:00 – 4:00 PM",
+      "description": "Enjoy drinks and appetizers on the garden terrace."
+    },
+    "item4": {
+      "title": "Reception Dinner",
+      "time": "4:00 – 6:00 PM",
+      "description": "Farm-to-table dinner at the Wildflower Barn."
+    },
+    "item5": {
+      "title": "Toasts & Cake Cutting",
+      "time": "6:00 – 6:30 PM",
+      "description": "Speeches from family and friends, followed by the cake cutting."
+    },
+    "item6": {
+      "title": "Dancing",
+      "time": "6:30 – 10:00 PM",
+      "description": "Dance the night away under twinkling lights."
+    }
   },
   "rsvp": {
       "title": "RSVP",

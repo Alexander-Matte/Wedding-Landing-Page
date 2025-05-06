@@ -19,11 +19,12 @@
         <div class="flex flex-col h-full">
           <div class="flex flex-col h-full bg-white rounded-lg shadow overflow-hidden min-h-[500px]">
             <!-- Image -->
-            <NuxtImg
-              :src="`/accommodations/${rt(item.img)}`"
+            <img
+              :src="`/img/accommodations/${rt(item.img)}`"
               alt="Accommodation image"
               class="w-full h-48 object-cover"
             />
+
 
             <!-- Content -->
             <div class="p-4 flex flex-col flex-grow">

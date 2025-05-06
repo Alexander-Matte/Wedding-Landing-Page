@@ -115,38 +115,36 @@
   },
   "schedule": {
     "title": "Zeitplan des Hochzeitstages",
-    "items": [
-      {
-        "title": "Ankunft der Gäste",
-        "time": "13:30 Uhr",
-        "description": "Bitte kommen Sie frühzeitig, um sich vor der Zeremonie zu setzen."
-      },
-      {
-        "title": "Zeremonie",
-        "time": "14:00 Uhr",
-        "description": "Austausch der Gelübde im Wildblumengarten."
-      },
-      {
-        "title": "Cocktailstunde",
-        "time": "15:00 - 16:00 Uhr",
-        "description": "Genießen Sie Getränke und Häppchen auf der Gartenterrasse."
-      },
-      {
-        "title": "Empfangsabendessen",
-        "time": "16:00 - 18:00 Uhr",
-        "description": "Farm-to-Table Abendessen im Wildflower Barn."
-      },
-      {
-        "title": "Trinksprüche & Hochzeitstorte schneiden",
-        "time": "18:00 - 18:30 Uhr",
-        "description": "Reden von Familie und Freunden, gefolgt vom Anschneiden der Hochzeitstorte."
-      },
-      {
-        "title": "Tanzen",
-        "time": "18:30 - 22:00 Uhr",
-        "description": "Tanzen Sie die Nacht unter funkelnden Lichtern."
-      }
-    ]
+    "item1": {
+      "title": "Ankunft der Gäste",
+      "time": "13:30 Uhr",
+      "description": "Bitte kommen Sie frühzeitig, um sich vor der Zeremonie zu setzen."
+    },
+    "item2": {
+      "title": "Zeremonie",
+      "time": "14:00 Uhr",
+      "description": "Austausch der Gelübde im Wildblumengarten."
+    },
+    "item3": {
+      "title": "Cocktailstunde",
+      "time": "15:00 - 16:00 Uhr",
+      "description": "Genießen Sie Getränke und Häppchen auf der Gartenterrasse."
+    },
+    "item4": {
+      "title": "Empfangsabendessen",
+      "time": "16:00 - 18:00 Uhr",
+      "description": "Farm-to-Table Abendessen im Wildflower Barn."
+    },
+    "item5": {
+      "title": "Trinksprüche & Hochzeitstorte schneiden",
+      "time": "18:00 - 18:30 Uhr",
+      "description": "Reden von Familie und Freunden, gefolgt vom Anschneiden der Hochzeitstorte."
+    },
+    "item6": {
+      "title": "Tanzen",
+      "time": "18:30 - 22:00 Uhr",
+      "description": "Tanzen Sie die Nacht unter funkelnden Lichtern."
+    }
   },
   "rsvp": {
     "title": "RSVP",
