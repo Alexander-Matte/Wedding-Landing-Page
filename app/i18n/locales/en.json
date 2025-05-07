@@ -92,10 +92,6 @@
               "description": "Once you arrive in Schwäbisch Gmünd, the venue is located in a nearby rural area about 4 km outside the city.",
               "notice1": "From Schwäbisch Gmünd, you can reach the venue and surrounding areas in a few ways:",
               "transportOptions": {
-                  "bus": {
-                      "title": "Bus",
-                      "description": "Local bus 72 stops near the venue. The stop is called Lindach, Paulushaus. *Please inform the driver where you need to get off to ensure you exit at the correct location."
-                  },
                   "taxi": {
                       "title": "Taxi",
                       "description": "Taxis are available at the train station and in the city. You can contact the following taxi companies:",

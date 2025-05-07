@@ -68,7 +68,6 @@
           </p>
 
           <ul class="list-disc list-inside">
-            <li><strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.bus.title') }}: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.bus.description') }}</li>
             <li><strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.taxi.title') }}: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.taxi.description') }}
               <ul class="list-inside list-disc">
                 <li><strong>Taxi Schwäbisch Gmünd: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.taxi.taxiServices.taxiSchwaebischGmuend') }}</li>

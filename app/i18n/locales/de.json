@@ -77,7 +77,7 @@
     "transportation": {
       "title": "Transport",
       "description": "Die nächstgelegenen Großstädte mit internationalen Flughäfen zum Veranstaltungsort sind Stuttgart, Frankfurt und München. Der Flughafen Stuttgart (STR) ist näher und bequemer, aber auch der Flughafen Frankfurt (FRA) und der Flughafen München (MUC) sind gute Optionen mit mehr internationalen Flugverbindungen.",
-      "notice1": "Von jedem dieser Flughäfen aus haben Sie drei Hauptmöglichkeiten, um in die Region zu gelangen:",
+      "notice1": "Von jedem dieser Flughäfen aus haben Sie zwei Hauptmöglichkeiten, um in die Region zu gelangen:",
       "options": {
         "train": {
           "title": "Zug",
@@ -92,10 +92,6 @@
         "description": "Nach Ihrer Ankunft in Schwäbisch Gmünd befindet sich der Veranstaltungsort in einer nahegelegenen ländlichen Gegend, etwa 4 km außerhalb der Stadt.",
         "notice1": "Von Schwäbisch Gmünd aus können Sie den Veranstaltungsort und die umliegenden Gebiete auf verschiedene Weise erreichen:",
         "transportOptions": {
-          "bus": {
-            "title": "Bus",
-            "description": "Der lokale Bus 72 hält in der Nähe des Veranstaltungsortes. Die Haltestelle heißt Lindach, Paulushaus. *Bitte informieren Sie den Busfahrer, wo Sie aussteigen möchten, damit er sicherstellen kann, dass Sie an der richtigen Stelle aussteigen."
-          },
           "taxi": {
             "title": "Taxi",
             "description": "Taxis sind am Bahnhof und in der Stadt verfügbar. Sie können folgende Taxiunternehmen kontaktieren:",
