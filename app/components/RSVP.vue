@@ -247,7 +247,6 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
       message: event.data.message,
       guests: additionalGuests.value
     }
-    console.log('Form payload', payload)
   }
 
   toast.add({ 
