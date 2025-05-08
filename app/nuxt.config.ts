@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/i18n',
     '@nuxt/eslint',
+    '@nuxtjs/supabase'
   ],
   css: ['~/assets/css/main.css'],
   router: {
@@ -45,6 +46,16 @@ export default defineNuxtConfig({
   },
   image: {
     dir: 'assets/img'
+  },
+  supabase: {
+    redirect: false,
+    redirectOptions: {
+      login: '/login',
+      callback: '/confirm',
+      include: undefined,
+      exclude: ['/*'],
+      saveRedirectToCookie: false,
+    }  
   }
   
 })
