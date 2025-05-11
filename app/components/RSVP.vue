@@ -78,7 +78,21 @@
               />
             </UFormField>
 
-            <UButton type="submit" color="primary" class="w-full">{{ $t('rsvp.form.submit') }}</UButton>
+            <UFormField>
+              <NuxtTurnstile
+                :options="{ theme: 'light', language: locale }"
+                v-model="turnstileToken"
+              />
+
+            </UFormField>
+
+            <UButton 
+              type="submit" 
+              color="primary" 
+              class="w-full cursor-pointer"
+              :loading="loading">
+              {{ $t('rsvp.form.submit') }}
+            </UButton>
           </UForm>
         </div>
       </div>
@@ -92,8 +106,15 @@ import { ref, reactive, watch } from 'vue'
 import { z } from 'zod'
 import { useI18n } from 'vue-i18n'
 import type { FormSubmitEvent } from '@nuxt/ui'
-
+const { locale } = useI18n()
 const { t } = useI18n()
+const supabase = useNuxtApp().$supabase
+
+const turnstileKey = ref(0)
+const turnstileToken = ref('')
+const turnstile = ref()
+const loading = ref(false)
+
 
 const schema = z.object({
   name: z.string().min(1, t('rsvp.form.name.required')),
@@ -154,6 +175,7 @@ watch(() => state.guests, (newVal) => {
     additionalGuests.value.splice(count)
   }
 })
+
 
 const validateGuestName = (index: number) => {
   const guest = additionalGuests.value[index]
@@ -229,32 +251,87 @@ const checkAdditionalGuests = (): boolean => {
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
   event.preventDefault()
   formSubmitted.value = true
+  loading.value = true
   checkEmail()
 
-  if (emailError.value) {
-    toast.add({ title: 'Invalid Input', description: emailError.value, color: 'error' })
+  if (!turnstileToken.value) {
+    toast.add({ 
+      title: t('rsvp.toast.captcha.error'), 
+      color: 'error' 
+    })
+    loading.value = false
     return
   }
 
-  const mainName = event.data.name.trim()
+  if (emailError.value) {
+    toast.add({ 
+      title: t('rsvp.toast.invalidInput.title'), 
+      description: emailError.value, 
+      color: 'error' 
+    })
+    loading.value = false
+    return
+  }
+
+  const mainName = state.name.trim()
   const guestsValid = checkAdditionalGuests()
 
-  if (guestsValid) {
-    const payload = {
-      name: mainName,
-      email: event.data.email,
-      attending: event.data.attending,
-      message: event.data.message,
-      guests: additionalGuests.value
-    }
+  if (!guestsValid) {
+    loading.value = false
+    return
+  }
+
+  const rpcPayload = {
+    mainName: mainName,
+    email: state.email,
+    attending: state.attending === 'yes',
+    message: state.message || '',
+    guests: additionalGuests.value.map(g => g.name)
+  }
+
+          
+  let { data, error } = await supabase
+    .rpc('save_rsvp_and_guests', {
+      attending: rpcPayload.attending,
+      email: rpcPayload.email,
+      guests: rpcPayload.guests,
+      mainname: rpcPayload.mainName,
+      message: rpcPayload.message,
+      
+    });
+
+  if (error) {
+    toast.add({ 
+      title: t('rsvp.toast.error.title'), 
+      description: t('rsvp.toast.error.description'), 
+      color: 'error' 
+    });
+    loading.value = false
+    return;
   }
 
   toast.add({ 
-      title: t('rsvp.toast.success.title'), 
-      description: t('rsvp.toast.success.description'), 
-      color: 'success' 
-    })
+    title: t('rsvp.toast.success.title'), 
+    description: t('rsvp.toast.success.description'), 
+    color: 'success' 
+  });
+
+
+  state.name = ''
+  state.email = ''
+  state.attending = 'no'
+  state.message = ''
+  additionalGuests.value = []
+
+  // Reset error states
+  emailError.value = ''
+  formSubmitted.value = false
+  turnstile.value?.reset()
+  turnstileToken.value = ''
+  loading.value = false
 }
+
+
 </script>
 
 

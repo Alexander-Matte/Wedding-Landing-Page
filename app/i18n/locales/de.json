@@ -202,7 +202,15 @@
       "success": {
         "title": "RSVP abgesendet",
         "description": "Vielen Dank für Ihre Antwort!"
+      },
+      "error": {
+          "title": "Fehler",
+          "description": "Fehler beim Absenden des Formulars. Bitte kontaktiere Alex oder Madi."
+      },
+      "captcha": {
+        "error": "Bitte vervollständigen Sie die Verifizierung"
       }
+
     }
   },
   "registry": {

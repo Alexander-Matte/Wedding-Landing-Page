@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/i18n',
     '@nuxt/eslint',
-    '@nuxtjs/supabase'
+    '@nuxtjs/turnstile', // Make sure this is included
   ],
   css: ['~/assets/css/main.css'],
   router: {
@@ -47,15 +47,18 @@ export default defineNuxtConfig({
   image: {
     dir: 'assets/img'
   },
-  supabase: {
-    redirect: false,
-    redirectOptions: {
-      login: '/login',
-      callback: '/confirm',
-      include: undefined,
-      exclude: ['/*'],
-      saveRedirectToCookie: false,
-    }  
+  turnstile: {
+    siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
+    addValidateEndpoint: true
+  },
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
+      supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
+      turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
+    },
+    turnstile: {
+      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY || '',
+    },
   }
-  
 })

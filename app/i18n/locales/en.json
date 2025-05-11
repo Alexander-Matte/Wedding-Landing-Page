@@ -201,6 +201,13 @@
           "success": {
               "title": "RSVP submitted",
               "description": "Thank you for your response!"
+          },
+          "error": {
+            "title": "Error",
+            "description": "Error while submitting the form. Please contact Alex or Madi"
+          },
+          "captcha": {
+            "error": "Please complete the verification"
           }
       }
   },
