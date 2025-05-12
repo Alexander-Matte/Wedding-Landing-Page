@@ -296,8 +296,8 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
   }
 
   toast.add({
-    title: t('rsvp.toast.success'),
-    description: t('rsvp.toast.confirmation'),
+    title: t('rsvp.toast.success.title'),
+    description: t('rsvp.toast.success.description'),
     color: 'success'
   })
 

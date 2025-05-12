@@ -18,8 +18,6 @@ export default defineEventHandler(async (event) => {
     if (!result.success) {
       throw createError({ statusCode: 403, statusMessage: 'Turnstile verification failed.' })
     }
-
-    console.log(result);
   
     const { error } = await supabase.rpc('save_rsvp_and_guests', {
       attending: rpcPayload.attending,
