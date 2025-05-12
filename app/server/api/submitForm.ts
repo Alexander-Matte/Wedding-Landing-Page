@@ -20,6 +20,7 @@ export default defineEventHandler(async (event) => {
     }
 
     console.log(result);
+    console.log(token);
   
     const { error } = await supabase.rpc('save_rsvp_and_guests', {
       attending: rpcPayload.attending,
