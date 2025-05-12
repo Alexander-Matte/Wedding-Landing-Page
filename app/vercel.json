@@ -1,9 +1,15 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/under-construction"
-      }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/under-construction",
+      "has": [
+        {
+          "type": "environment",
+          "key": "VERCEL_ENV",
+          "value": "production"
+        }
+      ]
+    }
+  ]
+}
