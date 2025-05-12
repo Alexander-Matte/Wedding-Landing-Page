@@ -277,7 +277,6 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     guests: additionalGuests.value.map(g => g.name)
   }
 
-  console.log("TEST");
   const { data, error } = await useFetch('/api/submitForm', {
     method: 'POST',
     body: {

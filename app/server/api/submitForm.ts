@@ -7,6 +7,8 @@ export default defineEventHandler(async (event) => {
     const supabaseUrl = useRuntimeConfig().public.supabaseUrl
     const supabaseAnonKey = useRuntimeConfig().public.supabaseAnonKey
     const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
+    console.log(token);
   
     if (!token) {
       throw createError({ statusCode: 400, statusMessage: 'Turnstile token missing.' })
