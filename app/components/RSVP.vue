@@ -287,8 +287,8 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
 
   if (error.value) {
     toast.add({
-      title: t('rsvp.toast.error'),
-      description: error.value.statusMessage || t('rsvp.toast.generalError'),
+      title: t('rsvp.toast.error.title'),
+      description: error.value.statusMessage || t('rsvp.toast.error.description'),
       color: 'error'
     })
     loading.value = false
