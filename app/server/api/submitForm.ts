@@ -9,18 +9,13 @@ export default defineEventHandler(async (event) => {
     const supabase = createClient(supabaseUrl, supabaseAnonKey)
   
     if (!token) {
-        console.log({ statusCode: 400, statusMessage: 'Turnstile token missing.' });
       throw createError({ statusCode: 400, statusMessage: 'Turnstile token missing.' })
     }
   
     const result = await verifyTurnstileToken(token)
     if (!result.success) {
-        console.log({ statusCode: 403, statusMessage: 'Turnstile verification failed.' })
       throw createError({ statusCode: 403, statusMessage: 'Turnstile verification failed.' })
     }
-
-    console.log(result);
-    console.log(token);
   
     const { error } = await supabase.rpc('save_rsvp_and_guests', {
       attending: rpcPayload.attending,
