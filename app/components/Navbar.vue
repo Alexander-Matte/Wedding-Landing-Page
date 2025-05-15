@@ -11,22 +11,42 @@
         </div>
         <!-- Desktop menu -->
         <div class="hidden md:flex items-center space-x-8">
-          <NuxtLink to="#our-story" class="text-gray-700 transition-colors">
-            <strong>{{ $t('navbar.story') }}</strong> 
+          <NuxtLink
+            :to="locale === 'de' ? '/de#our-story' : '/#our-story'"
+            class="text-gray-700 transition-colors"
+          >
+            <strong>{{ $t('navbar.story') }}</strong>
           </NuxtLink>
-          <NuxtLink to="#details" class="text-gray-700 transition-colors">
+
+          <NuxtLink
+            :to="locale === 'de' ? '/de#details' : '/#details'"
+            class="text-gray-700 transition-colors"
+          >
             <strong>{{ $t('navbar.details') }}</strong>
           </NuxtLink>
-          <NuxtLink to="#schedule" class="text-gray-700 transition-colors">
+
+          <NuxtLink
+            :to="locale === 'de' ? '/de#schedule' : '/#schedule'"
+            class="text-gray-700 transition-colors"
+          >
             <strong>{{ $t('navbar.schedule') }}</strong>
           </NuxtLink>
-          <NuxtLink to="#rsvp" class="text-gray-700 transition-colors">
+
+          <NuxtLink
+            :to="locale === 'de' ? '/de#rsvp' : '/#rsvp'"
+            class="text-gray-700 transition-colors"
+          >
             <strong>{{ $t('navbar.rsvp') }}</strong>
           </NuxtLink>
-          <NuxtLink to="#registry" class="text-gray-700 transition-colors">
+
+          <NuxtLink
+            :to="locale.value === 'de' ? '/de#registry' : '/#registry'"
+            class="text-gray-700 transition-colors"
+          >
             <strong>{{ $t('navbar.registry') }}</strong>
           </NuxtLink>
         </div>
+
         <LanguageSelector />
 
         <!-- Mobile menu button -->
@@ -46,35 +66,35 @@
           class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
-          Our Story
+          {{ $t('navbar.story') }}
         </NuxtLink>
         <NuxtLink
           to="#details"
           class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
-          Details
+          {{ $t('navbar.details') }}
         </NuxtLink>
         <NuxtLink
           to="#schedule"
           class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
-          Schedule
+          {{ $t('navbar.schedule') }}
         </NuxtLink>
         <NuxtLink
           to="#rsvp"
           class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
-          RSVP
+          {{ $t('navbar.rsvp') }}
         </NuxtLink>
         <NuxtLink
           to="#registry"
           class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
-          Registry
+          {{ $t('navbar.registry') }}
         </NuxtLink>
       </div>
     </div>
@@ -82,49 +102,72 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const isOpen = ref(false);
-const isVisible = ref(true);
-const lastScrollY = ref(0);
-const currentScrollY = ref(0);
+const { locale } = useI18n()
+console.log(locale.value)
+
+const isOpen = ref(false)
+const isVisible = ref(true)
+const lastScrollY = ref(0)
+const currentScrollY = ref(0)
+
+// Initialize with fallback values (0)
+const fadeStart = ref(0)
+const fadeEnd = ref(0)
+
+const updateThresholds = () => {
+  fadeStart.value = window.innerHeight * 0.2
+  fadeEnd.value = window.innerHeight * 0.4
+}
 
 const toggleMenu = () => {
-  isOpen.value = !isOpen.value;
-};
+  isOpen.value = !isOpen.value
+}
 
 const handleScroll = () => {
-  currentScrollY.value = window.scrollY;
+  currentScrollY.value = window.scrollY
 
-  // Hide on scroll down, show on scroll up
-  if (currentScrollY.value > lastScrollY.value && currentScrollY.value > 200) {
-    isVisible.value = false;
-  } else {
-    isVisible.value = true;
+  if (
+    currentScrollY.value > lastScrollY.value &&
+    currentScrollY.value > fadeStart.value
+  ) {
+    isVisible.value = false
+  } else if (
+    currentScrollY.value < lastScrollY.value &&
+    currentScrollY.value > fadeStart.value
+  ) {
+    isVisible.value = true
+  } else if (currentScrollY.value <= fadeStart.value) {
+    isVisible.value = true
   }
 
-  lastScrollY.value = currentScrollY.value;
-};
+  lastScrollY.value = currentScrollY.value
+}
 
-// Background style that fades in white between 200px and 400px
 const backgroundStyle = computed(() => {
-  const y = currentScrollY.value;
+  const y = currentScrollY.value
 
-  if (y <= 200) {
-    return { backgroundColor: 'rgba(250, 249, 246, 0)' };
+  if (y <= fadeStart.value) {
+    return { backgroundColor: 'rgba(250, 249, 246, 0)' }
   }
 
-  const alpha = Math.min((y - 200) / 200, 1); // fade in between 200–400
-  return { backgroundColor: `rgba(250, 249, 246, ${alpha})` };
-});
-
-
+  const alpha = Math.min((y - fadeStart.value) / (fadeEnd.value - fadeStart.value), 1)
+  return { backgroundColor: `rgba(250, 249, 246, ${alpha})` }
+})
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-});
+  // Only now window is available
+  updateThresholds()
+  window.addEventListener('scroll', handleScroll)
+  window.addEventListener('resize', updateThresholds)
+})
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
+  window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('resize', updateThresholds)
+})
 </script>
+
+

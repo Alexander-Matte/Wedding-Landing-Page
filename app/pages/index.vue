@@ -31,3 +31,8 @@
    
   </div>
 </template>
+<script setup>
+import useScrollToHash from '~/composables/useScrollToHash'
+
+useScrollToHash()
+</script>

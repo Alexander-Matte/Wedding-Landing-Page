@@ -7,7 +7,7 @@
           <p class="mb-6">{{ $t('rsvp.description') }}</p>
           <p>{{ $t('rsvp.deadline') }}</p>
         </div>
-        <div class="md:w-2/3 p-8">
+        <div class="w-full md:w-2/3 p-8">
           <UForm 
           :schema="schema" 
           :state="state" 
@@ -19,7 +19,7 @@
               <UInput 
                 v-model="state.name" 
                 :placeholder="$t('rsvp.form.name.placeholder')" 
-                class="w-2/3"
+                class="w-full md:w-2/3"
               />
             </UFormField>
 
@@ -33,7 +33,7 @@
                 v-model="state.email" 
                 type="email" 
                 trailing-icon="i-lucide-at-sign"
-                class="w-2/3"
+                class="w-full md:w-2/3"
                 :placeholder="$t('rsvp.form.email.placeholder')" 
                 :class="{'border-red-500': emailError, 'focus:ring-red-500': emailError}"
                 @blur="checkEmail"
@@ -51,20 +51,24 @@
               <template v-if="state.attending === 'yes' && Number(state.guests) > 1">
                 <div class="space-y-4">
                   <h3 class="text-lg font-semibold">{{ $t('rsvp.form.additionalGuests.header') }}</h3>
-                  <div v-for="(guest, index) in additionalGuests" :key="index" class="flex flex-col space-y-4">
-                    <UFormField
-                      :label="$t('rsvp.form.additionalGuests.label', { number: index + 2 })"
-                      :error="formSubmitted && guest.name.trim() === '' ? $t('rsvp.form.additionalGuests.error') : ''"
-                      class="flex-1"
+                    <div
+                      v-for="(guest, index) in additionalGuests"
+                      :key="index"
+                      class="flex flex-col space-y-4 w-full md:w-2/3"
                     >
-                      <UInput
-                        v-model="guest.name"
-                        :placeholder="$t('rsvp.form.additionalGuests.placeholder', { number: index + 2 })"
-                        class="w-2/3"
-                        @blur="validateGuestName(index)"
-                      />
-                    </UFormField>
-                  </div>
+                      <UFormField
+                        :label="$t('rsvp.form.additionalGuests.label', { number: index + 2 })"
+                        :error="formSubmitted && guest.name.trim() === '' ? $t('rsvp.form.additionalGuests.error') : ''"
+                        class="w-full"
+                      >
+                        <UInput
+                          v-model="guest.name"
+                          :placeholder="$t('rsvp.form.additionalGuests.placeholder', { number: index + 2 })"
+                          class="w-full"
+                          @blur="validateGuestName(index)"
+                        />
+                      </UFormField>
+                    </div>
                 </div>
               </template>
             </template>
@@ -73,7 +77,7 @@
               <UTextarea 
               v-model="state.message" 
               :placeholder="$t('rsvp.form.message.placeholder')" 
-              class="w-2/3"
+              class="w-full md:w-2/3"
               autoresize
               />
             </UFormField>

@@ -113,39 +113,39 @@
     "title": "Zeitplan des Hochzeitstages",
     "item1": {
       "title": "Ankunft der Gäste",
-      "time": "13:30 Uhr",
-      "description": "Bitte kommen Sie frühzeitig, um sich vor der Zeremonie zu setzen."
+      "time": "14:30 Uhr",
+      "description": "Bitte kommt frühzeitig, damit ihr vor der Zeremonie Platz nehmen könnt."
     },
     "item2": {
       "title": "Zeremonie",
-      "time": "14:00 Uhr",
-      "description": "Austausch der Gelübde im Wildblumengarten."
+      "time": "15:00 Uhr",
+      "description": "Austausch der Eheversprechen."
     },
     "item3": {
-      "title": "Cocktailstunde",
-      "time": "15:00 - 16:00 Uhr",
-      "description": "Genießen Sie Getränke und Häppchen auf der Gartenterrasse."
+      "title": "Cocktailstunde + Fotos",
+      "time": "15:45 – 17:30 Uhr",
+      "description": "Genießt Getränke und Häppchen auf der Gartenterrasse."
     },
     "item4": {
-      "title": "Empfangsabendessen",
-      "time": "16:00 - 18:00 Uhr",
-      "description": "Farm-to-Table Abendessen im Wildflower Barn."
+      "title": "Abendessen (Empfang)",
+      "time": "17:30 – 18:30 Uhr",
+      "description": "Farm-to-Table-Dinner in der Wildflower-Scheune."
     },
     "item5": {
-      "title": "Trinksprüche & Hochzeitstorte schneiden",
-      "time": "18:00 - 18:30 Uhr",
-      "description": "Reden von Familie und Freunden, gefolgt vom Anschneiden der Hochzeitstorte."
+      "title": "Reden & Anschneiden der Torte",
+      "time": "18:30 – 19:00 Uhr",
+      "description": "Reden von Familie und Freunden, anschließend Anschneiden der Hochzeitstorte."
     },
     "item6": {
       "title": "Tanzen",
-      "time": "18:30 - 22:00 Uhr",
-      "description": "Tanzen Sie die Nacht unter funkelnden Lichtern."
+      "time": "19:00 Uhr – open end",
+      "description": "Ab 19:00 Uhr – solange die Musik spielt."
     }
   },
   "rsvp": {
     "title": "RSVP",
     "description": "Bitte teilen Sie uns mit, ob Sie an unserem besonderen Tag teilnehmen werden.",
-    "deadline": "Bitte antworten Sie bis zum 15. Juli 2023",
+    "deadline": "Bitte antworten Sie bis zum 1. September 2025",
     "form": {
       "name": {
         "label": "Vollständiger Name",

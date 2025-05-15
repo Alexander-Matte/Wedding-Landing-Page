@@ -16,6 +16,7 @@ export default defineEventHandler(async (event) => {
   
     const result = await verifyTurnstileToken(token)
     if (!result.success) {
+
       throw createError({ statusCode: 403, statusMessage: 'Turnstile verification failed.' })
     }
   
