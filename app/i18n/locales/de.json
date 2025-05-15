@@ -219,6 +219,12 @@
     "paragraph2": "Zu Beginn unseres gemeinsamen Lebens haben wir uns entschieden, keine traditionelle Geschenkliste zu erstellen. Wenn du dennoch gerne etwas schenken möchtest, würden wir uns sehr über einen Beitrag zu unserer Zukunft freuen – sei es für unser Zuhause, Reisen oder gemeinsame Träume.",
     "paragraph3": "Am allerwichtigsten ist: Wir freuen uns einfach riesig, mit dir zu feiern!"
   },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "description": "Wenn Sie Fragen haben oder Hilfe bei Buchung oder Transport benötigen, kontaktieren Sie uns bitte unter:",
+      "email_label": "E-Mail senden an",
+      "note": "Sie können uns eine E-Mail mit Fragen oder Anliegen senden. Wir sind auch immer per WhatsApp erreichbar."
+  },
   "footer": {
     "title": "Madeline & Alexander",
     "celebrationMessage": "Wir können es kaum erwarten, mit euch zu feiern!",

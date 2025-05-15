@@ -217,6 +217,12 @@
     "paragraph2": "As we begin our new life together, we’ve chosen not to create a traditional gift registry. Instead, if you feel inclined to give a gift, we would deeply appreciate a contribution towards our future—whether it's our home, travel, or shared dreams.",
     "paragraph3": "Most importantly, we’re just so happy to celebrate with you!"
   },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "If you have any questions at all or need help with booking or transport, please contact us at:",
+    "email_label": "Send email to",
+    "note": "You can send us an email with any questions or concerns. We are also always available via WhatsApp."
+  },
   "footer": {
     "title": "Madeline & Alexander",
     "celebrationMessage": "We can't wait to celebrate with you!",
