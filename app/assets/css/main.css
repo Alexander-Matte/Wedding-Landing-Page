@@ -1,8 +1,14 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-:root {
+@theme {
+  --color-wedding-white: #FAF9F6;
+  --color-wedding-green: #a3b18a;
   --text-color-default: black;
+}
+
+:root {
+  
   --default-font-family: "Playfair Display", serif;
 }
 

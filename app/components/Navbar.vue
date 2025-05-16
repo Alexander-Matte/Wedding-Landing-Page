@@ -40,11 +40,25 @@
           </NuxtLink>
 
           <NuxtLink
-            :to="locale.value === 'de' ? '/de#registry' : '/#registry'"
+            :to="locale === 'de' ? '/de#registry' : '/#registry'"
             class="text-gray-700 transition-colors"
           >
             <strong>{{ $t('navbar.registry') }}</strong>
           </NuxtLink>
+          <NuxtLink
+            :to="locale === 'de' ? '/de/activities' : '/activities'"
+            class="text-gray-700 transition-colors"
+            @click="toggleMenu"
+          >
+          <strong>{{ $t('navbar.activities') }}</strong>
+          </NuxtLink>
+          <NuxtLink
+            :to="locale === 'de' ? '/de/contact' : '/contact'"
+            class="text-gray-700 transition-colors"
+            @click="toggleMenu"
+          >
+          <strong>{{ $t('navbar.contact') }}</strong>
+        </NuxtLink>
         </div>
 
         <LanguageSelector />
@@ -62,39 +76,53 @@
     <div v-if="isOpen" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 bg-[#FAF9F6]">
         <NuxtLink
-          to="#our-story"
+          :to="locale === 'de' ? '/de#our-story' : '/#our-story'"
           class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
           {{ $t('navbar.story') }}
         </NuxtLink>
         <NuxtLink
-          to="#details"
+          :to="locale === 'de' ? '/de#details' : '/#details'"
           class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
           {{ $t('navbar.details') }}
         </NuxtLink>
         <NuxtLink
-          to="#schedule"
+          :to="locale === 'de' ? '/de#schedule' : '/#schedule'"
           class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
           {{ $t('navbar.schedule') }}
         </NuxtLink>
         <NuxtLink
-          to="#rsvp"
+          :to="locale === 'de' ? '/de#rsvp' : '/#rsvp'"
           class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
           {{ $t('navbar.rsvp') }}
         </NuxtLink>
         <NuxtLink
-          to="#registry"
+          :to="locale === 'de' ? '/de#registry' : '/#registry'"
           class="block px-3 py-2 text-base font-medium text-gray-700"
           @click="toggleMenu"
         >
           {{ $t('navbar.registry') }}
+        </NuxtLink>
+        <NuxtLink
+          :to="locale === 'de' ? '/de/activities' : '/activities'"
+          class="block px-3 py-2 text-base font-medium text-gray-700"
+          @click="toggleMenu"
+        >
+          {{ $t('navbar.activities') }}
+        </NuxtLink>
+        <NuxtLink
+          :to="locale === 'de' ? '/de/contact' : '/contact'"
+          class="block px-3 py-2 text-base font-medium text-gray-700"
+          @click="toggleMenu"
+        >
+          {{ $t('navbar.contact') }}
         </NuxtLink>
       </div>
     </div>

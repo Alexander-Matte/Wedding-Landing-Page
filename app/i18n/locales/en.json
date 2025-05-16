@@ -4,7 +4,9 @@
       "details": "Details",
       "schedule": "Schedule",
       "rsvp": "RSVP",
-      "registry": "Registry"
+      "registry": "Registry",
+      "activities": "Activities",
+      "contact": "Contact"
   },
   "hero": {
       "names": "Madeline Fehleisen & Alexander Matte",
@@ -219,9 +221,100 @@
   },
   "contact": {
     "title": "Get in Touch",
-    "description": "If you have any questions at all or need help with booking or transport, please contact us at:",
+    "description": "If you have any questions at all or need help with booking, transport or activities, please contact us at:",
     "email_label": "Send email to",
     "note": "You can send us an email with any questions or concerns. We are also always available via WhatsApp."
+  },
+    "activities": {
+    "title": "Things to Do Around Schwäbisch Gmünd",
+    "subtitle": "Whether you're staying a few days or a couple of weeks, there's something here for everyone.",
+
+    "days_1_4": {
+      "title": "🗓️ If You're Here for 1–4 Days",
+      "explore": {
+        "title": "Explore Schwäbisch Gmünd",
+        "desc": "Discover cobbled streets, cafés, and the Holy Cross Minster."
+      },
+      "riverwalk": {
+        "title": "Stadtgarten & Rems River Walk",
+        "desc": "Relaxing green spaces right in town."
+      },
+      "skypark": {
+        "title": "Sky Park",
+        "desc": "A fun treetop climbing experience for all ages."
+      },
+      "museum": {
+        "title": "Museum im Prediger",
+        "desc": "Art and local culture inside a historic monastery."
+      },
+      "food": {
+        "title": "Swabian Cuisine",
+        "desc": "Try Maultaschen, Spätzle, and local beer at a traditional restaurant."
+      }
+    },
+
+    "days_7": {
+      "title": "🗓️ If You're Staying for a Week",
+      "hike": {
+        "title": "Hike Hohenstaufen",
+        "desc": "Beautiful views and castle ruins nearby."
+      },
+      "limes": {
+        "title": "Aalen’s Limes Museum",
+        "desc": "Dive into Roman history just 30 mins away."
+      },
+      "hall": {
+        "title": "Schwäbisch Hall",
+        "desc": "Day trip to a storybook town with half-timbered houses."
+      },
+      "therme": {
+        "title": "Thermal Baths",
+        "desc": "Unwind at Limes-Therme or Adelindis Therme."
+      },
+      "nature": {
+        "title": "Remstal Nature",
+        "desc": "Bike or hike scenic valleys and trails."
+      }
+    },
+
+    "days_14": {
+      "title": "🗓️ If You're Here for 2 Weeks",
+      "stuttgart": {
+        "title": "Stuttgart",
+        "desc": "Visit the Mercedes-Benz Museum, the zoo, or Königstraße for shopping."
+      },
+      "castles": {
+        "title": "Castle Tour",
+        "desc": "Explore Hohenzollern, Lichtenstein, or Ludwigsburg castles."
+      },
+      "blackforest": {
+        "title": "Black Forest",
+        "desc": "Scenic drives, hikes, and villages like Triberg or Titisee."
+      },
+      "bodensee": {
+        "title": "Lake Constance (Bodensee)",
+        "desc": "Visit Meersburg, Lindau, or take a ferry to Mainau Island."
+      },
+      "ulm": {
+        "title": "Ulm",
+        "desc": "Climb the tallest church in the world and stroll along the Danube."
+      },
+      "allgaeu": {
+        "title": "Allgäu Region",
+        "desc": "Discover rolling green hills, Alpine views, and traditional Bavarian charm."
+      },
+      "neuschwanstein": {
+        "title": "Neuschwanstein Castle",
+        "desc": "A fairytale castle near Füssen — one of Germany’s most iconic sights."
+      },
+      "munich": {
+        "title": "Munich (München)",
+        "desc": "Visit the capital of Bavaria for beer gardens, museums, English Garden, and a vibrant city vibe."
+      }
+    },
+
+    "footer": "Need help planning?",
+    "contact_link": "Reach out to us"
   },
   "footer": {
     "title": "Madeline & Alexander",
