@@ -5,9 +5,9 @@
         <div class="md:w-1/3 p-8 flex flex-col justify-center">
           <h2 class="text-3xl italic mb-4">{{ $t('rsvp.title') }}</h2>
           <p class="mb-6">{{ $t('rsvp.description') }}</p>
-          <p class="-200">{{ $t('rsvp.deadline') }}</p>
+          <p>{{ $t('rsvp.deadline') }}</p>
         </div>
-        <div class="md:w-2/3 p-8">
+        <div class="w-full md:w-2/3 p-8">
           <UForm 
           :schema="schema" 
           :state="state" 
@@ -19,7 +19,7 @@
               <UInput 
                 v-model="state.name" 
                 :placeholder="$t('rsvp.form.name.placeholder')" 
-                class="w-2/3"
+                class="w-full md:w-2/3"
               />
             </UFormField>
 
@@ -33,7 +33,7 @@
                 v-model="state.email" 
                 type="email" 
                 trailing-icon="i-lucide-at-sign"
-                class="w-2/3"
+                class="w-full md:w-2/3"
                 :placeholder="$t('rsvp.form.email.placeholder')" 
                 :class="{'border-red-500': emailError, 'focus:ring-red-500': emailError}"
                 @blur="checkEmail"
@@ -51,20 +51,24 @@
               <template v-if="state.attending === 'yes' && Number(state.guests) > 1">
                 <div class="space-y-4">
                   <h3 class="text-lg font-semibold">{{ $t('rsvp.form.additionalGuests.header') }}</h3>
-                  <div v-for="(guest, index) in additionalGuests" :key="index" class="flex flex-col space-y-4">
-                    <UFormField
-                      :label="$t('rsvp.form.additionalGuests.label', { number: index + 2 })"
-                      :error="formSubmitted && guest.name.trim() === '' ? $t('rsvp.form.additionalGuests.error') : ''"
-                      class="flex-1"
+                    <div
+                      v-for="(guest, index) in additionalGuests"
+                      :key="index"
+                      class="flex flex-col space-y-4 w-full md:w-2/3"
                     >
-                      <UInput
-                        v-model="guest.name"
-                        :placeholder="$t('rsvp.form.additionalGuests.placeholder', { number: index + 2 })"
-                        class="w-2/3"
-                        @blur="validateGuestName(index)"
-                      />
-                    </UFormField>
-                  </div>
+                      <UFormField
+                        :label="$t('rsvp.form.additionalGuests.label', { number: index + 2 })"
+                        :error="formSubmitted && guest.name.trim() === '' ? $t('rsvp.form.additionalGuests.error') : ''"
+                        class="w-full"
+                      >
+                        <UInput
+                          v-model="guest.name"
+                          :placeholder="$t('rsvp.form.additionalGuests.placeholder', { number: index + 2 })"
+                          class="w-full"
+                          @blur="validateGuestName(index)"
+                        />
+                      </UFormField>
+                    </div>
                 </div>
               </template>
             </template>
@@ -73,13 +77,14 @@
               <UTextarea 
               v-model="state.message" 
               :placeholder="$t('rsvp.form.message.placeholder')" 
-              class="w-2/3"
+              class="w-full md:w-2/3"
               autoresize
               />
             </UFormField>
 
             <UFormField>
               <NuxtTurnstile
+                ref="turnstile"
                 :options="{ theme: 'light', language: locale }"
                 v-model="turnstileToken"
               />
@@ -162,8 +167,7 @@ watch(() => state.attending, (newVal) => {
 
 // Watch when guest count changes
 watch(() => state.guests, (newVal) => {
-  if (!newVal || isNaN(Number(newVal))) return
-
+  if (!newVal || isNaN(parseInt(newVal as string))) return
   const count = Number(newVal) - 1
   const currentLength = additionalGuests.value.length
 
@@ -255,67 +259,51 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
   checkEmail()
 
   if (!turnstileToken.value) {
-    toast.add({ 
-      title: t('rsvp.toast.captcha.error'), 
-      color: 'error' 
+    toast.add({
+      title: t('rsvp.toast.captcha.error'),
+      description: t('rsvp.toast.captcha.tokenMissing'),
+      color: 'error'
     })
     loading.value = false
     return
   }
 
-  if (emailError.value) {
-    toast.add({ 
-      title: t('rsvp.toast.invalidInput.title'), 
-      description: emailError.value, 
-      color: 'error' 
-    })
-    loading.value = false
-    return
-  }
-
-  const mainName = state.name.trim()
-  const guestsValid = checkAdditionalGuests()
-
-  if (!guestsValid) {
+  if (state.attending === 'yes' && !checkAdditionalGuests()) {
     loading.value = false
     return
   }
 
   const rpcPayload = {
-    mainName: mainName,
+    mainName: state.name,
     email: state.email,
     attending: state.attending === 'yes',
     message: state.message || '',
     guests: additionalGuests.value.map(g => g.name)
   }
 
-          
-  let { data, error } = await supabase
-    .rpc('save_rsvp_and_guests', {
-      attending: rpcPayload.attending,
-      email: rpcPayload.email,
-      guests: rpcPayload.guests,
-      mainname: rpcPayload.mainName,
-      message: rpcPayload.message,
-      
-    });
+  const { data, error } = await useFetch('/api/submitForm', {
+    method: 'POST',
+    body: {
+      token: turnstileToken.value,
+      rpcPayload
+    }
+  })
 
-  if (error) {
-    toast.add({ 
-      title: t('rsvp.toast.error.title'), 
-      description: t('rsvp.toast.error.description'), 
-      color: 'error' 
-    });
+  if (error.value) {
+    toast.add({
+      title: t('rsvp.toast.error.title'),
+      description: error.value.statusMessage || t('rsvp.toast.error.description'),
+      color: 'error'
+    })
     loading.value = false
-    return;
+    return
   }
 
-  toast.add({ 
-    title: t('rsvp.toast.success.title'), 
-    description: t('rsvp.toast.success.description'), 
-    color: 'success' 
-  });
-
+  toast.add({
+    title: t('rsvp.toast.success.title'),
+    description: t('rsvp.toast.success.description'),
+    color: 'success'
+  })
 
   state.name = ''
   state.email = ''
@@ -330,6 +318,7 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
   turnstileToken.value = ''
   loading.value = false
 }
+
 
 
 </script>

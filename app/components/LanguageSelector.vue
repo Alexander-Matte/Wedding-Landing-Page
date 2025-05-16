@@ -22,18 +22,26 @@
 
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import { useI18n } from '#imports'
 
-
 const { locale, setLocale } = useI18n()
-const isGerman = ref(locale.value === 'de')
+const isGerman = ref(false)
 
-// Watch toggle value and change locale
+onMounted(() => {
+  const savedLocale = localStorage.getItem('locale')
+  if (savedLocale && savedLocale !== locale.value) {
+    setLocale(savedLocale)
+  }
+  isGerman.value = locale.value === 'de'
+})
+
 watch(isGerman, (newVal) => {
   const newLocale = newVal ? 'de' : 'en'
   if (newLocale !== locale.value) {
     setLocale(newLocale)
+    localStorage.setItem('locale', newLocale)
   }
 })
 </script>
+

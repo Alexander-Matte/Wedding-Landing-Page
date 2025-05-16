@@ -4,7 +4,9 @@
     "details": "Details",
     "schedule": "Zeitplan",
     "rsvp": "RSVP",
-    "registry": "Registry"
+    "registry": "Registry",
+    "activities": "Aktivitäten",
+    "contact": "Kontakt"
   },
   "hero": {
     "names": "Madeline Fehleisen & Alexander Matte",
@@ -113,39 +115,39 @@
     "title": "Zeitplan des Hochzeitstages",
     "item1": {
       "title": "Ankunft der Gäste",
-      "time": "13:30 Uhr",
-      "description": "Bitte kommen Sie frühzeitig, um sich vor der Zeremonie zu setzen."
+      "time": "14:30 Uhr",
+      "description": "Bitte kommt frühzeitig, damit ihr vor der Zeremonie Platz nehmen könnt."
     },
     "item2": {
       "title": "Zeremonie",
-      "time": "14:00 Uhr",
-      "description": "Austausch der Gelübde im Wildblumengarten."
+      "time": "15:00 Uhr",
+      "description": "Austausch der Eheversprechen."
     },
     "item3": {
-      "title": "Cocktailstunde",
-      "time": "15:00 - 16:00 Uhr",
-      "description": "Genießen Sie Getränke und Häppchen auf der Gartenterrasse."
+      "title": "Cocktailstunde + Fotos",
+      "time": "15:45 – 17:30 Uhr",
+      "description": "Genießt Getränke und Häppchen auf der Gartenterrasse."
     },
     "item4": {
-      "title": "Empfangsabendessen",
-      "time": "16:00 - 18:00 Uhr",
-      "description": "Farm-to-Table Abendessen im Wildflower Barn."
+      "title": "Abendessen (Empfang)",
+      "time": "17:30 – 18:30 Uhr",
+      "description": "Farm-to-Table-Dinner in der Wildflower-Scheune."
     },
     "item5": {
-      "title": "Trinksprüche & Hochzeitstorte schneiden",
-      "time": "18:00 - 18:30 Uhr",
-      "description": "Reden von Familie und Freunden, gefolgt vom Anschneiden der Hochzeitstorte."
+      "title": "Reden & Anschneiden der Torte",
+      "time": "18:30 – 19:00 Uhr",
+      "description": "Reden von Familie und Freunden, anschließend Anschneiden der Hochzeitstorte."
     },
     "item6": {
       "title": "Tanzen",
-      "time": "18:30 - 22:00 Uhr",
-      "description": "Tanzen Sie die Nacht unter funkelnden Lichtern."
+      "time": "19:00 Uhr – open end",
+      "description": "Ab 19:00 Uhr – solange die Musik spielt."
     }
   },
   "rsvp": {
     "title": "RSVP",
     "description": "Bitte teilen Sie uns mit, ob Sie an unserem besonderen Tag teilnehmen werden.",
-    "deadline": "Bitte antworten Sie bis zum 15. Juli 2023",
+    "deadline": "Bitte antworten Sie bis zum 1. September 2025",
     "form": {
       "name": {
         "label": "Vollständiger Name",
@@ -218,6 +220,103 @@
     "paragraph1": "Deine Anwesenheit bei unserer Hochzeit bedeutet uns wirklich die Welt. Wir sind so dankbar, diesen besonderen Tag mit den Menschen feiern zu dürfen, die wir am meisten lieben.",
     "paragraph2": "Zu Beginn unseres gemeinsamen Lebens haben wir uns entschieden, keine traditionelle Geschenkliste zu erstellen. Wenn du dennoch gerne etwas schenken möchtest, würden wir uns sehr über einen Beitrag zu unserer Zukunft freuen – sei es für unser Zuhause, Reisen oder gemeinsame Träume.",
     "paragraph3": "Am allerwichtigsten ist: Wir freuen uns einfach riesig, mit dir zu feiern!"
+  },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "description": "Wenn Sie Fragen haben oder Hilfe bei Buchung, Transport oder Aktivitäten benötigen, kontaktieren Sie uns bitte unter:",
+      "email_label": "E-Mail senden an",
+      "note": "Sie können uns eine E-Mail mit Fragen oder Anliegen senden. Wir sind auch immer per WhatsApp erreichbar."
+  },
+    "activities": {
+    "title": "Aktivitäten rund um Schwäbisch Gmünd",
+    "subtitle": "Ob Sie ein paar Tage oder ein paar Wochen bleiben – hier ist für jeden etwas dabei.",
+
+    "days_1_4": {
+      "title": "🗓️ Wenn Sie 1–4 Tage hier sind",
+      "explore": {
+        "title": "Schwäbisch Gmünd entdecken",
+        "desc": "Entdecken Sie Kopfsteinpflasterstraßen, Cafés und das Heilig-Kreuz-Münster."
+      },
+      "riverwalk": {
+        "title": "Stadtgarten & Rems-Spaziergang",
+        "desc": "Entspannende Grünflächen direkt in der Stadt."
+      },
+      "skypark": {
+        "title": "Sky Park",
+        "desc": "Ein Spaß beim Klettern in den Bäumen für alle Altersgruppen."
+      },
+      "museum": {
+        "title": "Museum im Prediger",
+        "desc": "Kunst und lokale Kultur in einem historischen Kloster."
+      },
+      "food": {
+        "title": "Schwäbische Küche",
+        "desc": "Probieren Sie Maultaschen, Spätzle und lokales Bier in einem traditionellen Restaurant."
+      }
+    },
+
+    "days_7": {
+      "title": "🗓️ Wenn Sie eine Woche bleiben",
+      "hike": {
+        "title": "Hohenstaufen-Wanderung",
+        "desc": "Schöne Aussicht und Burgruinen ganz in der Nähe."
+      },
+      "limes": {
+        "title": "Aalener Limesmuseum",
+        "desc": "Tauchen Sie in die römische Geschichte ein – nur 30 Minuten entfernt."
+      },
+      "hall": {
+        "title": "Schwäbisch Hall",
+        "desc": "Tagesausflug in eine märchenhafte Stadt mit Fachwerkhäusern."
+      },
+      "therme": {
+        "title": "Thermenbesuch",
+        "desc": "Entspannen Sie in der Limes-Therme oder Adelindis Therme."
+      },
+      "nature": {
+        "title": "Natur im Remstal",
+        "desc": "Radfahren oder Wandern durch malerische Täler und Wege."
+      }
+    },
+
+    "days_14": {
+      "title": "🗓️ Wenn Sie 2 Wochen Zeit haben",
+      "stuttgart": {
+        "title": "Stuttgart",
+        "desc": "Besuchen Sie das Mercedes-Benz Museum, die Wilhelma oder shoppen Sie auf der Königstraße."
+      },
+      "castles": {
+        "title": "Schlössertour",
+        "desc": "Entdecken Sie Burg Hohenzollern, Schloss Lichtenstein oder Schloss Ludwigsburg."
+      },
+      "blackforest": {
+        "title": "Schwarzwald",
+        "desc": "Malereische Fahrten, Wanderungen und Dörfer wie Triberg oder Titisee."
+      },
+      "bodensee": {
+        "title": "Bodensee",
+        "desc": "Besuchen Sie Meersburg, Lindau oder machen Sie eine Fähre zur Insel Mainau."
+      },
+      "ulm": {
+        "title": "Ulm",
+        "desc": "Besteigen Sie das höchste Kirchengebäude der Welt und spazieren Sie an der Donau entlang."
+      },
+      "allgaeu": {
+        "title": "Allgäu-Region",
+        "desc": "Grüne Hügel, Alpenblicke und bayerische Gemütlichkeit entdecken."
+      },
+      "neuschwanstein": {
+        "title": "Schloss Neuschwanstein",
+        "desc": "Ein märchenhaftes Schloss bei Füssen – eines der bekanntesten Sehenswürdigkeiten Deutschlands."
+      },
+      "munich": {
+        "title": "München",
+        "desc": "Besuchen Sie die bayerische Hauptstadt mit Biergärten, Museen, dem Englischen Garten und lebendigem Stadtleben."
+      }
+    },
+
+    "footer": "Brauchen Sie Hilfe bei der Planung?",
+    "contact_link": "Kontaktieren Sie uns"
   },
   "footer": {
     "title": "Madeline & Alexander",

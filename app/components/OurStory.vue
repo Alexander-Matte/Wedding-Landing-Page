@@ -7,12 +7,10 @@
       <div class="grid">
         <!-- Image -->
         <div class="flex">
-          <NuxtImg
-            src="stock-image-rings.jpeg"
+          <img
+            src="/img/stock-image-rings.jpeg"
             alt="Accommodation image"
-            class="flex flex-1 rounded-lg shadow-lg text-center justify-center"
-            width="900"
-            height="400"
+            class="w-full h-48 object-cover"
           />
 
         </div>

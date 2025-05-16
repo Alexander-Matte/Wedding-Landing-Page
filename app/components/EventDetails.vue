@@ -70,8 +70,8 @@
           <ul class="list-disc list-inside">
             <li><strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.taxi.title') }}: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.taxi.description') }}
               <ul class="list-inside list-disc">
-                <li><strong>Taxi Schwäbisch Gmünd: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.taxi.taxiServices.taxiSchwaebischGmuend') }}</li>
-                <li><strong>Taxi Gmünd: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.taxi.taxiServices.taxiGmuend') }}</li>
+                <li><strong>Taxi Schwäbisch Gmünd: </strong>07171 2900 /  +49 7171 2900</li>
+                <li><strong>Taxi Zieger: </strong>+49 178 6731983 / 07176 450225</li>
               </ul>
             </li>
             <li><strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.car.title') }}: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.car.description') }}</li>
