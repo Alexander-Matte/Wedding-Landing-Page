@@ -16,6 +16,7 @@
       <div class="w-24 h-1 bg-white mx-auto my-6"/>
       <p class="text-xl md:text-2xl mb-6">{{ $t('hero.marrying') }}</p>
       <p class="font-light text-2xl md:text-3xl">{{ $t('hero.date') }}</p>
+
       <div class="mt-12">
         <button class="rsvp-button">
           <span>
@@ -27,6 +28,8 @@
         </button>
       </div>
     </div>
+
+    
 
     <!-- Bottom curve -->
     <div class="absolute bottom-0 left-0 w-full z-10 pointer-events-none">
