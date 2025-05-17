@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/i18n',
     '@nuxt/eslint',
-    '@nuxtjs/turnstile', // Make sure this is included
+    '@nuxtjs/turnstile',
+    'nuxt-countdown'
   ],
   css: ['~/assets/css/main.css'],
   router: {
