@@ -2,21 +2,25 @@
 @import "@nuxt/ui";
 
 @theme {
-  --color-wedding-white: #FAF9F6;
-  --color-wedding-green: #a3b18a;
-  --text-color-default: black;
+  --color-wedding-white: #FAF9F6;          /* Soft off-white */
+  --color-wedding-green: #a3b18a;          /* Muted sage green */
+  --color-wedding-pink: #f7cac9;           /* Soft, pastel pink */
+
+  --color-primary: var(--color-wedding-pink);
+  --color-primary-hover: #f2b8b4;           /* Slightly deeper pink */
+
+  --text-color-default: #333333;           /* Soft dark text */
+  --background-default: var(--color-wedding-white);
 }
 
 :root {
-  
   --default-font-family: "Playfair Display", serif;
 }
 
 html {
-  font-family: "Playfair Display", serif;
+  font-family: var(--default-font-family);
   scroll-behavior: smooth;
 }
-
 
 input, textarea {
   color: inherit;

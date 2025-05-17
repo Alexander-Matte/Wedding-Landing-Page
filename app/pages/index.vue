@@ -5,11 +5,7 @@
       <section class="bg-wedding-white">
         <Hero />
       </section>
-
-      <section class="bg-wedding-white">
-        <CountdownDisplay />
-      </section>
-
+      
       <section class="bg-wedding-white">
         <OurStory />
       </section>

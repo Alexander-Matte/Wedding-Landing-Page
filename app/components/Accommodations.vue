@@ -34,7 +34,6 @@
               <h4 class="text-lg font-medium">
                 {{ rt(item.header) }}
               </h4>
-
               <a
                 :href="rt(item.website)"
                 target="_blank"

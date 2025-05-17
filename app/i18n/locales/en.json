@@ -31,7 +31,7 @@
       "reception": {
           "title": "Reception",
           "date": "Saturday, June 6, 2026",
-          "time": "1:00 PM – 6:00 AM :)",
+          "time": "2:30 PM – until the last one standing",
           "location": {
               "title": "Freizeithaus – Neuwirth",
               "addressLine1": "(Am) Appenhaus 1",
@@ -315,6 +315,16 @@
 
     "footer": "Need help planning?",
     "contact_link": "Reach out to us"
+  },
+  "countdown": {
+      "time": {
+        "year": "y",
+        "day": "d",
+        "hour": "h",
+        "minute": "m",
+        "second": "s"
+      },
+    "message": "Countdown until we say “I do”"
   },
   "footer": {
     "title": "Madeline & Alexander",

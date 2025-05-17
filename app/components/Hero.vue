@@ -27,21 +27,8 @@
           </span>
         </button>
       </div>
+      <CountdownDisplay/>
     </div>
-
-    
-
-    <!-- Bottom curve -->
-    <div class="absolute bottom-0 left-0 w-full z-10 pointer-events-none">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full">
-        <path
-          fill="#FAF9F6"
-          fill-opacity="1"
-          d="M0,288 C480,240 960,240 1440,288 L1440,320 L0,320 Z"
-        />
-      </svg>
-    </div>
-
   </section>
 </template>
 
@@ -90,7 +77,7 @@ import oceanRing from '@/assets/img/ocean-ring.jpeg'
   background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
     10% 10%, 18% 18%;
   background-position: 50% 120%;
-  animation: greentopBubbles 0.6s ease;
+  animation: greentopBubbles 1.5s ease;
 }
 
 @keyframes greentopBubbles {

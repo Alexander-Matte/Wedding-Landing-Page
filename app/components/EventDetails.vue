@@ -17,7 +17,7 @@
           </div>
           <div class="flex items-start gap-3">
             <UIcon name="i-heroicons-clock" class="mt-1 -600" />
-            <p>{{ $t('weddingDetails.reception.time') }}</p>
+            <p>{{ $t('weddingDetails.reception.time') }} 🥂</p>
           </div>
           <div class="flex items-start gap-3">
             <UIcon name="i-heroicons-map-pin" class="mt-1 -600" />

@@ -10,7 +10,7 @@
           <img
             src="/img/stock-image-rings.jpeg"
             alt="Accommodation image"
-            class="w-full h-48 object-cover"
+            class="w-full h-80 object-cover rounded-lg"
           />
 
         </div>
