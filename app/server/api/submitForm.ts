@@ -31,6 +31,25 @@ export default defineEventHandler(async (event) => {
     if (error) {
       throw createError({ statusCode: 500, statusMessage: error.message })
     }
+
+    try {
+      const emailResponse = await fetch('http://192.168.2.113:3000/api/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: 'Automated Email <yourwedding@resend.dev>',
+          to: `${process.env.EMAIL_TO}`,
+          subject: "Someone RSVP'd to your wedding!",
+          message: rpcPayload.message,
+        }),
+      })
+
+      if (!emailResponse.ok) {
+        const err = await emailResponse.json()
+      }
+
+    } catch (emailError) {
+    }
   
     return { success: true }
   })

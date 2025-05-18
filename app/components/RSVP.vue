@@ -281,6 +281,7 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
   }
 
   if (state.attending === 'yes' && !checkAdditionalGuests()) {
+    alert("whoaa");
     loading.value = false
     return
   }
