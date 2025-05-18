@@ -183,6 +183,10 @@
         "hint": "Optional",
         "placeholder": "Teilen Sie Ihre guten Wünsche oder eine Erinnerung"
       },
+      "personType": {
+        "adult": "Erwachsene",
+        "child": "Kind (unter 12 Jahren)"
+      },
       "submit": "RSVP absenden"
     },
     "toast": {
@@ -207,7 +211,7 @@
       },
       "error": {
           "title": "Fehler",
-          "description": "Fehler beim Absenden des Formulars. Bitte kontaktiere Alex oder Madi."
+          "description": "Fehler beim Absenden des Formulars. Bitte stelle sicher, dass alle Felder korrekt ausgefüllt sind. Wenn das Problem weiterhin besteht, wende dich bitte an Alex oder Madi."
       },
       "captcha": {
         "error": "Bitte vervollständigen Sie die Verifizierung"

@@ -61,6 +61,16 @@
                         :error="formSubmitted && guest.name.trim() === '' ? $t('rsvp.form.additionalGuests.error') : ''"
                         class="w-full"
                       >
+                      <URadioGroup 
+                        v-model="guest.type"
+                        orientation="horizontal" 
+                        :items="[
+                          { label: $t('rsvp.form.personType.adult'), value: 'adult' },
+                          { label: $t('rsvp.form.personType.child'), value: 'child' }
+                        ]"
+                        class="mb-2" 
+                      />
+
                         <UInput
                           v-model="guest.name"
                           :placeholder="$t('rsvp.form.additionalGuests.placeholder', { number: index + 2 })"
@@ -111,14 +121,15 @@ import { ref, reactive, watch } from 'vue'
 import { z } from 'zod'
 import { useI18n } from 'vue-i18n'
 import type { FormSubmitEvent } from '@nuxt/ui'
+import type { RadioGroupItem } from '@nuxt/ui'
 const { locale } = useI18n()
 const { t } = useI18n()
-const supabase = useNuxtApp().$supabase
-
+const toast = useToast()
 const turnstileKey = ref(0)
 const turnstileToken = ref('')
 const turnstile = ref()
 const loading = ref(false)
+
 
 
 const schema = z.object({
@@ -141,6 +152,7 @@ const state = reactive<Schema>({
   message: ''
 })
 
+
 const emailError = ref('')
 const missingGuestsError = ref('')
 const formSubmitted = ref(false)
@@ -150,9 +162,9 @@ const items = ref([
   { label: t('rsvp.form.attending.no'), value: 'no' }
 ])
 
-const additionalGuests = ref<{ name: string }[]>([])
+const additionalGuests = ref<{ name: string; type: 'adult' | 'child' }[]>([])
 
-const toast = useToast()
+
 
 // Watch when user selects "yes"
 watch(() => state.attending, (newVal) => {
@@ -173,7 +185,7 @@ watch(() => state.guests, (newVal) => {
 
   if (count > currentLength) {
     for (let i = currentLength; i < count; i++) {
-      additionalGuests.value.push({ name: '' })
+    additionalGuests.value.push({ name: '', type: 'adult' })
     }
   } else if (count < currentLength) {
     additionalGuests.value.splice(count)
@@ -223,7 +235,7 @@ const checkAdditionalGuests = (): boolean => {
     toast.add({ 
       title: t('rsvp.toast.emptyGuestName.title'), 
       description: t('rsvp.toast.emptyGuestName.description'), 
-      color: 'error' 
+      color: 'error', 
     })
     return false
   }
@@ -244,7 +256,7 @@ const checkAdditionalGuests = (): boolean => {
     toast.add({ 
       title: t('rsvp.toast.duplicateGuests.title'), 
       description: t('rsvp.toast.duplicateGuests.description'), 
-      color: 'error' 
+      color: 'error'
     })
     return false
   }
@@ -261,7 +273,7 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
   if (!turnstileToken.value) {
     toast.add({
       title: t('rsvp.toast.captcha.error'),
-      description: t('rsvp.toast.captcha.tokenMissing'),
+      description: t('rsvp.toast.captcha.error'),
       color: 'error'
     })
     loading.value = false
@@ -278,7 +290,10 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     email: state.email,
     attending: state.attending === 'yes',
     message: state.message || '',
-    guests: additionalGuests.value.map(g => g.name)
+    guests: additionalGuests.value.map(g => ({
+      name: g.name,
+      isAdult: g.type === 'adult'
+    }))
   }
 
   const { data, error } = await useFetch('/api/submitForm', {
@@ -292,7 +307,7 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
   if (error.value) {
     toast.add({
       title: t('rsvp.toast.error.title'),
-      description: error.value.statusMessage || t('rsvp.toast.error.description'),
+      description: t('rsvp.toast.error.description'),
       color: 'error'
     })
     loading.value = false

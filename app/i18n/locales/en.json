@@ -175,12 +175,16 @@
               "placeholder": "First and Last Name",
               "edit": "Edit",
               "save": "Save",
-              "error": "Bitte geben Sie einen zusätzlichen Gastnamen ein, bevor Sie das Formular absenden"
+              "error": "Please enter an additional guest name before submitting the form"
           },
           "message": {
               "label": "Message to the couple",
               "hint": "Optional",
               "placeholder": "Share your well wishes or a memory"
+          },
+          "personType": {
+            "adult": "Adult",
+            "child": "Child (Under 12)"
           },
           "submit": "Submit RSVP"
       },
@@ -206,7 +210,7 @@
           },
           "error": {
             "title": "Error",
-            "description": "Error while submitting the form. Please contact Alex or Madi"
+            "description": "Error while submitting the form. Please ensure all fields are filled out correct. If you still are having issues, please contact Alex or Madi"
           },
           "captcha": {
             "error": "Please complete the verification"
