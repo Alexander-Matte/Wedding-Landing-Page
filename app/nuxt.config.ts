@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/i18n',
     '@nuxt/eslint',
-    '@nuxtjs/turnstile',
+    '@nuxtjs/turnstile',,
+    '@nuxtjs/supabase',
     'nuxt-countdown'
   ],
   css: ['~/assets/css/main.css'],
@@ -61,5 +62,19 @@ export default defineNuxtConfig({
     turnstile: {
       secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY || '',
     },
+  },
+  supabase: {
+    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
+    key: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
+    redirectOptions: {
+      login: '/admin/login',
+      callback: '/admin/confirm',
+      include: ['/admin/**'],
+      exclude: [],
+      saveRedirectToCookie: true
+    },
+    cookieOptions: {
+      secure: process.env.NODE_ENV === 'production',
+  },
   }
 })

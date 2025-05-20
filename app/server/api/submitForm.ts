@@ -33,23 +33,18 @@ export default defineEventHandler(async (event) => {
     }
 
     try {
-      const emailResponse = await fetch('http://192.168.2.113:3000/api/sendEmail', {
+      const emailResponse = await $fetch('/api/sendEmail', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          from: 'Automated Email <yourwedding@resend.dev>',
-          to: `${process.env.EMAIL_TO}`,
-          subject: "Someone RSVP'd to your wedding!",
+        body: {
           message: rpcPayload.message,
-        }),
+          name: rpcPayload.mainName,
+          email: rpcPayload.email,
+        }
       })
-
-      if (!emailResponse.ok) {
-        const err = await emailResponse.json()
-      }
-
     } catch (emailError) {
+      // Handle error (e.g., emailError.data for response body)
     }
+
   
     return { success: true }
   })
