@@ -2,7 +2,7 @@ export default defineEventHandler(async (event) => {
   try {
     const { message, name, email } = await readBody(event);
 
-    const data = await $fetch('https://hmnxqljqivelblnqcytu.supabase.co/functions/v1/send-email', {
+    const data = await $fetch(process.env.NUXT_SUPABASE_EMAIL_EDGE_URL as string, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY}`,
