@@ -27,7 +27,10 @@
           </span>
         </button>
       </div>
-      <CountdownDisplay/>
+      <div class="text-white md:text-default">
+        <CountdownDisplay/>
+      </div>
+      
     </div>
   </section>
 </template>

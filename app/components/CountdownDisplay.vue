@@ -1,5 +1,5 @@
 <template>
-  <section class="text-center py-16">
+  <section class="text-center py-5">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-3xl md:text-4xl text-center italic mb-8 tracking-wide">
         {{ $t('countdown.message') }} 💍

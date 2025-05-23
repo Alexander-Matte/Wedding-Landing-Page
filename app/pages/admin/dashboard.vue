@@ -2,7 +2,7 @@
   <div class="flex min-h-screen bg-gray-100 font-sans">
     <!-- Sidebar -->
     <aside class="w-56 bg-gray-800 text-white flex flex-col p-6">
-      <div class="text-xl font-bold text-center mb-8">Admin Panel</div>
+      <div class="text-xl font-bold text-center mb-8">Wedding Panel</div>
       <ul class="space-y-2">
         <li
           :class="[
@@ -30,9 +30,12 @@
       <!-- Topbar -->
       <header class="bg-white px-6 py-4 border-b border-gray-200 flex justify-between items-center">
         <h1 class="text-xl font-semibold">Dashboard</h1>
-        <button @click="logout" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 font-semibold">
+        <UButton to="/" target="_blank" active color="neutral" variant="outline" active-color="primary" active-variant="solid" size="md">
+          Back To the wedding homepage!
+        </UButton>
+        <UButton @click="logout" active-variant="solid" active color="error" size="xl">
           Logout
-        </button>
+        </UButton>
       </header>
 
       <!-- Content -->
@@ -47,12 +50,15 @@
         </div>
 
         <div v-if="selectedView === 'rsvps'">
-            <div class="bg-blue-50 border border-blue-200 p-4 rounded shadow text-blue-900 mb-5">
+            <div class="bg-blue-50 border border-blue-200 p-4 rounded shadow text-blue-900 mb-5  text-center">
                 <h2 class="text-xl font-semibold">Hello Madi and Alex! 💍</h2>
-                <p class="mt-2">
+                <div class="mt-2">
                     I hope you are getting excited for your big day! 🎉<br />
-                    Here's the latest information on your wedding and RSVPs.
-                </p>
+                    <div class="scale-60">
+                      <CountdownDisplay/>
+                    </div>
+                    <p>Here's the latest information on your wedding and RSVPs.</p>
+                  </div>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div class="bg-white p-4 rounded shadow text-center">
@@ -219,15 +225,15 @@ const columns: TableColumn<RSVP>[] = [
             h(
             UDropdownMenu,
             {
-                content: {
-                align: 'end'
-                },
-                items: getRowItems(row),
-                'aria-label': 'Actions dropdown',
-                ui: {
-                    label: 'text-gray-900',
-                    content: 'bg-white text-gray-900 shadow-md border border-gray-200 rounded',
-                }
+              content: {
+              align: 'end'
+              },
+              items: getRowItems(row),
+              'aria-label': 'Actions dropdown',
+              ui: {
+                label: 'text-gray-900',
+                content: 'bg-white text-gray-900 shadow-md border border-gray-200 rounded',
+              },
             },
             () =>
                 h(UButton, {
@@ -278,7 +284,6 @@ const totalChildren = computed(() =>
 )
 
 function getRowItems(row: Row<RSVP>) {
-    console.log('Row original:', row.original);
   return [
     {
       type: 'label',

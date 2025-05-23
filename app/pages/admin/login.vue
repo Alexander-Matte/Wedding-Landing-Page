@@ -1,22 +1,44 @@
 <script setup lang="ts">
+import { z } from 'zod'
+import type { FormSubmitEvent } from '@nuxt/ui'
+
+// Supabase
 const supabase = useSupabaseClient()
-const email = ref('')
-const password = ref('')
+
+// Zod schema
+const schema = z.object({
+  email: z.string().email({ message: 'Invalid email address' }),
+  password: z.string().min(6, { message: 'Password must be at least 6 characters' }),
+})
+
+// Infer form types
+type Schema = z.infer<typeof schema>
+
+// Form state
+const state = reactive<Schema>({
+  email: '',
+  password: ''
+})
+
 const loading = ref(false)
 const errorMsg = ref('')
 
-const signIn = async () => {
+// Submission handler
+const signIn = async (event: FormSubmitEvent<Schema>) => {
   loading.value = true
   errorMsg.value = ''
+
   const { error } = await supabase.auth.signInWithPassword({
-    email: email.value,
-    password: password.value,
+    email: event.data.email,
+    password: event.data.password,
   })
+
   if (error) {
     errorMsg.value = error.message
   } else {
-    await navigateTo('/admin/dashboard') // or your desired page
+    await navigateTo('/admin/dashboard')
   }
+
   loading.value = false
 }
 </script>
@@ -28,22 +50,22 @@ const signIn = async () => {
         <h1 class="text-xl font-semibold text-center">Admin Login</h1>
       </template>
 
-      <form @submit.prevent="signIn" class="space-y-4">
-        <UFormGroup label="Email" name="email">
-          <UInput v-model="email" type="email" placeholder="admin@example.com" required />
-        </UFormGroup>
+      <!-- Nuxt UI Form with Zod validation -->
+      <UForm :schema="schema" :state="state" @submit="signIn" class="space-y-4">
+        <UFormField name="email" label="Email">
+          <UInput v-model="state.email" class="w-100" type="email" placeholder="admin@example.com" />
+        </UFormField>
 
-        <UFormGroup label="Password" name="password">
-          <UInput v-model="password" type="password" placeholder="••••••••" required />
-        </UFormGroup>
+        <UFormField name="password" label="Password">
+          <UInput v-model="state.password" class="w-100" type="password" placeholder="••••••••" />
+        </UFormField>
 
         <UButton type="submit" class="w-full mt-2" color="success" :loading="loading">
           Login
         </UButton>
 
-
         <p v-if="errorMsg" class="text-sm text-red-500 text-center">{{ errorMsg }}</p>
-      </form>
+      </UForm>
 
       <template #footer>
         <p class="text-xs text-gray-400 text-center">

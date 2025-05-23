@@ -11,8 +11,12 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxtjs/turnstile',,
     '@nuxtjs/supabase',
-    'nuxt-countdown'
+    'nuxt-countdown',
+    'nuxt-security',
   ],
+  security: {
+    enabled: process.env.NODE_ENV === 'production'
+  },
   css: ['~/assets/css/main.css'],
   router: {
     options: {
