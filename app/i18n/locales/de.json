@@ -40,6 +40,7 @@
       "description": "Feiert mit uns bei Abendessen, Tanz und Festlichkeiten im Zelt in der Nähe des Trauungsortes. Den Gästen steht der umliegende Bereich für Spiele im Freien und zum geselligen Beisammensein zur Verfügung. Die Cocktailstunde beginnt unmittelbar nach der Zeremonie. Weitere Informationen zum Veranstaltungsort finden Sie unter"
     },
     "accommodations": {
+      "info": "Wichtige Informationen",
       "title": "Unterkünfte",
       "cards": {
         "paulushaus": {
@@ -47,7 +48,7 @@
           "website": "https://paulushaus-neuwirth.de/",
           "img": "paulushaus.jpg",
           "description": "Gruppenhaus, ideal für größere Selbstversorgergruppen. Küche, Außenbereich mit Sport-/Spielplatz, grundlegende Ausstattung. Kein Restaurant. ~0 km zum Veranstaltungsort; ~4 km ins Stadtzentrum. Kostenlose Parkplätze.",
-          "info": "Der Veranstaltungsort liegt 4 km außerhalb der Stadt, daher wird ein Transportmittel benötigt, um dorthin und zurück zu gelangen. Taxis sind verfügbar, falls Sie kein Auto gemietet haben. Es gibt auch eine nahegelegene Bushaltestelle in Gehweite, falls Sie öffentliche Verkehrsmittel bevorzugen."
+          "info": "Die Location liegt 4 km außerhalb der Stadt, daher wird ein Transportmittel benötigt, um hin- und zurückzukommen. Taxis sind verfügbar, falls du kein Auto mietest. Wenn möglich, helfen wir auch gerne dabei, Fahrgelegenheiten zu organisieren – sei es über Freunde, Familie oder direkt über uns.",          "note_accommodation": "Bitte beachten: Die Unterkünfte direkt am Veranstaltungsort sind begrenzt und werden nach dem Prinzip „Wer zuerst kommt, mahlt zuerst“ vergeben. Wenn ihr gerne vor Ort übernachten möchtet, kontaktiert uns bitte, um die Unterkunft direkt mit uns abzustimmen. Da die Unterkünfte in unseren Location-Kosten enthalten sind, erwarten wir keinerlei Zahlung von unseren Gästen. Wenn es euch möglich ist, würden wir uns freuen, wenn ihr diese Möglichkeit vor allem für Gäste aus dem Ausland freihaltet. Natürlich könnt ihr euch trotzdem gerne bei uns melden – vielleicht sind noch Plätze frei. Wer mag, darf auch gerne mit einer kleinen Spende zu unserer Feier beitragen – dies ist aber absolut freiwillig und wird von Herzen geschätzt."
         },
         "hotelRemspark": {
           "header": "Hotel am Remspark",
@@ -105,6 +106,10 @@
           "car": {
             "title": "Auto",
             "description": "Wenn Sie außerhalb der Stadt übernachten oder einen Mietwagen haben, ist das Fahren die flexibelste Option. Parkplätze sind am Veranstaltungsort und bei den meisten Unterkünften verfügbar."
+          },
+          "organized": {
+            "title": "Organisierter Transport",
+            "description": "Wenn möglich, helfen wir gerne dabei, Fahrten zur Location zu organisieren – entweder über Freunde und Familie oder direkt über uns. Kontaktiere uns einfach, und wir schauen, was sich machen lässt!"
           }
         },
         "planningReminder": "Bitte planen Sie entsprechend, je nachdem, an welchem Flughafen Sie ankommen und ob Sie öffentliche Verkehrsmittel oder einen Mietwagen nutzen. Wir helfen Ihnen gerne bei der Koordination, falls Sie unsicher sind!"

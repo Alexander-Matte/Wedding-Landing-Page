@@ -12,15 +12,15 @@
         <h3 class="text-2xl mb-6">{{ $t('weddingDetails.reception.title') }}</h3>
         <div class="space-y-4">
           <div class="flex items-start gap-3">
-            <UIcon name="i-heroicons-calendar" class="mt-1 -600" />
+            <UIcon name="i-heroicons-calendar" class="mt-1" />
             <p>{{ $t('weddingDetails.reception.date') }}</p>
           </div>
           <div class="flex items-start gap-3">
-            <UIcon name="i-heroicons-clock" class="mt-1 -600" />
+            <UIcon name="i-heroicons-clock" class="mt-1" />
             <p>{{ $t('weddingDetails.reception.time') }} 🥂</p>
           </div>
           <div class="flex items-start gap-3">
-            <UIcon name="i-heroicons-map-pin" class="mt-1 -600" />
+            <UIcon name="i-heroicons-map-pin" class="mt-1" />
             <div>
               <p class="font-medium">{{ $t('weddingDetails.reception.location.title') }}</p>
               <p class="text-gray-600">{{ $t('weddingDetails.reception.location.addressLine1') }}</p>
@@ -75,6 +75,8 @@
               </ul>
             </li>
             <li><strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.car.title') }}: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.car.description') }}</li>
+            <li><strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.organized.title') }}: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.organized.description') }}</li>
+
           </ul>
 
           <p>

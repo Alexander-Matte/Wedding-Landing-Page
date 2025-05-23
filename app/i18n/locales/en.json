@@ -41,13 +41,15 @@
       },
       "accommodations": {
           "title": "Accommodations",
+          "info": "Important Information",
           "cards": {
               "paulushaus": {
                   "header": "Paulushaus Neuwirth – On-Site Lodging",
                   "website": "https://paulushaus-neuwirth.de/",
                   "img": "paulushaus.jpg",
                   "description": "Group house, ideal for larger self-catering groups. Kitchen, outdoor area with sports/playground, basic amenities. No restaurant. ~0 km to the venue; ~4 km to the city center. Free parking.",
-                  "info": "The venue is 4 km outside the city, so transportation is needed to get there and back. Taxis are available if you don’t rent a car. There’s also a nearby bus stop within walking distance if you prefer public transport."
+                  "info": "The venue is 4 km outside the city, so transportation is needed to get there and back. Taxis are available if you don’t rent a car. When possible, we’ll also try to help arrange transport—either through friends, family, or ourselves.",
+                  "note_accommodation": "Please note: Accommodations at the venue are limited and will be reserved on a first-come, first-served basis. If you'd like to stay at the venue, please contact us to arrange lodging directly. These accommodations are included in our venue costs, so we do not expect any payment from our guests. However, if you feel inclined to support our celebration, you’re welcome to make a donation — though this is entirely optional and deeply appreciated."
               },
               "hotelRemspark": {
                   "header": "Hotel am Remspark",
@@ -79,7 +81,7 @@
       "transportation": {
           "title": "Transportation",
           "description": "The closest major cities with international airports to the venue are Stuttgart, Frankfurt, and Munich. Stuttgart Airport (STR) is closer and more convenient, but Frankfurt (FRA) and Munich (MUC) also offer good options with more international connections.",
-          "notice1": "From each of these airports, you have three main options to reach the area:",
+          "notice1": "From each of these airports, you have two main options to reach the area:",
           "options": {
               "train": {
                   "title": "Train",
@@ -105,6 +107,10 @@
                   "car": {
                       "title": "Car",
                       "description": "If you’re staying outside the city or have a rental car, driving is the most flexible option. Parking is available at the venue and most accommodations."
+                  },
+                  "organized": {
+                    "title": "Organized Transport",
+                    "description": "We may be able to help organize transport to and from the venue—either through friends and family or directly through us. Just contact us and we’ll do our best to arrange something!"
                   }
               },
               "planningReminder": "Please plan accordingly based on which airport you arrive at and whether you will use public transportation or rent a car. We’re happy to help coordinate if you're unsure!"
@@ -224,7 +230,7 @@
     "paragraph3": "Most importantly, we’re just so happy to celebrate with you!"
   },
   "contact": {
-    "title": "Get in Touch",
+    "title": "Contact Us",
     "description": "If you have any questions at all or need help with booking, transport or activities, please contact us at:",
     "email_label": "Send email to",
     "note": "You can send us an email with any questions or concerns. We are also always available via WhatsApp."
