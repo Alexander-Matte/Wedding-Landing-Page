@@ -16,9 +16,6 @@
           <span class="text-lg">⏳</span>
           <span>Estimated completion: Coming Soon</span>
         </div>
-          <div class="flex items-center justify-center gap-2 text-gray-500">
-            PS: Sara stinks like a bag of bigfoots farts
-          </div>
       </div>
     </div>
   </template>
