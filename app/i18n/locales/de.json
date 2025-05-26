@@ -17,12 +17,9 @@
   "our_story": {
     "title": "Unsere Geschichte",
     "story": [
-      "2019, während einer Reise durch Neuseeland, arbeitete Alex in den Weinbergen, wo er einen freundlichen Deutschen traf – Spoiler: Madelines Bruder. Die beiden verstanden sich sofort, und die Einladung wurde ganz beiläufig ausgesprochen: Falls Alex jemals in Deutschland wäre, sollte er vorbeikommen. Auf dem Rückweg nach Kanada machte Alex einen spontanen Umweg nach Europa, um seinen neuen Freund in Deutschland und einen weiteren Kumpel in den Niederlanden zu besuchen.",
-      "Während seines Aufenthalts bei der Familie in Deutschland traf Alex Madeline – und es wurde schnell klar, dass zwischen ihnen etwas Besonderes war. Nach seiner Abreise hielten sie den Kontakt und tauschten ständig Sprachnachrichten aus, während Alex als Bodencrew-Mitglied bei einer Sprühflugzeugfirma in Saskatchewan arbeitete. Die frühen Morgenstunden gaben ihnen mehr Zeit zu sprechen, bevor die Zeitverschiebung sie jeden Tag auseinanderzog.",
-      "Als ihre Verbindung immer tiefer wurde, buchte Alex eine Rückkehrreise nach Deutschland – diesmal nur, um Madeline zu sehen. Sie verbrachten drei unvergessliche Wochen mit einer Roadtrip-Reise durch Österreich und bestanden den ultimativen Beziehungstest: nonstop miteinander zu reisen. Sie waren nicht nur nicht genervt voneinander, sondern entschieden sich am Ende der Reise, eine Fernbeziehung wirklich zu versuchen (auch wenn Alex anfangs sagte: “Lass uns das nicht einordnen” – klassischer Zug).",
-      "Nach einem weiteren schweren Abschied kehrte Alex nach Kanada zurück und sprang wieder in die Ölbohrarbeit, um schnell Geld zu sparen. Dann wagte Madeline einen mutigen Schritt – sie besuchte ihn im Februar – in Saskatchewan – wo die Temperaturen regelmäßig unter -40°C fallen. Sie blieb mit ihm durch die eisige Kälte und die langen Arbeitstage auf der Ölbohrinsel, einfach froh, zusammen zu sein. Da wusste Alex, dass sie es wirklich ernst meinte.",
-      "Ihr Rückflug wurde wegen COVID gestrichen, und obwohl ein Teil von Alex hoffte, dass sie länger bleiben würde, wussten sie beide, dass sie zurück musste. Diese gemeinsame Zeit festigte ihre Pläne: Alex würde nach Deutschland ziehen, und sie würden zusammen ein Leben aufbauen. Das war 2020, und seitdem haben sie nie zurückgeschaut – trotz der Herausforderungen, sich an ein neues Land, eine neue Kultur und Sprache anzupassen.",
-      "Nach all den Jahren der Distanz, der schweren Abschiede und herzlichen Wiedersehen sind Alex und Madeline überglücklich, endlich „Ja“ zu sagen und das nächste Kapitel zu beginnen – zusammen, für immer."
+      "2019, während einer Reise durch Neuseeland, traf Alex jemanden, der ihn später nach Deutschland – und zu Madeline – führen würde. Was als spontaner Besuch begann, wurde schnell zu etwas Größerem.",
+      "Sie blieben über Zeitzonen hinweg in Kontakt, Sprachnachrichten wurden zu Plänen, und schließlich kam es zu einem Wiedersehen. Eine gemeinsame Reise durch Österreich zeigte: Das hier ist etwas Besonderes.",
+      "Von den kanadischen Prärien bis ins kleine Städtchen in Deutschland, durch eisige Winter und pandemiebedingte Verzögerungen – sie haben es geschafft. Jetzt, nach Jahren der Fernbeziehung und vieler Abenteuer, sind sie bereit für das nächste Kapitel – gemeinsam."
     ],
     "quote": "Wahre Liebe ist wie Wildblumen... Sie wird oft an den unwahrscheinlichsten Orten gefunden."
   },
@@ -79,40 +76,19 @@
     },
     "transportation": {
       "title": "Transport",
-      "description": "Die nächstgelegenen Großstädte mit internationalen Flughäfen zum Veranstaltungsort sind Stuttgart, Frankfurt und München. Der Flughafen Stuttgart (STR) ist näher und bequemer, aber auch der Flughafen Frankfurt (FRA) und der Flughafen München (MUC) sind gute Optionen mit mehr internationalen Flugverbindungen.",
-      "notice1": "Von jedem dieser Flughäfen aus haben Sie zwei Hauptmöglichkeiten, um in die Region zu gelangen:",
-      "options": {
-        "train": {
-          "title": "Zug",
-          "description": "Alle drei Flughäfen verfügen über Zugverbindungen nach Schwäbisch Gmünd, der nächstgelegenen Stadt zum Veranstaltungsort. Je nach Route ist möglicherweise ein Umstieg erforderlich, typischerweise in Stuttgart oder Göppingen."
+      "accordion": {
+        "arrivingInGermany": {
+          "title": "Ankunft in Deutschland",
+          "content": "Fliegen Sie zu einem dieser Flughäfen:\n\n• Flughafen Stuttgart (STR) – Am nächsten zu unserem Wohnort (~50 km von Schwäbisch Gmünd)\n• Flughafen Frankfurt (FRA) – Größerer internationaler Flughafen (~250 km von Schwäbisch Gmünd)\n• Flughafen München (MUC) – Eine weitere Option (~215 km von Schwäbisch Gmünd)"
         },
-        "carRental": {
-          "title": "Mietwagen",
-          "description": "Ein Mietwagen ist eine bequeme Option und bietet Flexibilität, insbesondere wenn Sie auf dem Land übernachten oder die Region erkunden möchten. Autobahnen verbinden alle drei Flughäfen mit Schwäbisch Gmünd (ca. 45 Minuten von Stuttgart, 2,5 Stunden von Frankfurt und 2,5 Stunden von München)."
+        "gettingToGmuend": {
+          "title": "Anreise nach Schwäbisch Gmünd",
+          "content": "• Vom Flughafen Stuttgart: Zug ca. 45 Minuten; Mietwagen ca. 50 Minuten.\n• Vom Flughafen Frankfurt: Zug ca. 3–4 Stunden (Umsteigen in Stuttgart erforderlich); Mietwagen ca. 3 Stunden.\n• Vom Flughafen München: Zug ca. 3 Stunden; Mietwagen ca. 2,5 Stunden."
+        },
+        "gettingToVenue": {
+          "title": "Anreise zum Veranstaltungsort",
+          "content": "Vom Schwäbisch Gmünd zum Veranstaltungsort sind es ca. 10 km.\n\nWir empfehlen ein Taxi, wenn Sie nicht direkt vor Ort übernachten. Wir versuchen auch, bei Bedarf einen Transport mit Freunden und Familie zu organisieren."
         }
-      },
-      "venueDetails": {
-        "description": "Nach Ihrer Ankunft in Schwäbisch Gmünd befindet sich der Veranstaltungsort in einer nahegelegenen ländlichen Gegend, etwa 4 km außerhalb der Stadt.",
-        "notice1": "Von Schwäbisch Gmünd aus können Sie den Veranstaltungsort und die umliegenden Gebiete auf verschiedene Weise erreichen:",
-        "transportOptions": {
-          "taxi": {
-            "title": "Taxi",
-            "description": "Taxis sind am Bahnhof und in der Stadt verfügbar. Sie können folgende Taxiunternehmen kontaktieren:",
-            "taxiServices": {
-              "taxiSchwaebischGmuend": "Taxi Schwäbisch Gmünd: BITTE EINFÜGEN",
-              "taxiGmuend": "Taxi Gmünd: BITTE EINFÜGEN"
-            }
-          },
-          "car": {
-            "title": "Auto",
-            "description": "Wenn Sie außerhalb der Stadt übernachten oder einen Mietwagen haben, ist das Fahren die flexibelste Option. Parkplätze sind am Veranstaltungsort und bei den meisten Unterkünften verfügbar."
-          },
-          "organized": {
-            "title": "Organisierter Transport",
-            "description": "Wenn möglich, helfen wir gerne dabei, Fahrten zur Location zu organisieren – entweder über Freunde und Familie oder direkt über uns. Kontaktiere uns einfach, und wir schauen, was sich machen lässt!"
-          }
-        },
-        "planningReminder": "Bitte planen Sie entsprechend, je nachdem, an welchem Flughafen Sie ankommen und ob Sie öffentliche Verkehrsmittel oder einen Mietwagen nutzen. Wir helfen Ihnen gerne bei der Koordination, falls Sie unsicher sind!"
       }
     }
   },

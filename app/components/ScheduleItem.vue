@@ -3,7 +3,8 @@
     class="relative flex flex-col md:flex-row md:items-center text-center md:text-left"
   >
     <!-- Dot timeline and connecting line (Desktop only) -->
-    <div class="hidden md:block absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-green-100 border-2 border-green-500 z-10" />
+    <div class="hidden md:block absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-wedding-off-pink border-2 border-wedding-btn-pink z-10" />
+
 
     <!-- Left content -->
     <div

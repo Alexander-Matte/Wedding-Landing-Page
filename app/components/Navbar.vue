@@ -1,8 +1,7 @@
 <template>
   <nav
-    class="fixed w-full z-10 transition-transform transition-colors duration-700"
+    class="fixed w-full z-10 transition-transform transition-colors duration-700 bg-wedding-off-pink"
     :class="isVisible ? 'translate-y-0' : '-translate-y-full'"
-    :style="backgroundStyle"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
@@ -174,16 +173,6 @@ const handleScroll = () => {
   lastScrollY.value = currentScrollY.value
 }
 
-const backgroundStyle = computed(() => {
-  const y = currentScrollY.value
-
-  if (y <= fadeStart.value) {
-    return { backgroundColor: 'rgba(250, 249, 246, 0)' }
-  }
-
-  const alpha = Math.min((y - fadeStart.value) / (fadeEnd.value - fadeStart.value), 1)
-  return { backgroundColor: `rgba(250, 249, 246, ${alpha})` }
-})
 
 onMounted(() => {
   // Only now window is available

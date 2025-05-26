@@ -15,16 +15,13 @@
       "rsvp": "RSVP"
   },
   "our_story": {
-      "title": "Our Story",
-      "story": [
-          "In 2019, during a trip through New Zealand, Alex was working in the vineyards where he met a friendly German — spoiler: Madeline’s brother. The two quickly hit it off, and the invitation was casually extended: if Alex ever found himself in Germany, he should stop by. On his way back to Canada, Alex made a spontaneous detour to Europe to visit his new friend in Germany and another buddy in the Netherlands.",
-          "During his stay with the family in Germany, Alex met Madeline – and it quickly became clear that there was something special between them. After he left, they stayed in touch, constantly exchanging voice messages while Alex worked as a ground crew member for a crop-dusting company in Saskatchewan. The early mornings gave them more time to talk before the time difference pulled them apart each day.",
-          "As their connection deepened, Alex booked a return trip to Germany — this time just to see Madeline. They spent three unforgettable weeks road-tripping through Austria and passed the ultimate relationship test: traveling together nonstop. Not only were they not annoyed with each other, but by the end of the trip, they decided to really try a long-distance relationship (even though Alex initially said, “Let’s not label it” — classic move).",
-          "After another difficult goodbye, Alex returned to Canada and jumped back into oil drilling work to save up quickly. Then Madeline made a bold move — she visited him in February — in Saskatchewan — where temperatures regularly drop below -40°C. She stayed with him through the freezing cold and long days on the oil rig, just happy to be together. That’s when Alex knew she truly meant it.",
-          "Her return flight was canceled due to COVID, and although part of Alex hoped she would stay longer, they both knew she had to go back. That time together solidified their plans: Alex would move to Germany, and they would build a life together. That was in 2020, and they’ve never looked back — despite the challenges of adjusting to a new country, culture, and language.",
-          "After all the years of distance, hard goodbyes, and heartfelt reunions, Alex and Madeline are overjoyed to finally say 'I do' and begin the next chapter — together, forever."
-      ],
-      "quote": "True love is like wildflowers... it’s often found in the most unlikely places."
+    "title": "Our Story",
+    "story": [
+      "In 2019, while traveling in New Zealand, Alex met someone who would eventually lead him to Germany — and to Madeline. What started as a spontaneous visit turned into something much more.",
+      "They kept in touch across time zones, voice messages turning into plans, and eventually, a return trip to see each other again. A road trip through Austria sealed the deal — they knew they had something real.",
+      "From the Canadian prairies to small-town Germany, through freezing winters and pandemic delays, they made it work. Now, after years of long-distance and adventure, they’re finally ready to start the next chapter — together."
+    ],
+    "quote": "True love is like wildflowers... it’s often found in the most unlikely places."
   },
   "weddingDetails": {
       "title": "Wedding Details",
@@ -78,44 +75,23 @@
           },
           "visitMessage": "Visit Website"
       },
-      "transportation": {
-          "title": "Transportation",
-          "description": "The closest major cities with international airports to the venue are Stuttgart, Frankfurt, and Munich. Stuttgart Airport (STR) is closer and more convenient, but Frankfurt (FRA) and Munich (MUC) also offer good options with more international connections.",
-          "notice1": "From each of these airports, you have two main options to reach the area:",
-          "options": {
-              "train": {
-                  "title": "Train",
-                  "description": "All three airports have train connections to Schwäbisch Gmünd, the closest city to the venue. Depending on your route, a transfer may be required, typically in Stuttgart or Göppingen."
-              },
-              "carRental": {
-                  "title": "Car Rental",
-                  "description": "Renting a car is a convenient option and provides flexibility, especially if you’re staying in the countryside or want to explore the region. Highways connect all three airports to Schwäbisch Gmünd (about 45 minutes from Stuttgart, 2.5 hours from Frankfurt or Munich)."
-              }
-          },
-          "venueDetails": {
-              "description": "Once you arrive in Schwäbisch Gmünd, the venue is located in a nearby rural area about 4 km outside the city.",
-              "notice1": "From Schwäbisch Gmünd, you can reach the venue and surrounding areas in a few ways:",
-              "transportOptions": {
-                  "taxi": {
-                      "title": "Taxi",
-                      "description": "Taxis are available at the train station and in the city. You can contact the following taxi companies:",
-                      "taxiServices": {
-                          "taxiSchwaebischGmuend": "Taxi Schwäbisch Gmünd: PLEASE INSERT",
-                          "taxiGmuend": "Taxi Gmünd: PLEASE INSERT"
-                      }
-                  },
-                  "car": {
-                      "title": "Car",
-                      "description": "If you’re staying outside the city or have a rental car, driving is the most flexible option. Parking is available at the venue and most accommodations."
-                  },
-                  "organized": {
-                    "title": "Organized Transport",
-                    "description": "We may be able to help organize transport to and from the venue—either through friends and family or directly through us. Just contact us and we’ll do our best to arrange something!"
-                  }
-              },
-              "planningReminder": "Please plan accordingly based on which airport you arrive at and whether you will use public transportation or rent a car. We’re happy to help coordinate if you're unsure!"
-          }
+    "transportation": {
+      "title": "Transportation",
+      "accordion": {
+        "arrivingInGermany": {
+          "title": "Arriving in Germany",
+          "content": "Fly into one of these airports:\n\n• Stuttgart Airport (STR) – Closest to where we live (~50 km from Schwäbisch Gmünd)\n• Frankfurt Airport (FRA) – Larger international hub (~250 km from Schwäbisch Gmünd)\n• Munich Airport (MUC) – Another option (~215 km from Schwäbisch Gmünd)"
+        },
+        "gettingToGmuend": {
+          "title": "Getting to Schwäbisch Gmünd",
+          "content": "• From Stuttgart Airport: Train approx. 45 min; Car rental approx. 50 minutes.\n• From Frankfurt Airport: Train approx. 3-4 hours (Will need to transfer in Stuttgart); Car rental approx. 3 hours.\n• From Munich Airport: Train approx. 3 hours; Car rental approx. 2.5 hours."
+        },
+        "gettingToVenue": {
+          "title": "Getting to the Venue",
+          "content": "From Schwäbisch Gmünd to the venue is approx. 10 km.\n\nWe recommend taking a taxi if you are not staying at the venue. We will also try to organize transport with friends and family for you when possible."
+        }
       }
+    }
   },
   "schedule": {
     "title": "Wedding Day Schedule",

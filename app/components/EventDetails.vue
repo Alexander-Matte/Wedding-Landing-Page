@@ -41,59 +41,67 @@
       <!-- Accommodations -->
       <Accommodations class="mt-12" />
 
+  
 
       <!-- Transportation -->
-      <div class="mt-16">
-        <h3 class="text-2xl font-semibold mb-6 text-center">{{ $t('weddingDetails.transportation.title') }}</h3>
-        <div class="space-y-6 text-gray-700">
-          <p>
-            {{ $t('weddingDetails.transportation.description') }}
-          </p>
+      <div class="mt-18">
+        <div class="text-2xl font-semibold mb-6 text-center">
+        <USeparator
+          size="xs"
+          color="neutral"
+          :label="$t('weddingDetails.transportation.title')"
+          :ui="{ label: 'text-lg font-semibold' }"
+        />
 
-          <p>
-            {{ $t('weddingDetails.transportation.notice1') }}
-          </p>
-
-          <ul class="list-disc list-inside">
-            <li><strong>{{ $t('weddingDetails.transportation.options.train.title') }}</strong>: {{ $t('weddingDetails.transportation.options.train.description') }}</li>
-            <li><strong>{{ $t('weddingDetails.transportation.options.carRental.title') }}:</strong> {{ $t('weddingDetails.transportation.options.carRental.description') }}</li>
-          </ul>
-
-          <p>
-            {{ $t('weddingDetails.transportation.venueDetails.description') }}
-          </p>
-
-          <p>
-            {{ $t('weddingDetails.transportation.venueDetails.notice1') }}
-          </p>
-
-          <ul class="list-disc list-inside">
-            <li><strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.taxi.title') }}: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.taxi.description') }}
-              <ul class="list-inside list-disc">
-                <li><strong>Taxi Schwäbisch Gmünd: </strong>07171 2900 /  +49 7171 2900</li>
-                <li><strong>Taxi Zieger: </strong>+49 178 6731983 / 07176 450225</li>
-              </ul>
-            </li>
-            <li><strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.car.title') }}: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.car.description') }}</li>
-            <li><strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.organized.title') }}: </strong>{{ $t('weddingDetails.transportation.venueDetails.transportOptions.organized.description') }}</li>
-
-          </ul>
-
-          <p>
-            {{ $t('weddingDetails.transportation.venueDetails.planningReminder') }}
-          </p>
         </div>
+        <UAccordion 
+        trailing-icon="i-lucide-arrow-down"
+        :items="items"
+        type="multiple"
+        :ui="{
+          label: 'text-xl font-semibold',
+          trailingIcon: 'text-xl',
+        }"
+        >
+          <template #content="{ item }">
+            <div v-html="item.content" class="prose max-w-none pb-6"></div>
+          </template>
+
+        </UAccordion>
       </div>
+
+
+
+
     </div>
   </section>
 </template>
 
-<script setup>
-const { tm, rt } = useI18n();
+<script setup lang="ts">
+const { t,tm, rt } = useI18n();
+import type { AccordionItem } from '@nuxt/ui'
+
+const items: AccordionItem[] = [
+  {
+    label: t('weddingDetails.transportation.accordion.arrivingInGermany.title'),
+    icon: 'emojione-v1:airplane-departure',
+    content: t('weddingDetails.transportation.accordion.arrivingInGermany.content').replace(/\n/g, '<br/>'),
+  
+  },
+  {
+    label: t('weddingDetails.transportation.accordion.gettingToGmuend.title'),
+    icon: 'emojione-v1:high-speed-train',
+    content: t('weddingDetails.transportation.accordion.gettingToGmuend.content').replace(/\n/g, '<br/>')
+  },
+  {
+    label: t('weddingDetails.transportation.accordion.gettingToVenue.title'),
+    icon: 'emojione-v1:automobile',
+    content: t('weddingDetails.transportation.accordion.gettingToVenue.content').replace(/\n/g, '<br/>')
+  }
+]
+
+
 
 
 </script>
 
-<style scoped>
-/* Optional: Your scoped styles go here */
-</style>
