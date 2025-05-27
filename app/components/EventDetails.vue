@@ -12,15 +12,15 @@
         <h3 class="text-2xl mb-6">{{ $t('weddingDetails.reception.title') }}</h3>
         <div class="space-y-4">
           <div class="flex items-start gap-3">
-            <UIcon name="i-heroicons-calendar" class="mt-1" />
+            <UIcon name="emojione-v1:tear-off-calendar" class="mt-1 !size-6" />
             <p>{{ $t('weddingDetails.reception.date') }}</p>
           </div>
           <div class="flex items-start gap-3">
-            <UIcon name="i-heroicons-clock" class="mt-1" />
+            <UIcon name="emojione-v1:two-oclock" class="mt-1 !size-6" />
             <p>{{ $t('weddingDetails.reception.time') }} 🥂</p>
           </div>
           <div class="flex items-start gap-3">
-            <UIcon name="i-heroicons-map-pin" class="mt-1" />
+            <UIcon name="emojione-v1:round-pushpin" class="mt-1 !size-6" />
             <div>
               <p class="font-medium">{{ $t('weddingDetails.reception.location.title') }}</p>
               <p class="text-gray-600">{{ $t('weddingDetails.reception.location.addressLine1') }}</p>
@@ -31,7 +31,14 @@
         <div class="mt-6 text-gray-700">
           <p>
             {{ $t('weddingDetails.reception.description') }}
-            <a href="https://paulushaus-neuwirth.de/" class="text-blue-600 underline" target="_blank" rel="noopener noreferrer"> paulushaus-neuwirth.de</a>.
+            <ULink 
+              to="https://paulushaus-neuwirth.de/"
+              target="_blank"
+              class="text-black hover:text-teal-600 underline hover:underline font-medium transition-colors"
+            >
+              paulushaus-neuwirth.de
+            </ULink>
+
           </p>
         </div>
       </div>
@@ -60,6 +67,7 @@
         type="multiple"
         :ui="{
           label: 'text-xl font-semibold',
+          leadingIcon: 'text-4xl',
           trailingIcon: 'text-xl',
         }"
         >
@@ -86,7 +94,6 @@ const items: AccordionItem[] = [
     label: t('weddingDetails.transportation.accordion.arrivingInGermany.title'),
     icon: 'emojione-v1:airplane-departure',
     content: t('weddingDetails.transportation.accordion.arrivingInGermany.content').replace(/\n/g, '<br/>'),
-  
   },
   {
     label: t('weddingDetails.transportation.accordion.gettingToGmuend.title'),

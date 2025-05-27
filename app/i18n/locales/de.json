@@ -28,24 +28,25 @@
     "reception": {
       "title": "Empfang",
       "date": "Samstag, 6. Juni 2026",
-      "time": "Ab 14:30 Uhr – bis der Letzte steht",
+      "time": "Ab 14:00 Uhr – bis der Letzte steht",
       "location": {
         "title": "Freizeithaus – Neuwirth",
         "addressLine1": "(Am) Appenhaus 1",
         "addressLine2": "73527 Schw. Gmünd - Herlikofen"
       },
-      "description": "Feiert mit uns bei Abendessen, Tanz und Festlichkeiten im Zelt in der Nähe des Trauungsortes. Den Gästen steht der umliegende Bereich für Spiele im Freien und zum geselligen Beisammensein zur Verfügung. Die Cocktailstunde beginnt unmittelbar nach der Zeremonie. Weitere Informationen zum Veranstaltungsort finden Sie unter"
+      "description": "Feiert mit uns bei Abendessen, Tanz und guter Stimmung im Zelt in der Nähe des Trauungsortes. Der umliegende Bereich lädt zu Spielen im Freien und gemütlichem Beisammensein ein. Die Cocktailstunde startet direkt nach der Zeremonie. Mehr Infos zum Ort findet ihr unter"
     },
     "accommodations": {
       "info": "Wichtige Informationen",
       "title": "Unterkünfte",
       "cards": {
         "paulushaus": {
-          "header": "Paulushaus Neuwirth – Unterkunft am Veranstaltungsort",
+          "header": "Paulushaus Neuwirth – Unterkunft direkt am Veranstaltungsort",
           "website": "https://paulushaus-neuwirth.de/",
           "img": "paulushaus.jpg",
           "description": "Gruppenhaus, ideal für größere Selbstversorgergruppen. Küche, Außenbereich mit Sport-/Spielplatz, grundlegende Ausstattung. Kein Restaurant. ~0 km zum Veranstaltungsort; ~4 km ins Stadtzentrum. Kostenlose Parkplätze.",
-          "info": "Die Location liegt 4 km außerhalb der Stadt, daher wird ein Transportmittel benötigt, um hin- und zurückzukommen. Taxis sind verfügbar, falls du kein Auto mietest. Wenn möglich, helfen wir auch gerne dabei, Fahrgelegenheiten zu organisieren – sei es über Freunde, Familie oder direkt über uns.",          "note_accommodation": "Bitte beachten: Die Unterkünfte direkt am Veranstaltungsort sind begrenzt und werden nach dem Prinzip „Wer zuerst kommt, mahlt zuerst“ vergeben. Wenn ihr gerne vor Ort übernachten möchtet, kontaktiert uns bitte, um die Unterkunft direkt mit uns abzustimmen. Da die Unterkünfte in unseren Location-Kosten enthalten sind, erwarten wir keinerlei Zahlung von unseren Gästen. Wenn es euch möglich ist, würden wir uns freuen, wenn ihr diese Möglichkeit vor allem für Gäste aus dem Ausland freihaltet. Natürlich könnt ihr euch trotzdem gerne bei uns melden – vielleicht sind noch Plätze frei. Wer mag, darf auch gerne mit einer kleinen Spende zu unserer Feier beitragen – dies ist aber absolut freiwillig und wird von Herzen geschätzt."
+          "info": "Die Location liegt etwa 4 km außerhalb der Stadt – ihr braucht also ein Transportmittel, um hin- und zurückzukommen. Taxis sind verfügbar, falls ihr kein Auto mietet. Wenn ihr mögt, helfen wir euch auch gern bei der Organisation von Mitfahrgelegenheiten – über Freunde, Familie oder direkt über uns.",
+          "note_accommodation": "Bitte beachtet: Die Unterkünfte direkt am Veranstaltungsort sind begrenzt und werden nach dem Prinzip „Wer zuerst kommt, mahlt zuerst“ vergeben. Wenn ihr gerne vor Ort übernachten möchtet, sagt uns einfach Bescheid, damit wir das direkt mit euch abstimmen können. Die Unterkünfte sind bereits in unseren Location-Kosten enthalten, ihr müsst also nichts bezahlen. Wenn möglich, haltet diese Plätze bitte vor allem für Gäste aus dem Ausland frei – aber meldet euch gerne trotzdem bei uns, vielleicht ist noch etwas frei. Wer möchte, darf auch gerne mit einer kleinen Spende zu unserer Feier beitragen – völlig freiwillig und von Herzen willkommen."
         },
         "hotelRemspark": {
           "header": "Hotel am Remspark",
@@ -79,156 +80,153 @@
       "accordion": {
         "arrivingInGermany": {
           "title": "Ankunft in Deutschland",
-          "content": "Fliegen Sie zu einem dieser Flughäfen:\n\n• Flughafen Stuttgart (STR) – Am nächsten zu unserem Wohnort (~50 km von Schwäbisch Gmünd)\n• Flughafen Frankfurt (FRA) – Größerer internationaler Flughafen (~250 km von Schwäbisch Gmünd)\n• Flughafen München (MUC) – Eine weitere Option (~215 km von Schwäbisch Gmünd)"
+          "content": "Fliegt am besten zu einem dieser Flughäfen:\n\nFlughafen Stuttgart (STR) – Am nächsten zu unserem Wohnort (~50 km von Schwäbisch Gmünd)\nFlughafen Frankfurt (FRA) – Größerer internationaler Flughafen (~250 km von Schwäbisch Gmünd)\nFlughafen München (MUC) – Auch eine gute Option (~215 km von Schwäbisch Gmünd)"
         },
         "gettingToGmuend": {
-          "title": "Anreise nach Schwäbisch Gmünd",
-          "content": "• Vom Flughafen Stuttgart: Zug ca. 45 Minuten; Mietwagen ca. 50 Minuten.\n• Vom Flughafen Frankfurt: Zug ca. 3–4 Stunden (Umsteigen in Stuttgart erforderlich); Mietwagen ca. 3 Stunden.\n• Vom Flughafen München: Zug ca. 3 Stunden; Mietwagen ca. 2,5 Stunden."
+          "title": "Weiter nach Schwäbisch Gmünd",
+          "content": "Vom Flughafen Stuttgart: Zug ca. 45 Minuten; Mietwagen ca. 50 Minuten.\nVom Flughafen Frankfurt: Zug ca. 3–4 Stunden (Umsteigen in Stuttgart); Mietwagen ca. 3 Stunden.\nVom Flughafen München: Zug ca. 3 Stunden; Mietwagen ca. 2,5 Stunden."
         },
         "gettingToVenue": {
-          "title": "Anreise zum Veranstaltungsort",
-          "content": "Vom Schwäbisch Gmünd zum Veranstaltungsort sind es ca. 10 km.\n\nWir empfehlen ein Taxi, wenn Sie nicht direkt vor Ort übernachten. Wir versuchen auch, bei Bedarf einen Transport mit Freunden und Familie zu organisieren."
+          "title": "Weiter zum Veranstaltungsort",
+          "content": "Von Schwäbisch Gmünd zum Veranstaltungsort sind es etwa 10 km.\n\nWenn ihr nicht direkt vor Ort übernachtet, empfehlen wir ein Taxi. Wir versuchen aber auch, bei Bedarf einen Fahrdienst mit Freund:innen oder Familie zu organisieren."
         }
       }
     }
   },
   "schedule": {
-    "title": "Zeitplan des Hochzeitstages",
+    "title": "Zeitplan für unseren Hochzeitstag",
     "item1": {
       "title": "Ankunft der Gäste",
-      "time": "14:30 Uhr",
-      "description": "Bitte kommt frühzeitig, damit ihr vor der Zeremonie Platz nehmen könnt."
+      "time": "13:30 Uhr",
+      "description": "Kommt am besten ein bisschen früher, damit ihr euch in Ruhe einen Platz suchen könnt."
     },
     "item2": {
       "title": "Zeremonie",
-      "time": "15:00 Uhr",
-      "description": "Austausch der Eheversprechen."
+      "time": "14:00 Uhr",
+      "description": "Wir geben uns das Ja-Wort – seid dabei!"
     },
     "item3": {
-      "title": "Cocktailstunde + Fotos",
-      "time": "15:45 – 17:30 Uhr",
-      "description": "Genießt Getränke und Häppchen auf der Gartenterrasse."
+      "title": "Cocktailstunde & Fotos",
+      "time": "15:00 – 17:30 Uhr",
+      "description": "Lehnt euch zurück mit einem Drink und ein paar Häppchen auf der Terrasse, während Fotos gemacht werden."
     },
     "item4": {
-      "title": "Abendessen (Empfang)",
+      "title": "Abendessen",
       "time": "17:30 – 18:30 Uhr",
-      "description": "Farm-to-Table-Dinner in der Wildflower-Scheune."
+      "description": "Wir befinden uns noch in der Planungsphase für das Abendessen. Weitere Informationen zum Essen folgen zu einem späteren Zeitpunkt."
     },
     "item5": {
-      "title": "Reden & Anschneiden der Torte",
+      "title": "Reden & Torte",
       "time": "18:30 – 19:00 Uhr",
-      "description": "Reden von Familie und Freunden, anschließend Anschneiden der Hochzeitstorte."
+      "description": "Ein paar Worte von Familie und Freund:innen – danach gibt’s Torte!"
     },
     "item6": {
-      "title": "Tanzen",
+      "title": "Party & Tanzen",
       "time": "19:00 Uhr – open end",
-      "description": "Ab 19:00 Uhr – solange die Musik spielt."
+      "description": "Ab auf die Tanzfläche – solange die Musik läuft!"
     }
   },
   "rsvp": {
-    "title": "RSVP",
-    "description": "Bitte teilen Sie uns mit, ob Sie an unserem besonderen Tag teilnehmen werden.",
-    "deadline": "Bitte antworten Sie bis zum 1. September 2025",
+    "title": "Sag uns Bescheid",
+    "description": "Lass uns wissen, ob du mit uns feiern kannst – wir würden uns riesig freuen!",
+    "deadline": "Bitte gib uns bis zum 1. September 2025 Bescheid.",
     "form": {
       "name": {
-        "label": "Vollständiger Name",
-        "placeholder": "Vollständiger Name",
-        "required": "Der vollständige Name ist erforderlich"
+        "label": "Dein voller Name",
+        "placeholder": "Vor- und Nachname",
+        "required": "Bitte trag deinen Namen ein."
       },
       "email": {
-        "label": "E-Mail",
-        "placeholder": "Geben Sie Ihre E-Mail ein",
+        "label": "E-Mail-Adresse",
+        "placeholder": "Deine E-Mail",
         "required": "E-Mail ist erforderlich.",
-        "invalid": "Ungültige E-Mail-Adresse",
-        "error": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+        "invalid": "Hm, das sieht nicht nach einer gültigen E-Mail aus.",
+        "error": "Bitte gib eine gültige E-Mail-Adresse ein."
       },
       "attending": {
-        "label": "Werden Sie teilnehmen?",
-        "yes": "Freudig zusagen",
-        "no": "Bedauerlicherweise ablehnen"
+        "label": "Bist du dabei?",
+        "yes": "Ja, ich freu mich riesig!",
+        "no": "Leider kann ich nicht dabei sein"
       },
       "guests": {
-        "label": "Anzahl der Gäste (einschließlich sich selbst)"
+        "label": "Wie viele Personen kommen (inkl. dir)?"
       },
       "additionalGuests": {
-        "header": "Zusätzliche Gästennamen",
-        "label": "Gast {number} Vor- und Nachname",
+        "header": "Wer kommt noch mit?",
+        "label": "Gast {number} – Vor- und Nachname",
         "placeholder": "Vor- und Nachname",
         "edit": "Bearbeiten",
         "save": "Speichern",
-        "error": "Bitte geben Sie einen zusätzlichen Gastnamen ein, bevor Sie das Formular absenden"
-
+        "error": "Bitte gib den Namen des Gasts ein, bevor du das Formular abschickst."
       },
       "message": {
-        "label": "Nachricht für das Paar",
+        "label": "Nachricht an uns",
         "hint": "Optional",
-        "placeholder": "Teilen Sie Ihre guten Wünsche oder eine Erinnerung"
+        "placeholder": "Schreib uns etwas Schönes oder teil eine Erinnerung"
       },
       "personType": {
-        "adult": "Erwachsene",
+        "adult": "Erwachsene:r",
         "child": "Kind (unter 12 Jahren)"
       },
-      "submit": "RSVP absenden"
+      "submit": "Antwort absenden"
     },
     "toast": {
       "emptyGuestName": {
-        "title": "Gastname ist leer",
-        "description": "Bitte geben Sie einen Namen ein, bevor Sie speichern."
+        "title": "Gastname fehlt",
+        "description": "Bitte gib einen Namen ein, bevor du speicherst."
       },
       "duplicateMainName": {
-        "title": "Doppelt gemeldeter Name",
-        "description": "Der Name im Feld für zusätzliche Gäste darf nicht mit dem oben eingegebenen vollständigen Namen übereinstimmen."
+        "title": "Name doppelt",
+        "description": "Der Name bei den zusätzlichen Gästen darf nicht derselbe sein wie dein eigener."
       },
       "duplicateGuests": {
-        "title": "Doppelt gemeldeter Gastname",
-        "description": "Es gibt doppelte zusätzliche Gästennamen. Bitte stellen Sie sicher, dass jeder Gast einen einzigartigen Namen hat."
+        "title": "Gleicher Name doppelt",
+        "description": "Bitte achte darauf, dass jeder Gastname nur einmal vorkommt."
       },
       "invalidInput": {
-        "title": "Ungültige Eingabe"
+        "title": "Da stimmt was nicht"
       },
       "success": {
-        "title": "RSVP abgesendet",
-        "description": "Vielen Dank für Ihre Antwort!"
+        "title": "Danke fürs Antworten!",
+        "description": "Wir freuen uns riesig über deine Rückmeldung!"
       },
       "error": {
-          "title": "Fehler",
-          "description": "Fehler beim Absenden des Formulars. Bitte stelle sicher, dass alle Felder korrekt ausgefüllt sind. Wenn das Problem weiterhin besteht, wende dich bitte an Alex oder Madi."
+        "title": "Oops, da ging was schief",
+        "description": "Das Formular konnte nicht abgeschickt werden. Bitte schau nochmal über alle Felder. Wenn’s nicht klappt, meld dich gern direkt bei Alex oder Madi."
       },
       "captcha": {
-        "error": "Bitte vervollständigen Sie die Verifizierung"
+        "error": "Bitte bestätige, dass du kein Roboter bist :)"
       }
-
     }
   },
   "registry": {
-    "title": "Geschenkliste",
-    "paragraph1": "Deine Anwesenheit bei unserer Hochzeit bedeutet uns wirklich die Welt. Wir sind so dankbar, diesen besonderen Tag mit den Menschen feiern zu dürfen, die wir am meisten lieben.",
-    "paragraph2": "Zu Beginn unseres gemeinsamen Lebens haben wir uns entschieden, keine traditionelle Geschenkliste zu erstellen. Wenn du dennoch gerne etwas schenken möchtest, würden wir uns sehr über einen Beitrag zu unserer Zukunft freuen – sei es für unser Zuhause, Reisen oder gemeinsame Träume.",
-    "paragraph3": "Am allerwichtigsten ist: Wir freuen uns einfach riesig, mit dir zu feiern!"
+    "title": "Geschenke",
+    "paragraph1": "Dein Dabeisein bei unserer Hochzeit bedeutet uns wirklich alles. Wir sind unglaublich dankbar, diesen besonderen Tag mit den Menschen feiern zu dürfen, die uns am meisten am Herzen liegen.",
+    "paragraph2": "Da wir gerade erst unser gemeinsames Leben starten, haben wir keine klassische Geschenkliste erstellt. Wenn du uns trotzdem gerne etwas schenken möchtest, freuen wir uns über einen kleinen Beitrag für unser Zuhause, zukünftige Reisen oder gemeinsame Träume.",
+    "paragraph3": "Aber am allerwichtigsten ist: Wir freuen uns riesig, mit dir zu feiern!"
   },
-    "contact": {
-      "title": "Kontaktieren Sie uns",
-      "description": "Wenn Sie Fragen haben oder Hilfe bei Buchung, Transport oder Aktivitäten benötigen, kontaktieren Sie uns bitte unter:",
-      "email_label": "E-Mail senden an",
-      "note": "Sie können uns eine E-Mail mit Fragen oder Anliegen senden. Wir sind auch immer per WhatsApp erreichbar."
+  "contact": {
+    "title": "Meld dich bei uns",
+    "description": "Wenn du Fragen hast oder Hilfe bei der Unterkunft, Anreise oder Planung brauchst, schreib uns einfach:",
+    "email_label": "E-Mail an",
+    "note": "Du kannst uns jederzeit eine Mail schicken – oder noch einfacher: Schreib uns per WhatsApp!"
   },
-    "activities": {
+  "activities": {
     "title": "Aktivitäten rund um Schwäbisch Gmünd",
-    "subtitle": "Ob Sie ein paar Tage oder ein paar Wochen bleiben – hier ist für jeden etwas dabei.",
-
+    "subtitle": "Ob du nur ein paar Tage oder gleich ein paar Wochen bleibst – hier ist für jeden was dabei.",
     "days_1_4": {
-      "title": "🗓️ Wenn Sie 1–4 Tage hier sind",
+      "title": "🗓️ Wenn du 1–4 Tage hier bist",
       "explore": {
         "title": "Schwäbisch Gmünd entdecken",
-        "desc": "Entdecken Sie Kopfsteinpflasterstraßen, Cafés und das Heilig-Kreuz-Münster."
+        "desc": "Spaziere durch Kopfsteinpflasterstraßen, genieße gemütliche Cafés und schau dir das Heilig-Kreuz-Münster an."
       },
       "riverwalk": {
         "title": "Stadtgarten & Rems-Spaziergang",
-        "desc": "Entspannende Grünflächen direkt in der Stadt."
+        "desc": "Entspann dich in den grünen Oasen mitten in der Stadt."
       },
       "skypark": {
         "title": "Sky Park",
-        "desc": "Ein Spaß beim Klettern in den Bäumen für alle Altersgruppen."
+        "desc": "Klettern in den Bäumen – Spaß für Groß und Klein."
       },
       "museum": {
         "title": "Museum im Prediger",
@@ -236,87 +234,83 @@
       },
       "food": {
         "title": "Schwäbische Küche",
-        "desc": "Probieren Sie Maultaschen, Spätzle und lokales Bier in einem traditionellen Restaurant."
+        "desc": "Probier Maultaschen, Spätzle und ein regionales Bier in einem traditionellen Gasthaus."
       }
     },
-
     "days_7": {
-      "title": "🗓️ Wenn Sie eine Woche bleiben",
+      "title": "🗓️ Wenn du eine Woche bleibst",
       "hike": {
         "title": "Hohenstaufen-Wanderung",
-        "desc": "Schöne Aussicht und Burgruinen ganz in der Nähe."
+        "desc": "Genieße tolle Aussichten und Burgruinen ganz in der Nähe."
       },
       "limes": {
         "title": "Aalener Limesmuseum",
-        "desc": "Tauchen Sie in die römische Geschichte ein – nur 30 Minuten entfernt."
+        "desc": "Eintauchen in die römische Geschichte – nur 30 Minuten entfernt."
       },
       "hall": {
         "title": "Schwäbisch Hall",
-        "desc": "Tagesausflug in eine märchenhafte Stadt mit Fachwerkhäusern."
+        "desc": "Ein Tagesausflug in die märchenhafte Stadt mit ihren Fachwerkhäusern."
       },
       "therme": {
         "title": "Thermenbesuch",
-        "desc": "Entspannen Sie in der Limes-Therme oder Adelindis Therme."
+        "desc": "Entspanne in der Limes-Therme oder der Adelindis Therme."
       },
       "nature": {
         "title": "Natur im Remstal",
-        "desc": "Radfahren oder Wandern durch malerische Täler und Wege."
+        "desc": "Radfahren oder Wandern durch idyllische Täler und schöne Wege."
       }
     },
-
     "days_14": {
-      "title": "🗓️ Wenn Sie 2 Wochen Zeit haben",
+      "title": "🗓️ Wenn du zwei Wochen Zeit hast",
       "stuttgart": {
         "title": "Stuttgart",
-        "desc": "Besuchen Sie das Mercedes-Benz Museum, die Wilhelma oder shoppen Sie auf der Königstraße."
+        "desc": "Besuche das Mercedes-Benz Museum, die Wilhelma oder shoppe auf der Königstraße."
       },
       "castles": {
         "title": "Schlössertour",
-        "desc": "Entdecken Sie Burg Hohenzollern, Schloss Lichtenstein oder Schloss Ludwigsburg."
+        "desc": "Entdecke Burg Hohenzollern, Schloss Lichtenstein und Schloss Ludwigsburg."
       },
       "blackforest": {
         "title": "Schwarzwald",
-        "desc": "Malereische Fahrten, Wanderungen und Dörfer wie Triberg oder Titisee."
+        "desc": "Malerische Fahrten, Wanderungen und Dörfer wie Triberg oder Titisee warten auf dich."
       },
       "bodensee": {
         "title": "Bodensee",
-        "desc": "Besuchen Sie Meersburg, Lindau oder machen Sie eine Fähre zur Insel Mainau."
+        "desc": "Besuche Meersburg, Lindau oder mach eine Fähre zur Insel Mainau."
       },
       "ulm": {
         "title": "Ulm",
-        "desc": "Besteigen Sie das höchste Kirchengebäude der Welt und spazieren Sie an der Donau entlang."
+        "desc": "Besteig das höchste Kirchengebäude der Welt und spaziere an der Donau entlang."
       },
       "allgaeu": {
         "title": "Allgäu-Region",
-        "desc": "Grüne Hügel, Alpenblicke und bayerische Gemütlichkeit entdecken."
+        "desc": "Grüne Hügel, Alpenpanorama und bayerische Gemütlichkeit erwarten dich."
       },
       "neuschwanstein": {
         "title": "Schloss Neuschwanstein",
-        "desc": "Ein märchenhaftes Schloss bei Füssen – eines der bekanntesten Sehenswürdigkeiten Deutschlands."
+        "desc": "Das märchenhafte Schloss bei Füssen – eine der bekanntesten Sehenswürdigkeiten Deutschlands."
       },
       "munich": {
         "title": "München",
-        "desc": "Besuchen Sie die bayerische Hauptstadt mit Biergärten, Museen, dem Englischen Garten und lebendigem Stadtleben."
+        "desc": "Erlebe die bayerische Hauptstadt mit Biergärten, Museen, dem Englischen Garten und lebendigem Stadtleben."
       }
     },
-
-    "footer": "Brauchen Sie Hilfe bei der Planung?",
-    "contact_link": "Kontaktieren Sie uns"
+    "footer": "Brauchst du Hilfe bei der Planung?",
+    "contact_link": "Melde dich bei uns"
   },
   "countdown": {
     "time": {
-      "year": "J",
-      "day": "T",
-      "hour": "Std",
-      "minute": "Min",
-      "second": "Sek"
+      "year": "Jahr",
+      "day": "Tag",
+      "hour": "Stunde",
+      "minute": "Minute",
+      "second": "Sekunde"
     },
-    "message": "Countdown bis wir „Ja“ sagen"
+    "message": "Der Countdown läuft – bald geben wir uns das Ja-Wort!"
   },
   "footer": {
     "title": "Madeline & Alexander",
-    "celebrationMessage": "Wir können es kaum erwarten, mit euch zu feiern!",
-    "eventDetails": "6. Juni 2026 • Paulushaus-Neuwirth • Schwäbisch Gmünd, DE"
+    "celebrationMessage": "Wir freuen uns riesig darauf, mit dir zu feiern!",
+    "eventDetails": "6. Juni 2026 • Paulushaus-Neuwirth • Schwäbisch Gmünd"
   }
-  
 }

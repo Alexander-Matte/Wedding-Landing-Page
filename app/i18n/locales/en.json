@@ -1,18 +1,18 @@
 {
   "navbar": {
-      "story": "Story",
-      "details": "Details",
-      "schedule": "Schedule",
-      "rsvp": "RSVP",
-      "registry": "Registry",
-      "activities": "Activities",
-      "contact": "Contact"
+    "story": "Story",
+    "details": "Details",
+    "schedule": "Schedule",
+    "rsvp": "RSVP",
+    "registry": "Registry",
+    "activities": "Activities",
+    "contact": "Contact"
   },
   "hero": {
-      "names": "Madeline Fehleisen & Alexander Matte",
-      "marrying": "are getting married",
-      "date": "June 6, 2026",
-      "rsvp": "RSVP"
+    "names": "Madeline Fehleisen & Alexander Matte",
+    "marrying": "are getting married",
+    "date": "June 6, 2026",
+    "rsvp": "RSVP"
   },
   "our_story": {
     "title": "Our Story",
@@ -24,67 +24,67 @@
     "quote": "True love is like wildflowers... it’s often found in the most unlikely places."
   },
   "weddingDetails": {
-      "title": "Wedding Details",
-      "reception": {
-          "title": "Reception",
-          "date": "Saturday, June 6, 2026",
-          "time": "2:30 PM – until the last one standing",
-          "location": {
-              "title": "Freizeithaus – Neuwirth",
-              "addressLine1": "(Am) Appenhaus 1",
-              "addressLine2": "73527 Schwäbisch Gmünd - Herlikofen"
-          },
-          "description": "Join us for dinner, dancing, and celebration in a tent near the ceremony site. The surrounding area will be open for guests to enjoy outdoor games and socializing. Cocktail hour will begin immediately after the ceremony. More information about the venue can be found at"
+    "title": "Wedding Details",
+    "reception": {
+      "title": "Reception",
+      "date": "Saturday, June 6, 2026",
+      "time": "2:00 PM – until the last one standing",
+      "location": {
+        "title": "Freizeithaus – Neuwirth",
+        "addressLine1": "(Am) Appenhaus 1",
+        "addressLine2": "73527 Schwäbisch Gmünd - Herlikofen"
       },
-      "accommodations": {
-          "title": "Accommodations",
-          "info": "Important Information",
-          "cards": {
-              "paulushaus": {
-                  "header": "Paulushaus Neuwirth – On-Site Lodging",
-                  "website": "https://paulushaus-neuwirth.de/",
-                  "img": "paulushaus.jpg",
-                  "description": "Group house, ideal for larger self-catering groups. Kitchen, outdoor area with sports/playground, basic amenities. No restaurant. ~0 km to the venue; ~4 km to the city center. Free parking.",
-                  "info": "The venue is 4 km outside the city, so transportation is needed to get there and back. Taxis are available if you don’t rent a car. When possible, we’ll also try to help arrange transport—either through friends, family, or ourselves.",
-                  "note_accommodation": "Please note: Accommodations at the venue are limited and will be reserved on a first-come, first-served basis. If you'd like to stay at the venue, please contact us to arrange lodging directly. These accommodations are included in our venue costs, so we do not expect any payment from our guests. However, if you feel inclined to support our celebration, you’re welcome to make a donation — though this is entirely optional and deeply appreciated."
-              },
-              "hotelRemspark": {
-                  "header": "Hotel am Remspark",
-                  "website": "https://hotelamremspark.de/",
-                  "img": "Hotel-am-Remspark.jpg",
-                  "description": "Modern 4-star hotel near the city center. Fitness area, rooftop restaurant/bar, breakfast buffet. ~7–8 km to the venue. Paid parking on-site. Bike rental available for a fee, and Wi-Fi included."
-              },
-              "hotelSchwaebischGmuend": {
-                  "header": "Hotel Schwäbisch Gmünd",
-                  "website": "https://hotel-schwaebisch-gmuend.de/",
-                  "img": "hotel-fortuna.jpg",
-                  "description": "Comfortable 4-star hotel with wellness area (pool, sauna, fitness), breakfast buffet, and regional cuisine. ~6–7 km to the venue. Underground parking (~€10/day). Located right at the train station."
-              },
-              "schoenblick": {
-                  "header": "Hotel Schönblick",
-                  "website": "https://www.schoenblick.de/de/hotel",
-                  "img": "hotel-schoenblich.jpg",
-                  "description": "Quiet guesthouse near the forest. Breakfast included, basic amenities, park area, and free parking. ~1–2 km to the venue; ~2.5 km to the city center."
-              },
-              "mutlangerHof": {
-                  "header": "Hotel Mutlanger Hof",
-                  "website": "https://www.mutlangerhof.de/",
-                  "img": "mutlangerhof.jpg",
-                  "description": "Simple and quiet guesthouse in Mutlangen. Free Wi-Fi, continental breakfast, and bike rental. ~5 km to the venue; ~3.5 km to the city center. Free parking on-site."
-              }
-          },
-          "visitMessage": "Visit Website"
+      "description": "Join us for dinner, dancing, and celebration in a tent near the ceremony site. The surrounding area will be open for guests to enjoy outdoor games and socializing. Cocktail hour will begin immediately after the ceremony. More information about the venue can be found at"
+    },
+    "accommodations": {
+      "title": "Accommodations",
+      "info": "Important Information",
+      "cards": {
+        "paulushaus": {
+          "header": "Paulushaus Neuwirth – On-Site Lodging",
+          "website": "https://paulushaus-neuwirth.de/",
+          "img": "paulushaus.jpg",
+          "description": "Group house, ideal for larger self-catering groups. Kitchen, outdoor area with sports/playground, basic amenities. No restaurant. ~0 km to the venue; ~4 km to the city center. Free parking.",
+          "info": "The venue is 4 km outside the city, so transportation is needed to get there and back. Taxis are available if you don’t rent a car. When possible, we’ll also try to help arrange transport—either through friends, family, or ourselves.",
+          "note_accommodation": "Please note: Accommodations at the venue are limited and will be reserved on a first-come, first-served basis. If you'd like to stay at the venue, please contact us to arrange lodging directly. These accommodations are included in our venue costs, so we do not expect any payment from our guests. However, if you feel inclined to support our celebration, you’re welcome to make a donation — though this is entirely optional and deeply appreciated."
+        },
+        "hotelRemspark": {
+          "header": "Hotel am Remspark",
+          "website": "https://hotelamremspark.de/",
+          "img": "Hotel-am-Remspark.jpg",
+          "description": "Modern 4-star hotel near the city center. Fitness area, rooftop restaurant/bar, breakfast buffet. ~7–8 km to the venue. Paid parking on-site. Bike rental available for a fee, and Wi-Fi included."
+        },
+        "hotelSchwaebischGmuend": {
+          "header": "Hotel Schwäbisch Gmünd",
+          "website": "https://hotel-schwaebisch-gmuend.de/",
+          "img": "hotel-fortuna.jpg",
+          "description": "Comfortable 4-star hotel with wellness area (pool, sauna, fitness), breakfast buffet, and regional cuisine. ~6–7 km to the venue. Underground parking (~€10/day). Located right at the train station."
+        },
+        "schoenblick": {
+          "header": "Hotel Schönblick",
+          "website": "https://www.schoenblick.de/de/hotel",
+          "img": "hotel-schoenblich.jpg",
+          "description": "Quiet guesthouse near the forest. Breakfast included, basic amenities, park area, and free parking. ~1–2 km to the venue; ~2.5 km to the city center."
+        },
+        "mutlangerHof": {
+          "header": "Hotel Mutlanger Hof",
+          "website": "https://www.mutlangerhof.de/",
+          "img": "mutlangerhof.jpg",
+          "description": "Simple and quiet guesthouse in Mutlangen. Free Wi-Fi, continental breakfast, and bike rental. ~5 km to the venue; ~3.5 km to the city center. Free parking on-site."
+        }
       },
+      "visitMessage": "Visit Website"
+    },
     "transportation": {
       "title": "Transportation",
       "accordion": {
         "arrivingInGermany": {
           "title": "Arriving in Germany",
-          "content": "Fly into one of these airports:\n\n• Stuttgart Airport (STR) – Closest to where we live (~50 km from Schwäbisch Gmünd)\n• Frankfurt Airport (FRA) – Larger international hub (~250 km from Schwäbisch Gmünd)\n• Munich Airport (MUC) – Another option (~215 km from Schwäbisch Gmünd)"
+          "content": "Fly into one of these airports:\n\nStuttgart Airport (STR) – Closest to where we live (~50 km from Schwäbisch Gmünd)\nFrankfurt Airport (FRA) – Larger international hub (~250 km from Schwäbisch Gmünd)\nMunich Airport (MUC) – Another option (~215 km from Schwäbisch Gmünd)"
         },
         "gettingToGmuend": {
           "title": "Getting to Schwäbisch Gmünd",
-          "content": "• From Stuttgart Airport: Train approx. 45 min; Car rental approx. 50 minutes.\n• From Frankfurt Airport: Train approx. 3-4 hours (Will need to transfer in Stuttgart); Car rental approx. 3 hours.\n• From Munich Airport: Train approx. 3 hours; Car rental approx. 2.5 hours."
+          "content": "From Stuttgart Airport: Train approx. 45 min; Car rental approx. 50 minutes.\nFrom Frankfurt Airport: Train approx. 3-4 hours (Will need to transfer in Stuttgart); Car rental approx. 3 hours.\nFrom Munich Airport: Train approx. 3 hours; Car rental approx. 2.5 hours."
         },
         "gettingToVenue": {
           "title": "Getting to the Venue",
@@ -97,23 +97,23 @@
     "title": "Wedding Day Schedule",
     "item1": {
       "title": "Guest Arrival",
-      "time": "2:30 PM",
+      "time": "1:30 PM",
       "description": "Please arrive early to be seated before the ceremony."
     },
     "item2": {
       "title": "Ceremony",
-      "time": "3:00 PM",
+      "time": "2:00 PM",
       "description": "Exchange of vows."
     },
     "item3": {
       "title": "Cocktail Hour + Photos",
-      "time": "3:45 – 5:30 PM",
+      "time": "3:00 – 5:30 PM",
       "description": "Enjoy drinks and appetizers on the garden terrace."
     },
     "item4": {
       "title": "Reception Dinner",
       "time": "5:30 – 6:30 PM",
-      "description": "Farm-to-table dinner at the Wildflower Barn."
+      "description": "We are still finalizing the dinner plans. Details about the food will be shared closer to the wedding date."
     },
     "item5": {
       "title": "Toasts & Cake Cutting",
@@ -122,82 +122,82 @@
     },
     "item6": {
       "title": "Dancing",
-      "time": "7:00 – Openended",
-      "description": "7:00 – As long as the music plays"
+      "time": "7:00 – Open End",
+      "description": "Let’s hit the dance floor and keep the celebration going into the night!"
     }
   },
   "rsvp": {
-      "title": "RSVP",
-      "description": "Please let us know if you will be attending our special day.",
-      "deadline": "Please respond by September 1st, 2025",
-      "form": {
-          "name": {
-              "label": "Full Name",
-              "placeholder": "Enter your full name",
-              "required": "Full name is required"
-          },
-          "email": {
-              "label": "Email",
-              "placeholder": "Enter your email",
-              "required": "Email is required.",
-              "invalid": "Invalid email address",
-              "error": "Please enter a valid email address."
-          },
-          "attending": {
-              "label": "Will you attend?",
-              "yes": "Joyfully accept",
-              "no": "Regretfully decline"
-          },
-          "guests": {
-              "label": "Number of guests (including yourself)"
-          },
-          "additionalGuests": {
-              "header": "Additional Guest Names",
-              "label": "Guest {number} First and Last Name",
-              "placeholder": "First and Last Name",
-              "edit": "Edit",
-              "save": "Save",
-              "error": "Please enter an additional guest name before submitting the form"
-          },
-          "message": {
-              "label": "Message to the couple",
-              "hint": "Optional",
-              "placeholder": "Share your well wishes or a memory"
-          },
-          "personType": {
-            "adult": "Adult",
-            "child": "Child (Under 12)"
-          },
-          "submit": "Submit RSVP"
+    "title": "RSVP",
+    "description": "Please let us know if you will be attending our special day.",
+    "deadline": "Please respond by September 1st, 2025",
+    "form": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name",
+        "required": "Full name is required"
       },
-      "toast": {
-          "emptyGuestName": {
-              "title": "Guest name is empty",
-              "description": "Please enter a name before saving."
-          },
-          "duplicateMainName": {
-              "title": "Duplicate name",
-              "description": "The name entered in the additional guest field cannot match the Full Name field above."
-          },
-          "duplicateGuests": {
-              "title": "Duplicate guest name",
-              "description": "There are duplicate additional guest names. Please make sure each guest has a unique name."
-          },
-          "invalidInput": {
-              "title": "Invalid input"
-          },
-          "success": {
-              "title": "RSVP submitted",
-              "description": "Thank you for your response!"
-          },
-          "error": {
-            "title": "Error",
-            "description": "Error while submitting the form. Please ensure all fields are filled out correct. If you still are having issues, please contact Alex or Madi"
-          },
-          "captcha": {
-            "error": "Please complete the verification"
-          }
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email",
+        "required": "Email is required.",
+        "invalid": "Invalid email address",
+        "error": "Please enter a valid email address."
+      },
+      "attending": {
+        "label": "Will you attend?",
+        "yes": "Joyfully accept",
+        "no": "Regretfully decline"
+      },
+      "guests": {
+        "label": "Number of guests (including yourself)"
+      },
+      "additionalGuests": {
+        "header": "Additional Guest Names",
+        "label": "Guest {number} First and Last Name",
+        "placeholder": "First and Last Name",
+        "edit": "Edit",
+        "save": "Save",
+        "error": "Please enter an additional guest name before submitting the form"
+      },
+      "message": {
+        "label": "Message to the couple",
+        "hint": "Optional",
+        "placeholder": "Share your well wishes or a memory"
+      },
+      "personType": {
+        "adult": "Adult",
+        "child": "Child (Under 12)"
+      },
+      "submit": "Submit RSVP"
+    },
+    "toast": {
+      "emptyGuestName": {
+        "title": "Guest name is empty",
+        "description": "Please enter a name before saving."
+      },
+      "duplicateMainName": {
+        "title": "Duplicate name",
+        "description": "The name entered in the additional guest field cannot match the Full Name field above."
+      },
+      "duplicateGuests": {
+        "title": "Duplicate guest name",
+        "description": "There are duplicate additional guest names. Please make sure each guest has a unique name."
+      },
+      "invalidInput": {
+        "title": "Invalid input"
+      },
+      "success": {
+        "title": "RSVP submitted",
+        "description": "Thank you for your response!"
+      },
+      "error": {
+        "title": "Error",
+        "description": "Error while submitting the form. Please ensure all fields are filled out correct. If you still are having issues, please contact Alex or Madi"
+      },
+      "captcha": {
+        "error": "Please complete the verification"
       }
+    }
   },
   "registry": {
     "title": "Registry",
@@ -211,10 +211,9 @@
     "email_label": "Send email to",
     "note": "You can send us an email with any questions or concerns. We are also always available via WhatsApp."
   },
-    "activities": {
+  "activities": {
     "title": "Things to Do Around Schwäbisch Gmünd",
     "subtitle": "Whether you're staying a few days or a couple of weeks, there's something here for everyone.",
-
     "days_1_4": {
       "title": "🗓️ If You're Here for 1–4 Days",
       "explore": {
@@ -238,7 +237,6 @@
         "desc": "Try Maultaschen, Spätzle, and local beer at a traditional restaurant."
       }
     },
-
     "days_7": {
       "title": "🗓️ If You're Staying for a Week",
       "hike": {
@@ -262,7 +260,6 @@
         "desc": "Bike or hike scenic valleys and trails."
       }
     },
-
     "days_14": {
       "title": "🗓️ If You're Here for 2 Weeks",
       "stuttgart": {
@@ -298,18 +295,17 @@
         "desc": "Visit the capital of Bavaria for beer gardens, museums, English Garden, and a vibrant city vibe."
       }
     },
-
     "footer": "Need help planning?",
     "contact_link": "Reach out to us"
   },
   "countdown": {
-      "time": {
-        "year": "y",
-        "day": "d",
-        "hour": "h",
-        "minute": "m",
-        "second": "s"
-      },
+    "time": {
+      "year": "y",
+      "day": "d",
+      "hour": "h",
+      "minute": "m",
+      "second": "s"
+    },
     "message": "Countdown until we say “I do”"
   },
   "footer": {
