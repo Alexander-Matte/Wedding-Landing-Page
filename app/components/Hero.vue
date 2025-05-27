@@ -13,7 +13,7 @@
       <h1 class="italic text-4xl md:text-6xl mb-2">
         {{ $t('hero.names') }}
       </h1>
-      <div class="w-24 h-1 bg-white mx-auto my-6"/>
+      <div class="w-24 h-1 bg-wedding-pink mx-auto my-6"/>
       <p class="text-xl md:text-2xl mb-6">{{ $t('hero.marrying') }}</p>
       <p class="font-light text-2xl md:text-3xl">{{ $t('hero.date') }}</p>
 
@@ -22,7 +22,7 @@
           <span>
             <a
               href="#rsvp"
-              class="inline-block bg-white px-8 py-3 rounded-full text-lg font-medium hover:bg--50 transition-colors"
+              class="inline-block bg-wedding-pink hover px-8 py-3 rounded-2xl text-lg font-medium transition-colors"
             >{{ $t('hero.rsvp') }}</a>
           </span>
         </button>

@@ -6,7 +6,7 @@
       </h2>
 
       <div class="relative">
-        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-green-700 -ml-0.5"/>
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-lime-700 -ml-0.5" />
 
         <div class="space-y-12">
           <ScheduleItem

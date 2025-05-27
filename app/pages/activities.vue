@@ -1,7 +1,7 @@
 <template>
   <Navbar />
   <div class="h-20"></div>
-
+  
   <div class="container mx-auto px-4 py-10 space-y-12">
     <div class="text-center">
       <h1 class="text-4xl font-bold mb-4">{{ $t('activities.title') }}</h1>
@@ -9,7 +9,6 @@
         {{ $t('activities.subtitle') }}
       </p>
     </div>
-
     <!-- 1–4 Days -->
     <UCard class="bg-[#FAF9F6]">
       <template #header>
@@ -66,10 +65,5 @@
   </div>
 </template>
 <style>
-/* Ensure the entire page uses Playfair Display for elegance */
-body,
-html {
-  font-family: 'Playfair Display', serif;
-  background-color: #fff5f7; /* subtle warm background */
-}
+
 </style>

@@ -42,26 +42,25 @@ export default defineAppConfig({
       },
       input: {
         slots: {
-          base: '!bg-[#FAF9F6] border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-3 focus:ring-primary-500 focus:border-primary-500 text-black'  // Override the text color here
-        }
+        base: 'w-full !bg-white rounded-md border-0 placeholder:text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 transition-colors',
+          }
       },
 
       textarea: {
         slots: {
-            base: '!bg-[#FAF9F6] border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500'
+          base: [
+            'w-full !bg-white rounded-md border-0 placeholder:text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75',
+            'transition-colors'
+          ],        
         }
       },
       select: {
         slots: {
-          base: '!bg-[#FAF9F6] !text-black border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 hover:bg-[#4B3A2A] hover:text-white',
+          base: [
+          '!bg-white !text-default relative group rounded-md inline-flex items-center focus:outline-none disabled:cursor-not-allowed disabled:opacity-75',
+          'transition-colors'
+          ],
           content: 'bg-[#FAF9F6] max-h-60 w-(--reka-select-trigger-width) shadow-lg rounded-md ring ring-default overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-select-content-transform-origin) pointer-events-auto',
-          item: [
-            'bg-[#FAF9F6] text-black hover:bg-[#3F3F3F] hover:text-white group relative w-full flex items-center select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md',
-            'data-disabled:cursor-not-allowed data-disabled:opacity-75',
-            'data-highlighted:not-data-disabled:bg-[#3F3F3F] data-highlighted:not-data-disabled:text-white',
-            'transition-colors before:transition-colors'
-          ]
-          
         }
       },
       radioGroup: {

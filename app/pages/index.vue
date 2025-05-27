@@ -10,13 +10,13 @@
         <OurStory />
       </section>
       
-      <section class="bg-wedding-green">
+      <section class="bg-wedding-off-pink">
         <EventDetails />
       </section>
       <section class="bg-wedding-white">
         <Schedule />
       </section>
-      <section class="bg-wedding-green">
+      <section class="bg-wedding-off-pink">
         <RSVP />
       </section>
 
@@ -25,7 +25,7 @@
       </section>
     </main>
       
-    <section class="bg-wedding-green">
+    <section class="bg-wedding-off-pink">
       <Footer />
     </section>
    

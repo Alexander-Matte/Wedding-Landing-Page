@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h3 class="text-2xl font-semibold mb-6 text-center">
-      {{ $t('weddingDetails.accommodations.title') }}
-    </h3>
+    <div class="text-2xl font-semibold my-9 text-center">
+      <USeparator size="xs" color="neutral" :label="$t('weddingDetails.accommodations.title')" :ui="{ label: 'text-lg font-semibold' }"/>
+    </div>
 
     <ClientOnly>
       <UCarousel
@@ -25,7 +25,7 @@
             <USlideover 
             v-if="item.info" 
             side="bottom" 
-            title="Info"
+            :title="$t('weddingDetails.accommodations.info')"
             :close="{
               color: 'primary',
               variant: 'outline',
@@ -33,16 +33,15 @@
             }"
             >
               <UButton 
-              color="warning" 
-              label="Open"
-              trailing-icon="heroicons:information-circle" 
-              size="lg"
-              class="rounded-b-none"
-              :close="{
-                color: 'primary',
-                variant: 'outline',
-                class: 'rounded-full'
-              }">
+                color="warning" 
+                label="Open"
+                trailing-icon="emojione-v1:information" 
+                size="lg"
+                class="rounded-b-none"
+                :ui="{
+                  trailingIcon: 'text-xl ml-auto'
+                }"
+              >
                 {{ $t('weddingDetails.accommodations.info') }}
             </UButton>
               <template #body>
