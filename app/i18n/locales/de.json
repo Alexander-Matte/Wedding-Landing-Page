@@ -300,13 +300,13 @@
   },
   "countdown": {
     "time": {
-      "year": "Jahr",
-      "day": "Tag",
-      "hour": "Stunde",
-      "minute": "Minute",
-      "second": "Sekunde"
+      "year": "J",
+      "day": "T",
+      "hour": "Std",
+      "minute": "M",
+      "second": "Sek"
     },
-    "message": "Der Countdown läuft – bald ist unser großer Tag!"
+    "message": "Countdown bis zum „I do“"
   },
   "footer": {
     "title": "Madeline & Alexander",

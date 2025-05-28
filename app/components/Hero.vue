@@ -9,7 +9,7 @@
     <div class="absolute inset-0 bg-opacity-30 z-2 pointer-events-none"/>
 
     <!-- Content -->
-    <div class="relative z-20 text-center px-4">
+    <div class="relative z-20 text-center px-4 mt-5">
       <h1 class="italic text-4xl md:text-6xl mb-2">
         {{ $t('hero.names') }}
       </h1>
