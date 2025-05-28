@@ -271,7 +271,7 @@ const totalAttending = computed(() =>
 
 const totalAdults = computed(() =>
   data.value.reduce((count, rsvp) => {
-    const rsvpAdult = 1 // RSVP person is always an adult
+    const rsvpAdult = 1 
     const guestAdults = (rsvp.guests || []).filter(g => g.is_adult).length
     return count + rsvpAdult + guestAdults
   }, 0)
