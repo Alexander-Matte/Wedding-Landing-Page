@@ -57,7 +57,7 @@
     <div class="text-center mt-10">
       <p class="text-gray-600">
         {{ $t('activities.footer') }}
-        <NuxtLink to="/contact" class="text-primary font-medium hover:underline">
+        <NuxtLink to="/contact" class="text-default font-medium hover:underline">
           {{ $t('activities.contact_link') }}
         </NuxtLink>
       </p>
