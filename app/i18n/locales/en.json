@@ -192,7 +192,7 @@
       },
       "error": {
         "title": "Error",
-        "description": "Error while submitting the form. Please ensure all fields are filled out correct. If you still are having issues, please contact Alex or Madi"
+        "description": "An error occurred while submitting the form. If you've already submitted an RSVP with this email or are still experiencing issues, please contact Alex or Madi through the contact page."
       },
       "captcha": {
         "error": "Please complete the verification"

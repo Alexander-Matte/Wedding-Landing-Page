@@ -192,7 +192,7 @@
       },
       "error": {
         "title": "Oops, da ging was schief",
-        "description": "Das Formular konnte nicht abgeschickt werden. Bitte schau nochmal über alle Felder. Wenn’s nicht klappt, meld dich gern direkt bei Alex oder Madi."
+        "description": "Beim Absenden des Formulars ist ein Fehler aufgetreten. Wenn du bereits eine Zusage mit dieser E-Mail-Adresse abgeschickt hast oder weiterhin Probleme auftreten, kontaktiere bitte Alex oder Madi über die Kontaktseite."
       },
       "captcha": {
         "error": "Bitte bestätige, dass du kein Roboter bist :)"

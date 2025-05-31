@@ -27,7 +27,6 @@ export default defineEventHandler(async (event) => {
     })
   
     if (error) {
-      console.log(error.message);
       throw createError({ statusCode: 500, statusMessage: error.message })
     }
 
@@ -41,7 +40,7 @@ export default defineEventHandler(async (event) => {
         }
       })
     } catch (emailError) {
-      // Handle error (e.g., emailError.data for response body)
+      
     }
 
   
