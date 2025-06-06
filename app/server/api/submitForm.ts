@@ -17,17 +17,19 @@ export default defineEventHandler(async (event) => {
       throw createError({ statusCode: 403, statusMessage: 'Turnstile verification failed.' })
     }
 
-  
-    const { error } = await supabase.rpc('save_rsvp_and_guest', {
-      attending: rpcPayload.attending,
-      email: rpcPayload.email,
-      guests: rpcPayload.guests,
-      mainname: rpcPayload.mainName,
-      message: rpcPayload.message
-    })
-  
+    const { data, error } = await supabase
+      .from('rsvp')  // Specify the rsvp table
+      .insert([
+        {
+          attending: rpcPayload.attending,
+          email: rpcPayload.email,
+          name: rpcPayload.mainName,  // Ensure the field name matches your table schema
+          message: rpcPayload.message,
+          guests: rpcPayload.guests  // This should be a JSON array
+        }
+      ]);
+
     if (error) {
-      console.log(error.message);
       throw createError({ statusCode: 500, statusMessage: error.message })
     }
 
