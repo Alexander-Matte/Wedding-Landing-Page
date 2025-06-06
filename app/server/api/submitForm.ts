@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     }
 
   
-    const { error } = await supabase.rpc('save_rsvp_and_guests', {
+    const { error } = await supabase.rpc('save_rsvp_and_guest', {
       attending: rpcPayload.attending,
       email: rpcPayload.email,
       guests: rpcPayload.guests,
