@@ -127,6 +127,7 @@
     }
   },
   "rsvp": {
+    "scrollHint": "Scrollen, um zu sehen, was wir geplant haben.",
     "title": "Sag uns Bescheid",
     "description": "Lass uns wissen, ob du mit uns feiern kannst – wir würden uns riesig freuen!",
     "deadline": "Bitte gib uns bis zum 1. September 2025 Bescheid.",

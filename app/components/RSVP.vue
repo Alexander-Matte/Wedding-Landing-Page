@@ -1,8 +1,16 @@
 <template>
   <section id="rsvp" class="py-20 px-4">
     <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+<div class="flex justify-center mt-4 md:hidden px-4">
+  <div class="animate-bounce text-gray-600 text-sm flex items-center justify-center space-x-2 max-w-xs text-center break-words">
+    <Icon name="i-lucide-chevron-up" class="h-5 w-5 flex-shrink-0" />
+    <span class="break-words">{{ $t('rsvp.scrollHint') }}</span>
+    <Icon name="i-lucide-chevron-down" class="h-5 w-5 flex-shrink-0" />
+  </div>
+</div>
+
       <div class="md:flex">
-        <div class="md:w-1/3 p-8 flex flex-col justify-center">
+        <div class="md:w-1/3 px-8 flex flex-col justify-center">
           <h2 class="text-3xl italic mb-4">{{ $t('rsvp.title') }}</h2>
           <p class="mb-6">{{ $t('rsvp.description') }}</p>
           <p>{{ $t('rsvp.deadline') }}</p>

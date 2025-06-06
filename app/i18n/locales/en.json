@@ -127,6 +127,7 @@
     }
   },
   "rsvp": {
+    "scrollHint": "Scroll to see what we’ve planned!",
     "title": "RSVP",
     "description": "Please let us know if you will be attending our special day.",
     "deadline": "Please respond by September 1st, 2025",

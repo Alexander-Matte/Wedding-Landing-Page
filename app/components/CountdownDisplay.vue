@@ -11,7 +11,6 @@
         with-years
       >
         <p class="text-2xl md:text-3xl font-mono tracking-widest">
-          {{ years }}{{ $t('countdown.time.year') }}
            {{ days }}{{ $t('countdown.time.day') }}
            {{ hours }}{{ $t('countdown.time.hour') }}
            {{ minutes }}{{ $t('countdown.time.minute') }}
@@ -23,7 +22,7 @@
 </template>
 
 <script setup>
-const targetDate = new Date('June 06, 2026 15:00:00')
+const targetDate = new Date('June 06, 2026 14:00:00')
 </script>
 
 <style scoped>
