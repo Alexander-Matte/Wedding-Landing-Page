@@ -9,7 +9,7 @@
   "crons": [
     {
       "path": "/api/cron-rsvp",
-      "schedule": "*/2 * * * *"
+      "schedule": "0 * * * ** * * *"
     }
   ]
 }
