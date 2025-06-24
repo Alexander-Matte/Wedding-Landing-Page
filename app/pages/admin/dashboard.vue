@@ -100,20 +100,25 @@
                 </p>
 
                 <h3 class="font-semibold mb-2">Guests</h3>
-                <ul class="list-disc list-inside">
-                <li v-for="(guest, idx) in row.original.guests" :key="idx">
-                    {{ guest.name }} —
-                    <span class="italic">
-                    {{ guest.is_adult ? 'Adult' : 'Child (Under 12)' }}
-                    </span>
-                </li>
-                <li
-                    v-if="!row.original.guests || row.original.guests.length === 0"
-                    class="italic text-gray-500"
-                >
-                    No guests associated with this RSVP
-                </li>
-                </ul>
+                  <ul class="list-disc list-inside">
+                    <li v-for="(guest, idx) in row.original.guests" :key="idx">
+                        {{ guest.name }} —
+                        <span class="italic">
+                        {{ guest.is_adult ? 'Adult' : 'Child (Under 12)' }}
+                        </span>
+                    </li>
+                    <li
+                        v-if="!row.original.guests || row.original.guests.length === 0"
+                        class="italic text-gray-500"
+                    >
+                        No guests associated with this RSVP
+                    </li>
+                  </ul>
+
+                <h3 class="font-semibold mb-2 mt-4">Song</h3>
+                <p class="mb-4 italic text-gray-700">
+                {{ row.original.song ? row.original.song : 'No song :( )' }}
+                </p>
             </div>
             </template>
 
@@ -206,7 +211,7 @@ const columns: TableColumn<RSVP>[] = [
   },
   {
     accessorKey: 'created_at',
-    header: 'RSVP Date',
+    header: 'RSVP Recieved Date',
     cell: ({ row }) =>
       new Date(row.getValue('created_at')).toLocaleString('en-US', {
         day: 'numeric',

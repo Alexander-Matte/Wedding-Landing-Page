@@ -17,7 +17,7 @@
   "our_story": {
     "title": "Our Story",
     "story": [
-      "In 2019, while traveling in New Zealand, Alex met someone who would eventually lead him to Germany — and to Madeline. What started as a spontaneous visit turned into something much more.",
+      "Back in 2019, while traveling in New Zealand, Alex met Max (Madi's brother - Thanks mate), who would eventually lead him to Germany — and to Madeline. What started as a spontaneous visit turned into something much more.",
       "They kept in touch across time zones, voice messages turning into plans, and eventually, a return trip to see each other again. A road trip through Austria sealed the deal — they knew they had something real.",
       "From the Canadian prairies to small-town Germany, through freezing winters and pandemic delays, they made it work. Now, after years of long-distance and adventure, they’re finally ready to start the next chapter — together."
     ],
@@ -164,6 +164,12 @@
         "label": "Message to the couple",
         "hint": "Optional",
         "placeholder": "Share your well wishes or a memory"
+      },
+      "song": {
+        "label": "Song that will get you dancing!",
+        "placeholder": "What will make you hit the D-Floor?!",
+        "tooLong": "Song title cannot exceed 200 characters",
+        "required": "Please share a song to ensure our dance floor is boppin"
       },
       "personType": {
         "adult": "Adult",

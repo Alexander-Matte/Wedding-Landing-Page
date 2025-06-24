@@ -17,7 +17,7 @@
   "our_story": {
     "title": "Unsere Geschichte",
     "story": [
-      "2019, während einer Reise durch Neuseeland, traf Alex jemanden, der ihn später nach Deutschland – und zu Madeline – führen würde. Was als spontaner Besuch begann, wurde schnell zu etwas Größerem.",
+      "2019, während einer Reise durch Neuseeland, traf Alex Max (Madi’s Bruder - Thanks mate), der ihn später nach Deutschland bringen würde – und zu Madeline (nicht bewusst ;)). Was als spontaner Besuch begann, wurde schnell zu etwas Größerem.",
       "Sie blieben über Zeitzonen hinweg in Kontakt, Sprachnachrichten wurden zu Plänen, und schließlich kam es zu einem Wiedersehen. Eine gemeinsame Reise durch Österreich zeigte: Das hier ist etwas Besonderes.",
       "Von den kanadischen Prärien bis ins kleine Städtchen in Deutschland, durch eisige Winter und pandemiebedingte Verzögerungen – sie haben es geschafft. Jetzt, nach Jahren der Fernbeziehung und vieler Abenteuer, sind sie bereit für das nächste Kapitel – gemeinsam."
     ],
@@ -164,6 +164,12 @@
         "label": "Nachricht an uns",
         "hint": "Optional",
         "placeholder": "Schreib uns etwas Schönes oder teil eine Erinnerung"
+      },
+      "song": {
+        "label": "Lied, der dich zum Tanzen bringt!",
+        "placeholder": "Welcher Lied bringt dich auf die Tanzfläche?",
+        "tooLong": "Der Liedtitel darf maximal 200 Zeichen lang sein",
+        "required": "Bitte teil uns deinen Lied mit, damit die Tanzfläche so richtig bebt!"
       },
       "personType": {
         "adult": "Erwachsene:r",

@@ -1,60 +1,61 @@
 <template>
   <nav
-    class="fixed w-full z-10 transition-transform transition-colors duration-700 bg-wedding-off-pink"
+    class="fixed w-full z-20 transition-transform transition-colors duration-700 bg-wedding-off-pink"
     :class="isVisible ? 'translate-y-0' : '-translate-y-full'"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <NuxtLink
-          :to="locale === 'de' ? '/de' : '/'">
+          :to="locale === 'de' ? '/de' : '/'"
+          >
           <span class="text-xl font-medium italic">M & A</span>
         </NuxtLink>
         <!-- Desktop menu -->
         <div class="hidden md:flex items-center space-x-8">
           <NuxtLink
             :to="locale === 'de' ? '/de#our-story' : '/#our-story'"
-            class="text-gray-700 transition-colors"
+            class="relative text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           >
             <strong>{{ $t('navbar.story') }}</strong>
           </NuxtLink>
 
           <NuxtLink
             :to="locale === 'de' ? '/de#details' : '/#details'"
-            class="text-gray-700 transition-colors"
+            class="relative text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           >
             <strong>{{ $t('navbar.details') }}</strong>
           </NuxtLink>
 
           <NuxtLink
             :to="locale === 'de' ? '/de#schedule' : '/#schedule'"
-            class="text-gray-700 transition-colors"
+            class="relative text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           >
             <strong>{{ $t('navbar.schedule') }}</strong>
           </NuxtLink>
 
           <NuxtLink
             :to="locale === 'de' ? '/de#rsvp' : '/#rsvp'"
-            class="text-gray-700 transition-colors"
+            class="relative text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           >
             <strong>{{ $t('navbar.rsvp') }}</strong>
           </NuxtLink>
 
           <NuxtLink
             :to="locale === 'de' ? '/de#registry' : '/#registry'"
-            class="text-gray-700 transition-colors"
+            class="relative text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           >
             <strong>{{ $t('navbar.registry') }}</strong>
           </NuxtLink>
           <NuxtLink
             :to="locale === 'de' ? '/de/activities' : '/activities'"
-            class="text-gray-700 transition-colors"
+            class="relative text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
             @click="toggleMenu"
           >
           <strong>{{ $t('navbar.activities') }}</strong>
           </NuxtLink>
           <NuxtLink
             :to="locale === 'de' ? '/de/contact' : '/contact'"
-            class="text-gray-700 transition-colors"
+            class="relative text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
             @click="toggleMenu"
           >
           <strong>{{ $t('navbar.contact') }}</strong>
@@ -77,49 +78,49 @@
       <div class="px-2 pt-2 pb-3 space-y-1 bg-[#FAF9F6]">
         <NuxtLink
           :to="locale === 'de' ? '/de#our-story' : '/#our-story'"
-          class="block px-3 py-2 text-base font-medium text-gray-700"
+          class="relative block px-3 py-2 text-base font-medium text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           @click="toggleMenu"
         >
           {{ $t('navbar.story') }}
         </NuxtLink>
         <NuxtLink
           :to="locale === 'de' ? '/de#details' : '/#details'"
-          class="block px-3 py-2 text-base font-medium text-gray-700"
+          class="relative block px-3 py-2 text-base font-medium text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           @click="toggleMenu"
         >
           {{ $t('navbar.details') }}
         </NuxtLink>
         <NuxtLink
           :to="locale === 'de' ? '/de#schedule' : '/#schedule'"
-          class="block px-3 py-2 text-base font-medium text-gray-700"
+          class="relative block px-3 py-2 text-base font-medium text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           @click="toggleMenu"
         >
           {{ $t('navbar.schedule') }}
         </NuxtLink>
         <NuxtLink
           :to="locale === 'de' ? '/de#rsvp' : '/#rsvp'"
-          class="block px-3 py-2 text-base font-medium text-gray-700"
+          class="relative block px-3 py-2 text-base font-medium text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           @click="toggleMenu"
         >
           {{ $t('navbar.rsvp') }}
         </NuxtLink>
         <NuxtLink
           :to="locale === 'de' ? '/de#registry' : '/#registry'"
-          class="block px-3 py-2 text-base font-medium text-gray-700"
+          class="relative block px-3 py-2 text-base font-medium text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           @click="toggleMenu"
         >
           {{ $t('navbar.registry') }}
         </NuxtLink>
         <NuxtLink
           :to="locale === 'de' ? '/de/activities' : '/activities'"
-          class="block px-3 py-2 text-base font-medium text-gray-700"
+          class="relative block px-3 py-2 text-base font-medium text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           @click="toggleMenu"
         >
           {{ $t('navbar.activities') }}
         </NuxtLink>
         <NuxtLink
           :to="locale === 'de' ? '/de/contact' : '/contact'"
-          class="block px-3 py-2 text-base font-medium text-gray-700"
+          class="relative block px-3 py-2 text-base font-medium text-gray-700 transition-colors after:block after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-gray-700 after:transition-all hover:text-gray-900 hover:after:w-full"
           @click="toggleMenu"
         >
           {{ $t('navbar.contact') }}

@@ -78,7 +78,6 @@
                         ]"
                         class="mb-2" 
                       />
-
                         <UInput
                           v-model="guest.name"
                           :placeholder="$t('rsvp.form.additionalGuests.placeholder', { number: index + 2 })"
@@ -90,7 +89,17 @@
                 </div>
               </template>
             </template>
-
+            <UFormField 
+              :label="$t('rsvp.form.song.label')" 
+              name="song" 
+              required 
+            >
+              <UInput 
+                v-model="state.song" 
+                class="w-full md:w-2/3"
+                :placeholder="$t('rsvp.form.song.placeholder')"
+              />
+            </UFormField>
             <UFormField :label="$t('rsvp.form.message.label')" :hint="$t('rsvp.form.message.hint')" name="message">
               <UTextarea 
               v-model="state.message" 
@@ -147,8 +156,11 @@ const schema = z.object({
     .email(t('rsvp.form.email.invalid')),
   attending: z.enum(['yes', 'no']),
   guests: z.string().optional(),
-  message: z.string().optional()
-})
+  message: z.string().optional(),
+  song: z.string()
+    .min(1, t('rsvp.form.song.required'))
+    .max(200, t('rsvp.form.song.tooLong')) 
+});
 
 type Schema = z.output<typeof schema>
 
@@ -157,7 +169,8 @@ const state = reactive<Schema>({
   email: '',
   attending: 'no',
   guests: '',
-  message: ''
+  message: '',
+  song: ''
 })
 
 
@@ -289,7 +302,6 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
   }
 
   if (state.attending === 'yes' && !checkAdditionalGuests()) {
-    alert("whoaa");
     loading.value = false
     return
   }
@@ -302,7 +314,8 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     guests: additionalGuests.value.map(g => ({
       name: g.name,
       isAdult: g.type === 'adult'
-    }))
+    })),
+    song: state.song,
   }
 
   const { data, error } = await useFetch('/api/submitForm', {

@@ -18,14 +18,15 @@ export default defineEventHandler(async (event) => {
     }
 
     const { data, error } = await supabase
-      .from('rsvp')  // Specify the rsvp table
+      .from('rsvp')
       .insert([
         {
           attending: rpcPayload.attending,
           email: rpcPayload.email,
-          name: rpcPayload.mainName,  // Ensure the field name matches your table schema
+          name: rpcPayload.mainName,
           message: rpcPayload.message,
-          guests: rpcPayload.guests  // This should be a JSON array
+          guests: rpcPayload.guests,
+          song: rpcPayload.song
         }
       ]);
 
