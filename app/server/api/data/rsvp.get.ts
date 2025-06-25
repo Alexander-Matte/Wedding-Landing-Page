@@ -3,15 +3,17 @@ import { serverSupabaseClient } from '#supabase/server'
 export default defineEventHandler(async (event) => {
   const client = await serverSupabaseClient(event)
 
-  const { data: rsvp, error } = await client
-    .from('rsvp')
-    .select(`
-      *,
-      guests (
-        name,
-        is_adult
-      )
-    `)
+const { data: rsvp, error } = await client
+  .from('rsvp')
+  .select(`
+    *,
+    guests (
+      name,
+      is_adult
+    )
+  `)
+  .not('email', 'like', 'cronTest%')
+
   
   if (error) {
     throw createError({ statusCode: 500, statusMessage: error.message })

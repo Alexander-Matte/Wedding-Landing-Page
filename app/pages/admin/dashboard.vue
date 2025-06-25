@@ -60,24 +60,33 @@
                     <p>Here's the latest information on your wedding and RSVPs.</p>
                   </div>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <div class="text-sm text-gray-500">Total RSVPs</div>
-                    <div class="text-xl font-bold">{{ totalRSVPs }}</div>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <div class="text-sm text-gray-500">Attending</div>
-                    <div class="text-xl font-bold">{{ totalAttending }}</div>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <div class="text-sm text-gray-500">Adults</div>
-                    <div class="text-xl font-bold">{{ totalAdults }}</div>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <div class="text-sm text-gray-500">Children</div>
-                    <div class="text-xl font-bold">{{ totalChildren }}</div>
-                </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+              <div class="bg-white p-4 rounded shadow text-center">
+                <div class="text-sm text-gray-500">Total RSVPs</div>
+                <div class="text-xl font-bold">{{ totalRSVPs }}</div>
+              </div>
+              <div class="bg-white p-4 rounded shadow text-center">
+                <div class="text-sm text-gray-500">Not Attending</div>
+                <div class="text-xl font-bold">{{ totalNotAttending }}</div>
+              </div>
+              <div class="bg-white p-4 rounded shadow text-center">
+                <div class="text-sm text-gray-500">Attending</div>
+                <div class="text-xl font-bold">{{ totalAttending }}</div>
+              </div>
             </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="bg-white p-4 rounded shadow text-center">
+                <div class="text-sm text-gray-500">Adults</div>
+                <div class="text-xl font-bold">{{ totalAdults }}</div>
+              </div>
+              <div class="bg-white p-4 rounded shadow text-center">
+                <div class="text-sm text-gray-500">Children</div>
+                <div class="text-xl font-bold">{{ totalChildren }}</div>
+              </div>
+            </div>
+
 
           <h2 class="text-2xl font-semibold mb-4">RSVPs</h2>
           <div class="bg-white p-4 rounded shadow">
@@ -134,7 +143,7 @@
 import { ref, h, resolveComponent } from 'vue'
 import type { TableColumn } from '@nuxt/ui'
 import type { Row } from '@tanstack/vue-table'
-
+const UIcon = resolveComponent('UIcon')
 const supabase = useSupabaseClient()
 const UButton = resolveComponent('UButton')
 const UBadge = resolveComponent('UBadge')
@@ -192,15 +201,32 @@ const columns: TableColumn<RSVP>[] = [
     accessorKey: 'email',
     header: 'Email'
   },
-  {
-    accessorKey: 'attending',
-    header: 'Attending',
-    cell: ({ row }) =>
-      h(UBadge, {
+{
+  accessorKey: 'attending',
+  header: ({ column }) =>
+    h(
+      'div',
+      { class: 'text-left' },
+      'Attending'
+    ),
+  cell: ({ row }) =>
+    h(
+      UBadge,
+      {
         color: row.getValue('attending') ? 'green' : 'red',
-        variant: 'subtle'
-      }, () => row.getValue('attending') ? 'Yes' : 'No')
-  },
+        variant: 'subtle',
+        class: 'flex items-center justify-start w-full p-0' // left-align contents
+      },
+      () =>
+        h(UIcon, {
+          name: row.getValue('attending')
+            ? 'emojione-v1:left-check-mark'
+            : 'emojione-v1:cross-mark',
+          class: 'mt-1 !size-5'
+        })
+    )
+}
+,
   {
     id: 'hasGuests',
     header: 'Has Guests',
@@ -274,9 +300,17 @@ const totalAttending = computed(() =>
   data.value.filter(rsvp => rsvp.attending).length
 )
 
+const totalNotAttending = computed(() =>
+  data.value.filter(rsvp => rsvp.attending === false).length
+)
+
+
 const totalAdults = computed(() =>
   data.value.reduce((count, rsvp) => {
-    const rsvpAdult = 1 
+    if (!rsvp.attending) {
+      return count
+    }
+    const rsvpAdult = 1 // the main RSVP person
     const guestAdults = (rsvp.guests || []).filter(g => g.is_adult).length
     return count + rsvpAdult + guestAdults
   }, 0)
@@ -284,9 +318,14 @@ const totalAdults = computed(() =>
 
 const totalChildren = computed(() =>
   data.value.reduce((count, rsvp) => {
-    return count + (rsvp.guests || []).filter(g => !g.is_adult).length
+    if (!rsvp.attending) {
+      return count
+    }
+    const guestChildren = (rsvp.guests || []).filter(g => !g.is_adult).length
+    return count + guestChildren
   }, 0)
 )
+
 
 function getRowItems(row: Row<RSVP>) {
   return [
