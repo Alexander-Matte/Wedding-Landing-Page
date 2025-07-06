@@ -1,67 +1,23 @@
 <template>
-  <div class="flex min-h-screen bg-gray-100 font-sans">
-    <!-- Sidebar -->
-    <aside class="w-56 bg-gray-800 text-white flex flex-col p-6">
-      <div class="text-xl font-bold text-center mb-8">Wedding Panel</div>
-      <ul class="space-y-2">
-        <li
-          :class="[
-            'px-4 py-2 rounded cursor-pointer',
-            selectedView === 'rsvps' ? 'bg-gray-700' : 'hover:bg-gray-700'
-          ]"
-          @click="selectedView = 'rsvps'"
-        >
-          RSVPs
-        </li>
-        <li
-          :class="[
-            'px-4 py-2 rounded cursor-pointer',
-            selectedView === 'message' ? 'bg-gray-700' : 'hover:bg-gray-700'
-          ]"
-          @click="selectedView = 'message'"
-        >
-          Special Message
-        </li>
-      </ul>
-    </aside>
-
+  <div>
     <!-- Main content -->
     <main class="flex-1 flex flex-col">
-      <!-- Topbar -->
-      <header class="bg-white px-6 py-4 border-b border-gray-200 flex justify-between items-center">
-        <h1 class="text-xl font-semibold">Dashboard</h1>
-        <UButton to="/" target="_blank" active color="neutral" variant="outline" active-color="primary" active-variant="solid" size="md">
-          Back To the wedding homepage!
-        </UButton>
-        <UButton @click="logout" active-variant="solid" active color="error" size="xl">
-          Logout
-        </UButton>
-      </header>
-
       <!-- Content -->
-      <div class="p-8 space-y-6">
-        <div v-if="selectedView === 'message'">
-          <h2 class="text-2xl font-semibold mb-4">Special Message</h2>
-          <div class="bg-pink-100 border border-pink-300 text-pink-900 p-4 rounded">
-            Hi Madi ❤️ — Just a little note to say how much I love you and appreciate you.  
-            You're the most amazing part of my life, and everything I build — even this admin panel — is better because you're in it.  
-            Thank you for always being by my side. 💍✨
-          </div>
-        </div>
-
-        <div v-if="selectedView === 'rsvps'">
-            <div class="bg-blue-50 border border-blue-200 p-4 rounded shadow text-blue-900 mb-5  text-center">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <div class="bg-blue-50 border border-blue-200 p-4 rounded shadow text-blue-900 mb-5 text-center">
                 <h2 class="text-xl font-semibold">Hello Madi and Alex! 💍</h2>
                 <div class="mt-2">
                     I hope you are getting excited for your big day! 🎉<br />
-                    <div class="scale-60">
-                      <CountdownDisplay/>
+                    <div class="flex justify-center">
+                      <div class="w-full max-w-xs">
+                        <CountdownDisplay />
+                      </div>
                     </div>
                     <p>Here's the latest information on your wedding and RSVPs.</p>
                   </div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <div class="bg-white p-4 rounded shadow text-center">
                 <div class="text-sm text-gray-500">Total RSVPs</div>
                 <div class="text-xl font-bold">{{ totalRSVPs }}</div>
@@ -76,7 +32,7 @@
               </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div class="bg-white p-4 rounded shadow text-center">
                 <div class="text-sm text-gray-500">Adults</div>
                 <div class="text-xl font-bold">{{ totalAdults }}</div>
@@ -89,51 +45,52 @@
 
 
           <h2 class="text-2xl font-semibold mb-4">RSVPs</h2>
-          <div class="bg-white p-4 rounded shadow">
+          <div class="bg-white p-4 rounded shadow overflow-x-auto w-full">
             <UTable
               v-model:expanded="expanded"
               :data="data"
               :columns="columns"
               row-type="RSVP"
               :ui="{
+                table: 'w-full text-sm table-auto',
                 tr: '',
-                th: 'text-gray-800 font-semibold'
+                th: 'text-gray-800 font-semibold px-2 py-2 text-left whitespace-nowrap',
+                td: 'px-2 py-2 break-words max-w-[200px] text-gray-700'
               }"
               class="w-full"
             >
-            <template #expanded="{ row }">
-            <div class="p-4 bg-gray-50 rounded">
-                <h3 class="font-semibold mb-2">Message</h3>
-                <p class="mb-4 italic text-gray-700">
-                {{ row.original.message ? row.original.message : 'No message' }}
-                </p>
+              <template #expanded="{ row }">
+                <div class="p-4 bg-gray-50 rounded">
+                  <h3 class="font-semibold mb-2">Message</h3>
+                  <p class="mb-4 italic text-gray-700">
+                    {{ row.original.message ? row.original.message : 'No message' }}
+                  </p>
 
-                <h3 class="font-semibold mb-2">Guests</h3>
+                  <h3 class="font-semibold mb-2">Guests</h3>
                   <ul class="list-disc list-inside">
                     <li v-for="(guest, idx) in row.original.guests" :key="idx">
-                        {{ guest.name }} —
-                        <span class="italic">
+                      {{ guest.name }} —
+                      <span class="italic">
                         {{ guest.is_adult ? 'Adult' : 'Child (Under 12)' }}
-                        </span>
+                      </span>
                     </li>
                     <li
-                        v-if="!row.original.guests || row.original.guests.length === 0"
-                        class="italic text-gray-500"
+                      v-if="!row.original.guests || row.original.guests.length === 0"
+                      class="italic text-gray-500"
                     >
-                        No guests associated with this RSVP
+                      No guests associated with this RSVP
                     </li>
                   </ul>
 
-                <h3 class="font-semibold mb-2 mt-4">Song</h3>
-                <p class="mb-4 italic text-gray-700">
-                {{ row.original.song ? row.original.song : 'No song :( )' }}
-                </p>
-            </div>
-            </template>
-
+                  <h3 class="font-semibold mb-2 mt-4">Song</h3>
+                  <p class="mb-4 italic text-gray-700">
+                    {{ row.original.song ? row.original.song : 'No song :( )' }}
+                  </p>
+                </div>
+              </template>
             </UTable>
           </div>
-        </div>
+
       </div>
     </main>
   </div>
@@ -149,7 +106,9 @@ const UButton = resolveComponent('UButton')
 const UBadge = resolveComponent('UBadge')
 const UDropdownMenu = resolveComponent('UDropdownMenu')
 
-const selectedView = ref<'rsvps' | 'message'>('rsvps')
+definePageMeta({
+  layout: 'admin'
+})
 
 const logout = async () => {
   await supabase.auth.signOut()
@@ -168,7 +127,6 @@ type RSVP = {
   created_at: string
   guests?: Guest[]
 }
-
 
 const data = ref<RSVP[]>([])
 
