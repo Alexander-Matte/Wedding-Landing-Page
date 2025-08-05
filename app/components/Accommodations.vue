@@ -13,8 +13,8 @@
           arrows: 'hidden md:flex'
         }"
         arrows
-        :prev="{ variant: 'solid' }"
-        :next="{ variant: 'solid' }"
+        :prev="{ variant: 'solid', size: 'xl' }"
+        :next="{ variant: 'solid', size: 'xl' }"
         dots
         loop
         :autoplay="{ delay: 3500 }"
@@ -27,39 +27,59 @@
             side="bottom" 
             :title="$t('weddingDetails.accommodations.info')"
             :close="{
-              color: 'primary',
+              color: 'gray',
               variant: 'outline',
-              class: 'rounded-full'
+              class: 'rounded-full hover:bg-wedding-pink/10'
             }"
+            :ui="{
+              overlay: 'bg-black/50 backdrop-blur-sm',
+              base: 'bg-white border-l border-wedding-pink/20',
+              header: 'bg-wedding-pink! bg-gradient-to-r from-wedding-pink/10 to-wedding-btn-pink/10 border-b border-wedding-pink/20',
+              title: 'text-gray-800 font-medium',
+              body: 'p-6 bg-white',
+              footer: 'bg-gray-50 border-t border-wedding-pink/20 p-6',
+              close: 'text-gray-600 hover:text-wedding-btn-pink hover:bg-wedding-pink/10'
+            }"
+            class="!bg-white"
             >
               <UButton 
-                color="warning" 
+                color="gray" 
+                variant="outline"
                 label="Open"
                 trailing-icon="emojione-v1:information" 
                 size="lg"
-                class="rounded-b-none"
+                class="rounded-b-none border-wedding-pink/30 hover:bg-wedding-pink/10 hover:border-wedding-pink/50 transition-all duration-200"
                 :ui="{
-                  trailingIcon: 'text-xl ml-auto'
+                  trailingIcon: 'text-xl ml-auto text-wedding-btn-pink'
                 }"
               >
                 {{ $t('weddingDetails.accommodations.info') }}
             </UButton>
               <template #body>
-                <p class="text-white">
-                  {{ rt(item.info) }}
-                </p>
+                <div class="space-y-4 bg-white">
+                  <div class="p-4 bg-wedding-pink/5 rounded-lg border border-wedding-pink/20">
+                    <p class="text-gray-700 leading-relaxed">
+                      {{ rt(item.info) }}
+                    </p>
+                  </div>
+                </div>
               </template>
               <template #footer>
-                <div class="text-white">
-                  {{ rt(item.note_accommodation) }}
-                  <div class="mt-5">
+                <div class="space-y-4 bg-gray-50">
+                  <div class="p-4 bg-wedding-btn-pink/5 rounded-lg border border-wedding-btn-pink/20">
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                      {{ rt(item.note_accommodation) }}
+                    </p>
+                  </div>
+                  <div class="flex justify-center">
                     <NuxtLink
                       to="/contact"
-                      class="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded shadow transition duration-150"
+                      class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-wedding-pink to-wedding-btn-pink hover:from-wedding-btn-pink hover:to-wedding-pink text-white font-medium rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                     >
-                      <UIcon name="heroicons:envelope" class="w-5 h-5" />
-                    {{ $t('contact.title') }}
-                  </NuxtLink></div>
+                      <UIcon name="i-lucide-mail" class="w-5 h-5" />
+                      {{ $t('contact.title') }}
+                    </NuxtLink>
+                  </div>
                 </div>
               </template>
             </USlideover>
@@ -103,6 +123,7 @@ interface AccommodationCard {
   website: string
   description: string
   info?: string
+  note_accommodation?: string
 }
 
 const cards = tm('weddingDetails.accommodations.cards') as Record<
@@ -116,3 +137,39 @@ const itemKeyMap = computed(() =>
   Object.fromEntries(accommodationItems.value.map((item, i) => [i, item._key]))
 )
 </script>
+
+<style scoped>
+/* Override modal styling to ensure wedding theme */
+:deep(.slideover) {
+  background-color: white !important;
+}
+
+:deep(.slideover-header) {
+  background: linear-gradient(to right, rgba(240, 215, 209, 0.1), rgba(219, 134, 134, 0.1)) !important;
+  border-bottom: 1px solid rgba(240, 215, 209, 0.2) !important;
+}
+
+:deep(.slideover-body) {
+  background-color: white !important;
+  color: #374151 !important;
+}
+
+:deep(.slideover-footer) {
+  background-color: #f9fafb !important;
+  border-top: 1px solid rgba(240, 215, 209, 0.2) !important;
+}
+
+:deep(.slideover-title) {
+  color: #1f2937 !important;
+  font-weight: 500 !important;
+}
+
+:deep(.slideover-close) {
+  color: #6b7280 !important;
+}
+
+:deep(.slideover-close:hover) {
+  color: #db8686 !important;
+  background-color: rgba(240, 215, 209, 0.1) !important;
+}
+</style>

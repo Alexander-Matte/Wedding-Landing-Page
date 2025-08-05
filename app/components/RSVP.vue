@@ -1,144 +1,266 @@
 <template>
-  <section id="rsvp" class="py-20 px-4">
-    <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
-<div class="flex justify-center mt-4 md:hidden px-4">
-  <div class="animate-bounce text-gray-600 text-sm flex items-center justify-center space-x-2 max-w-xs text-center break-words">
-    <Icon name="i-lucide-chevron-up" class="h-5 w-5 flex-shrink-0" />
-    <span class="break-words">{{ $t('rsvp.scrollHint') }}</span>
-    <Icon name="i-lucide-chevron-down" class="h-5 w-5 flex-shrink-0" />
-  </div>
-</div>
+  <section id="rsvp" class="pt-4 pb-24 px-4 bg-wedding-white">
+    <div class="section-max-width">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-light italic mb-6 text-gray-800">
+          {{ $t('rsvp.title') }}
+        </h2>
+        <div class="w-16 h-0.5 bg-gradient-to-r from-wedding-pink to-wedding-btn-pink mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          {{ $t('rsvp.description') }}
+        </p>
+        <p class="text-sm text-gray-500 mt-2">
+          {{ $t('rsvp.deadline') }}
+        </p>
+      </div>
 
-      <div class="md:flex">
-        <div class="md:w-1/3 px-8 flex flex-col justify-center">
-          <h2 class="text-3xl italic mb-4">{{ $t('rsvp.title') }}</h2>
-          <p class="mb-6">{{ $t('rsvp.description') }}</p>
-          <p>{{ $t('rsvp.deadline') }}</p>
+      <!-- Mobile Scroll Hint -->
+      <div class="flex justify-center mb-6 lg:hidden">
+        <div class="animate-bounce text-gray-500 text-sm flex items-center space-x-2 bg-wedding-pink/10 px-4 py-2 rounded-full">
+          <UIcon name="i-lucide-chevron-down" class="w-4 h-4" />
+          <span>{{ $t('rsvp.scrollHint') }}</span>
+          <UIcon name="i-lucide-chevron-down" class="w-4 h-4" />
         </div>
-        <div class="w-full md:w-2/3 p-8">
-          <UForm 
-          :schema="schema" 
-          :state="state" 
-          class="space-y-6" 
-          @submit="onSubmit"
-          @keydown.enter.prevent
-          >
-            <UFormField :label="$t('rsvp.form.name.label')" name="name" required>
-              <UInput 
-                v-model="state.name" 
-                :placeholder="$t('rsvp.form.name.placeholder')" 
-                class="w-full md:w-2/3"
-              />
-            </UFormField>
+      </div>
 
-            <UFormField 
-              :label="$t('rsvp.form.email.label')" 
-              name="email" 
-              required 
-              :error="emailError ? $t('rsvp.form.email.error') : ''"
+      <!-- RSVP Form Card -->
+      <div class="card max-w-4xl mx-auto overflow-hidden">
+        <div class="grid lg:grid-cols-3">
+          <!-- Form Info Sidebar -->
+          <div class="lg:col-span-1 bg-gradient-to-br from-wedding-pink/10 to-wedding-btn-pink/10 p-8 lg:p-12 flex flex-col justify-center">
+            <div class="text-center lg:text-left">
+              <div class="w-16 h-16 bg-wedding-pink/20 rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                <UIcon name="i-lucide-heart" class="w-8 h-8 text-wedding-btn-pink" />
+              </div>
+              <h3 class="text-2xl font-light italic mb-4 text-gray-800">
+                {{ $t('rsvp.title') }}
+              </h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                {{ $t('rsvp.description') }}
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-center space-x-3 text-sm text-gray-600">
+                  <UIcon name="i-lucide-check-circle" class="w-5 h-5 text-green-500" />
+                  <span>{{ $t('rsvp.features.secureSubmission') }}</span>
+                </div>
+                <div class="flex items-center space-x-3 text-sm text-gray-600">
+                  <UIcon name="i-lucide-check-circle" class="w-5 h-5 text-green-500" />
+                  <span>{{ $t('rsvp.features.toastConfirmation') }}</span>
+                </div>
+                <div class="flex items-center space-x-3 text-sm text-gray-600">
+                  <UIcon name="i-lucide-check-circle" class="w-5 h-5 text-green-500" />
+                  <span>{{ $t('rsvp.features.guestManagement') }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Section -->
+          <div class="lg:col-span-2 p-8 lg:p-12">
+            <UForm 
+              :schema="schema" 
+              :state="state" 
+              class="space-y-6" 
+              @submit="onSubmit"
+              @keydown.enter.prevent
             >
-              <UInput 
-                v-model="state.email" 
-                type="email" 
-                trailing-icon="i-lucide-at-sign"
-                class="w-full md:w-2/3"
-                :placeholder="$t('rsvp.form.email.placeholder')" 
-                :class="{'border-red-500': emailError, 'focus:ring-red-500': emailError}"
-                @blur="checkEmail"
-              />
-            </UFormField>
-
-            <UFormField :label="$t('rsvp.form.attending.label')" name="attending">
-              <URadioGroup v-model="state.attending" :items="items" class="w-2/3"/>
-            </UFormField>
-
-            <template v-if="state.attending === 'yes'">
-              <UFormField :label="$t('rsvp.form.guests.label')" name="guests">
-                <USelect v-model="state.guests" arrow color="neutral" variant="subtle" :items="['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']" />
+              <!-- Name Field -->
+              <UFormField :label="$t('rsvp.form.name.label')" name="name" required>
+                <UInput 
+                  v-model="state.name" 
+                  :placeholder="$t('rsvp.form.name.placeholder')" 
+                  class="w-full"
+                  :ui="{ 
+                    base: 'relative block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none border-0 focus:ring-2 focus:ring-wedding-pink/50 focus:ring-offset-0 dark:focus:ring-wedding-pink/50',
+                    icon: 'flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500',
+                    input: 'block w-full border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                  }"
+                />
               </UFormField>
-              <template v-if="state.attending === 'yes' && Number(state.guests) > 1">
-                <div class="space-y-4">
-                  <h3 class="text-lg font-semibold">{{ $t('rsvp.form.additionalGuests.header') }}</h3>
+
+              <!-- Email Field -->
+              <UFormField 
+                :label="$t('rsvp.form.email.label')" 
+                name="email" 
+                required 
+                :error="emailError ? $t('rsvp.form.email.error') : ''"
+              >
+                <UInput 
+                  v-model="state.email" 
+                  type="email" 
+                  trailing-icon="i-lucide-at-sign"
+                  class="w-full"
+                  :placeholder="$t('rsvp.form.email.placeholder')" 
+                  :class="{'border-red-500': emailError, 'focus:ring-red-500': emailError}"
+                  @blur="checkEmail"
+                  :ui="{ 
+                    base: 'relative block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none border-0 focus:ring-2 focus:ring-wedding-pink/50 focus:ring-offset-0 dark:focus:ring-wedding-pink/50',
+                    icon: 'flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500',
+                    input: 'block w-full border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                  }"
+                />
+              </UFormField>
+
+              <!-- Attending Field -->
+              <UFormField :label="$t('rsvp.form.attending.label')" name="attending">
+                <URadioGroup 
+                  v-model="state.attending" 
+                  :items="attendingItems" 
+                  class="w-full"
+                  :ui="{
+                    wrapper: 'grid grid-cols-2 gap-4',
+                    item: 'relative flex cursor-pointer rounded-lg border border-gray-200 bg-white p-4 shadow-sm focus:outline-none hover:border-wedding-pink/50',
+                    itemActive: 'border-wedding-pink ring-2 ring-wedding-pink/50',
+                    itemInactive: 'border-gray-200',
+                    label: 'flex flex-1 cursor-pointer',
+                    labelActive: 'text-wedding-btn-pink',
+                    labelInactive: 'text-gray-900',
+                    radio: 'h-4 w-4 text-wedding-pink border-gray-300 focus:ring-wedding-pink/50'
+                  }"
+                />
+              </UFormField>
+
+              <!-- Guest Count (if attending) -->
+              <template v-if="state.attending === 'yes'">
+                <UFormField :label="$t('rsvp.form.guests.label')" name="guests">
+                  <USelect 
+                    v-model="state.guests" 
+                    :items="guestCountItems"
+                    class="w-full"
+                    :ui="{
+                      base: 'relative block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none border-0 focus:ring-2 focus:ring-wedding-pink/50 focus:ring-offset-0',
+                      input: 'block w-full border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 text-left'
+                    }"
+                  />
+                </UFormField>
+
+                <!-- Additional Guests -->
+                <template v-if="state.attending === 'yes' && Number(state.guests) > 1">
+                  <div class="space-y-6">
+                    <div class="flex items-center space-x-3">
+                      <UIcon name="i-lucide-users" class="w-5 h-5 text-wedding-btn-pink" />
+                      <h4 class="text-lg font-medium text-gray-800">
+                        {{ $t('rsvp.form.additionalGuests.header') }}
+                      </h4>
+                    </div>
+                    
                     <div
                       v-for="(guest, index) in additionalGuests"
                       :key="index"
-                      class="flex flex-col space-y-4 w-full md:w-2/3"
+                      class="space-y-4 p-6 bg-wedding-pink/5 rounded-xl border border-wedding-pink/20"
                     >
                       <UFormField
                         :label="$t('rsvp.form.additionalGuests.label', { number: index + 2 })"
                         :error="formSubmitted && guest.name.trim() === '' ? $t('rsvp.form.additionalGuests.error') : ''"
-                        class="w-full"
                       >
-                      <URadioGroup 
-                        v-model="guest.type"
-                        orientation="horizontal" 
-                        :items="[
-                          { label: $t('rsvp.form.personType.adult'), value: 'adult' },
-                          { label: $t('rsvp.form.personType.child'), value: 'child' }
-                        ]"
-                        class="mb-2" 
-                      />
+                        <!-- Guest Type Selection -->
+                        <URadioGroup 
+                          v-model="guest.type"
+                          orientation="horizontal" 
+                          :items="[
+                            { label: $t('rsvp.form.personType.adult'), value: 'adult' },
+                            { label: $t('rsvp.form.personType.child'), value: 'child' }
+                          ]"
+                          class="mb-4"
+                          :ui="{
+                            wrapper: 'flex space-x-4',
+                            item: 'flex items-center space-x-2',
+                            radio: 'h-4 w-4 text-wedding-pink border-gray-300 focus:ring-wedding-pink/50'
+                          }"
+                        />
+                        
+                        <!-- Guest Name Input -->
                         <UInput
                           v-model="guest.name"
                           :placeholder="$t('rsvp.form.additionalGuests.placeholder', { number: index + 2 })"
                           class="w-full"
                           @blur="validateGuestName(index)"
+                          :ui="{ 
+                            base: 'relative block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none border-0 focus:ring-2 focus:ring-wedding-pink/50 focus:ring-offset-0',
+                            input: 'block w-full border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                          }"
                         />
                       </UFormField>
                     </div>
-                </div>
+                  </div>
+                </template>
               </template>
-            </template>
-            <UFormField 
-              :label="$t('rsvp.form.song.label')" 
-              name="song" 
-              required 
-            >
-              <UInput 
-                v-model="state.song" 
-                class="w-full md:w-2/3"
-                :placeholder="$t('rsvp.form.song.placeholder')"
-              />
-            </UFormField>
-            <UFormField :label="$t('rsvp.form.message.label')" :hint="$t('rsvp.form.message.hint')" name="message">
-              <UTextarea 
-              v-model="state.message" 
-              :placeholder="$t('rsvp.form.message.placeholder')" 
-              class="w-full md:w-2/3"
-              autoresize
-              />
-            </UFormField>
 
-            <UFormField>
-              <NuxtTurnstile
-                ref="turnstile"
-                :options="{ theme: 'light', language: locale }"
-                v-model="turnstileToken"
-              />
+              <!-- Song Request -->
+              <UFormField 
+                :label="$t('rsvp.form.song.label')" 
+                name="song" 
+                required 
+              >
+                <UInput 
+                  v-model="state.song" 
+                  class="w-full"
+                  :placeholder="$t('rsvp.form.song.placeholder')"
+                  :ui="{ 
+                    base: 'relative block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none border-0 focus:ring-2 focus:ring-wedding-pink/50 focus:ring-offset-0',
+                    input: 'block w-full border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                  }"
+                />
+              </UFormField>
 
-            </UFormField>
+              <!-- Message Field -->
+              <UFormField 
+                :label="$t('rsvp.form.message.label')" 
+                :hint="$t('rsvp.form.message.hint')" 
+                name="message"
+              >
+                <UTextarea 
+                  v-model="state.message" 
+                  :placeholder="$t('rsvp.form.message.placeholder')" 
+                  class="w-full"
+                  autoresize
+                  :ui="{ 
+                    base: 'relative block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none border-0 focus:ring-2 focus:ring-wedding-pink/50 focus:ring-offset-0',
+                    textarea: 'block w-full border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 resize-none'
+                  }"
+                />
+              </UFormField>
 
-            <UButton 
-              type="submit" 
-              color="primary" 
-              class="w-full cursor-pointer"
-              :loading="loading">
-              {{ $t('rsvp.form.submit') }}
-            </UButton>
-          </UForm>
+              <!-- Turnstile Verification -->
+              <UFormField>
+                <div class="flex justify-start">
+                  <NuxtTurnstile
+                    ref="turnstile"
+                    :options="{ 
+                      theme: 'light', 
+                      language: locale,
+                      size: 'normal'
+                    }"
+                    v-model="turnstileToken"
+                  />
+                </div>
+              </UFormField>
+
+              <!-- Submit Button -->
+              <UButton 
+                type="submit" 
+                class="w-full bg-gradient-to-r from-wedding-btn-pink to-wedding-pink hover:from-wedding-pink hover:to-wedding-btn-pink text-white font-medium py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                :loading="loading"
+                :disabled="loading"
+              >
+                <UIcon name="i-lucide-send" class="w-5 h-5 mr-2" />
+                {{ $t('rsvp.form.submit') }}
+              </UButton>
+            </UForm>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </template>
 
-
 <script setup lang="ts">
-import { ref, reactive, watch } from 'vue'
+import { ref, reactive, watch, computed } from 'vue'
 import { z } from 'zod'
 import { useI18n } from 'vue-i18n'
 import type { FormSubmitEvent } from '@nuxt/ui'
-import type { RadioGroupItem } from '@nuxt/ui'
+
 const { locale } = useI18n()
 const { t } = useI18n()
 const toast = useToast()
@@ -147,8 +269,7 @@ const turnstileToken = ref('')
 const turnstile = ref()
 const loading = ref(false)
 
-
-
+// Form validation schema
 const schema = z.object({
   name: z.string().min(1, t('rsvp.form.name.required')),
   email: z.string()
@@ -173,21 +294,21 @@ const state = reactive<Schema>({
   song: ''
 })
 
-
-const emailError = ref('')
-const missingGuestsError = ref('')
-const formSubmitted = ref(false)
-
-const items = ref([
+// Form items
+const attendingItems = computed(() => [
   { label: t('rsvp.form.attending.yes'), value: 'yes' },
   { label: t('rsvp.form.attending.no'), value: 'no' }
 ])
 
+const guestCountItems = computed(() => 
+  Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1}`, value: `${i + 1}` }))
+)
+
+const emailError = ref('')
+const formSubmitted = ref(false)
 const additionalGuests = ref<{ name: string; type: 'adult' | 'child' }[]>([])
 
-
-
-// Watch when user selects "yes"
+// Watch for attendance changes
 watch(() => state.attending, (newVal) => {
   if (newVal === 'yes') {
     state.guests = '1'
@@ -198,7 +319,7 @@ watch(() => state.attending, (newVal) => {
   }
 })
 
-// Watch when guest count changes
+// Watch for guest count changes
 watch(() => state.guests, (newVal) => {
   if (!newVal || isNaN(parseInt(newVal as string))) return
   const count = Number(newVal) - 1
@@ -206,18 +327,16 @@ watch(() => state.guests, (newVal) => {
 
   if (count > currentLength) {
     for (let i = currentLength; i < count; i++) {
-    additionalGuests.value.push({ name: '', type: 'adult' })
+      additionalGuests.value.push({ name: '', type: 'adult' })
     }
   } else if (count < currentLength) {
     additionalGuests.value.splice(count)
   }
 })
 
-
+// Validation functions
 const validateGuestName = (index: number) => {
   const guest = additionalGuests.value[index]
-
-  // Validate guest name
   if (guest.name.trim() === '') {
     toast.add({
       title: t('rsvp.toast.emptyGuestName.title'),
@@ -238,21 +357,17 @@ const checkEmail = () => {
 }
 
 const isValidEmail = (email: string) => {
-  // Simple email regex for basic validation
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
   return emailRegex.test(email)
 }
 
 const checkAdditionalGuests = (): boolean => {
-  missingGuestsError.value = ''
-
   const mainName = state.name.trim().toLowerCase()
   const guestNames = additionalGuests.value.map(g => g.name.trim().toLowerCase())
 
   // Check for empty guest names
   const emptyGuest = additionalGuests.value.find(g => g.name.trim() === '')
   if (emptyGuest) {
-    missingGuestsError.value = t('rsvp.form.additionalGuests.error')
     toast.add({ 
       title: t('rsvp.toast.emptyGuestName.title'), 
       description: t('rsvp.toast.emptyGuestName.description'), 
@@ -285,12 +400,14 @@ const checkAdditionalGuests = (): boolean => {
   return true
 }
 
+// Form submission
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
   event.preventDefault()
   formSubmitted.value = true
   loading.value = true
   checkEmail()
 
+  // Security checks
   if (!turnstileToken.value) {
     toast.add({
       title: t('rsvp.toast.captcha.error'),
@@ -306,6 +423,7 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     return
   }
 
+  // Prepare payload
   const rpcPayload = {
     mainName: state.name,
     email: state.email,
@@ -318,50 +436,85 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     song: state.song,
   }
 
-  const { data, error } = await useFetch('/api/submitForm', {
-    method: 'POST',
-    body: {
-      token: turnstileToken.value,
-      rpcPayload
-    }
-  })
+  try {
+    const { data, error } = await useFetch('/api/submitForm', {
+      method: 'POST',
+      body: {
+        token: turnstileToken.value,
+        rpcPayload
+      }
+    })
 
-  if (error.value) {
+    if (error.value) {
+      throw error.value
+    }
+
+    // Success
+    toast.add({
+      title: t('rsvp.toast.success.title'),
+      description: t('rsvp.toast.success.description'),
+      color: 'success'
+    })
+
+    // Reset form
+    state.name = ''
+    state.email = ''
+    state.attending = 'no'
+    state.message = ''
+    state.song = ''
+    additionalGuests.value = []
+    emailError.value = ''
+    formSubmitted.value = false
+    turnstile.value?.reset()
+    turnstileToken.value = ''
+
+  } catch (err) {
     toast.add({
       title: t('rsvp.toast.error.title'),
       description: t('rsvp.toast.error.description'),
       color: 'error'
     })
+  } finally {
     loading.value = false
-    return
   }
-
-  toast.add({
-    title: t('rsvp.toast.success.title'),
-    description: t('rsvp.toast.success.description'),
-    color: 'success'
-  })
-
-  state.name = ''
-  state.email = ''
-  state.attending = 'no'
-  state.message = ''
-  additionalGuests.value = []
-
-  // Reset error states
-  emailError.value = ''
-  formSubmitted.value = false
-  turnstile.value?.reset()
-  turnstileToken.value = ''
-  loading.value = false
 }
-
-
-
 </script>
 
-
-
 <style scoped>
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card {
+    margin: 0 1rem;
+  }
+}
 
+@media (max-width: 640px) {
+  .section-padding {
+    padding: 2rem 1rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Form field focus states */
+:deep(.form-field:focus-within) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(240, 215, 209, 0.3);
+}
+
+/* Loading state */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Print styles */
+@media print {
+  .card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
 </style>

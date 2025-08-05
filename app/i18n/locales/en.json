@@ -177,6 +177,11 @@
       },
       "submit": "Submit RSVP"
     },
+    "features": {
+      "secureSubmission": "Secure form submission",
+      "toastConfirmation": "Toast notification confirmation",
+      "guestManagement": "Guest management"
+    },
     "toast": {
       "emptyGuestName": {
         "title": "Guest name is empty",
@@ -209,14 +214,30 @@
   "registry": {
     "title": "Registry",
     "paragraph1": "Your presence at our wedding truly means the world to us. We are so grateful to celebrate this special day with the people we love most.",
-    "paragraph2": "As we begin our new life together, we’ve chosen not to create a traditional gift registry. Instead, if you feel inclined to give a gift, we would deeply appreciate a contribution towards our future—whether it's our home, travel, or shared dreams.",
-    "paragraph3": "Most importantly, we’re just so happy to celebrate with you!"
+    "paragraph2": "As we begin our new life together, we've chosen not to create a traditional gift registry. Instead, if you feel inclined to give a gift, we would deeply appreciate a contribution towards our future—whether it's our home, travel, or shared dreams.",
+    "paragraph3": "Most importantly, we're just so happy to celebrate with you!",
+    "presenceCard": {
+      "title": "Your Presence",
+      "description": "Your presence at our wedding is the greatest gift we could ask for. We can't wait to celebrate with you!"
+    },
+    "futureCard": {
+      "title": "Our Future",
+      "description": "If you'd like to contribute to our future together, we'd be grateful for any support towards our dreams."
+    }
   },
   "contact": {
     "title": "Contact Us",
     "description": "If you have any questions at all or need help with booking, transport or activities, please contact us at:",
     "email_label": "Send email to",
-    "note": "You can send us an email with any questions or concerns. We are also always available via WhatsApp."
+    "note": "You can send us an email with any questions or concerns. We are also always available via WhatsApp.",
+    "getInTouch": "Get in Touch",
+    "whatsapp": "WhatsApp",
+    "whatsappDesc": "Available for quick questions and coordination",
+    "responseTime": "Response Time",
+    "responseTimeDesc": "We typically respond within 24 hours",
+    "sendEmail": "Send Email",
+    "rsvpNow": "RSVP Now",
+    "needHelp": "Need Immediate Help?"
   },
   "activities": {
     "title": "Things to Do Around Schwäbisch Gmünd",

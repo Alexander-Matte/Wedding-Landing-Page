@@ -166,16 +166,21 @@
         "placeholder": "Schreib uns etwas Schönes oder teil eine Erinnerung"
       },
       "song": {
-        "label": "Lied, der dich zum Tanzen bringt!",
-        "placeholder": "Welcher Lied bringt dich auf die Tanzfläche?",
+        "label": "Lied, das dich zum Tanzen bringt!",
+        "placeholder": "Welches Lied bringt dich auf die Tanzfläche?",
         "tooLong": "Der Liedtitel darf maximal 200 Zeichen lang sein",
-        "required": "Bitte teil uns deinen Lied mit, damit die Tanzfläche so richtig bebt!"
+        "required": "Bitte teil uns dein Lied mit, damit die Tanzfläche so richtig bebt!"
       },
       "personType": {
         "adult": "Erwachsene:r",
         "child": "Kind (unter 12 Jahren)"
       },
       "submit": "Antwort absenden"
+    },
+    "features": {
+      "secureSubmission": "Sichere Formularübermittlung",
+      "toastConfirmation": "Toast-Benachrichtigung Bestätigung",
+      "guestManagement": "Gästeverwaltung"
     },
     "toast": {
       "emptyGuestName": {
@@ -210,13 +215,29 @@
     "title": "Geschenke",
     "paragraph1": "Dein Dabeisein bei unserer Hochzeit bedeutet uns wirklich alles. Wir sind unglaublich dankbar, diesen besonderen Tag mit den Menschen feiern zu dürfen, die uns am meisten am Herzen liegen.",
     "paragraph2": "Da wir gerade erst unser gemeinsames Leben starten, haben wir keine klassische Geschenkliste erstellt. Wenn du uns trotzdem gerne etwas schenken möchtest, freuen wir uns über einen kleinen Beitrag für unser Zuhause, zukünftige Reisen oder gemeinsame Träume.",
-    "paragraph3": "Aber am allerwichtigsten ist: Wir freuen uns riesig, mit dir zu feiern!"
+    "paragraph3": "Aber am allerwichtigsten ist: Wir freuen uns riesig, mit dir zu feiern!",
+    "presenceCard": {
+      "title": "Dein Dabeisein",
+      "description": "Dein Dabeisein bei unserer Hochzeit ist das größte Geschenk, das wir uns wünschen können. Wir können es kaum erwarten, mit dir zu feiern!"
+    },
+    "futureCard": {
+      "title": "Unsere Zukunft",
+      "description": "Wenn du gerne zu unserer gemeinsamen Zukunft beitragen möchtest, wären wir dankbar für jede Unterstützung unserer Träume."
+    }
   },
   "contact": {
     "title": "Meld dich bei uns",
     "description": "Wenn du Fragen hast oder Hilfe bei der Unterkunft, Anreise oder Planung brauchst, schreib uns einfach:",
     "email_label": "E-Mail an",
-    "note": "Du kannst uns jederzeit eine Mail schicken – oder noch einfacher: Schreib uns per WhatsApp!"
+    "note": "Du kannst uns jederzeit eine Mail schicken – oder noch einfacher: Schreib uns per WhatsApp!",
+    "getInTouch": "Kontaktiere uns",
+    "whatsapp": "WhatsApp",
+    "whatsappDesc": "Verfügbar für schnelle Fragen und Koordination",
+    "responseTime": "Antwortzeit",
+    "responseTimeDesc": "Wir antworten normalerweise innerhalb von 24 Stunden",
+    "sendEmail": "E-Mail senden",
+    "rsvpNow": "Jetzt zusagen",
+    "needHelp": "Brauchst du sofort Hilfe?"
   },
   "activities": {
     "title": "Aktivitäten rund um Schwäbisch Gmünd",

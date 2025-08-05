@@ -1,36 +1,57 @@
 <template>
-  <div class="w-full min-h-screen bg-wedding-white]">
+  <div class="min-h-screen bg-wedding-white">
     <Navbar />
+    
     <main>
-      <section class="bg-wedding-white">
-        <Hero />
-      </section>
+      <!-- Hero Section -->
+      <Hero />
       
-      <section class="bg-wedding-white">
-        <OurStory />
-      </section>
+      <!-- Our Story Section -->
+      <OurStory />
       
-      <section class="bg-wedding-off-pink">
-        <EventDetails />
-      </section>
+      <!-- Event Details Section -->
+      <EventDetails />
+      
+      <!-- Schedule Section -->
       <section class="bg-wedding-white">
         <Schedule />
       </section>
+      
+      <!-- RSVP Section -->
+      <RSVP />
+      
+      <!-- Registry Section -->
       <section class="bg-wedding-off-pink">
-        <RSVP />
-      </section>
-
-      <section class="bg-wedding-white">
         <Registry />
       </section>
     </main>
-      
-    <section class="bg-wedding-off-pink">
-      <Footer />
-    </section>
-   
+    
+    <!-- Footer Section -->
+    <Footer />
   </div>
 </template>
+
 <script setup>
 useScrollToHash()
 </script>
+
+<style scoped>
+/* Ensure smooth scrolling between sections */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize for mobile performance */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Print optimization */
+@media print {
+  .section-padding {
+    padding: 2rem 0;
+  }
+}
+</style>

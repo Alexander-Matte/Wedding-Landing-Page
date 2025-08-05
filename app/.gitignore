@@ -23,3 +23,5 @@ logs
 .env.*
 !.env.example
 
+PROJECT_INDEX.md
+
