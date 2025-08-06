@@ -5,7 +5,7 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
       ? to.path.slice(0, -1) 
       : to.path
 
-    const allowedAdminRoutes = ['/admin', '/admin/login', '/admin/dashboard', '/admin/message']
+    const allowedAdminRoutes = ['/admin', '/admin/login', '/admin/dashboard', '/admin/message', '/admin/errors']
     const user = useSupabaseUser()
 
     // If trying to access disallowed admin routes → redirect to homepage
@@ -23,6 +23,6 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
       return navigateTo('/admin/dashboard')
     }
 
-    // Otherwise allow access
+    // Otherwise allow access - authorization will be checked by API endpoints
   }
 })

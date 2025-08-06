@@ -24,4 +24,6 @@ logs
 !.env.example
 
 PROJECT_INDEX.md
+SECURITY.md
+PRODUCTION_SETUP.md
 

@@ -4,6 +4,21 @@
     <main class="flex-1 flex flex-col py-8">
       <!-- Content -->
       <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <!-- Error State -->
+        <div v-if="error" class="bg-red-50 border border-red-200 rounded-lg p-4">
+          <div class="flex">
+            <UIcon name="i-lucide-alert-circle" class="w-5 h-5 text-red-400 mr-3" />
+            <div>
+              <h3 class="text-sm font-medium text-red-800">Error</h3>
+              <p class="text-sm text-red-700 mt-1">{{ error }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loading State -->
+        <div v-if="loading" class="flex justify-center items-center py-12">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        </div>
         <!-- Welcome Header -->
         <div class="bg-gradient-to-r from-blue-500 to-pink-500 rounded-2xl shadow-xl p-8 text-white text-center relative overflow-hidden">
           <div class="absolute inset-0 bg-black/10"></div>
@@ -261,6 +276,34 @@ type RSVP = {
 }
 
 const data = ref<RSVP[]>([])
+const loading = ref(true)
+const error = ref<string | null>(null)
+
+try {
+  const { status, data: rsvps, error: fetchError } = await useFetch('/api/data/rsvp', {
+    onResponseError({ response }) {
+      if (response.status === 401) {
+        error.value = 'You are not authorized to access this data. Please log in again.'
+        navigateTo('/admin/login')
+      } else if (response.status === 403) {
+        error.value = 'You do not have permission to access this data.'
+        navigateTo('/admin/login?error=unauthorized')
+      } else {
+        error.value = 'Failed to load RSVP data. Please try again.'
+      }
+    }
+  })
+
+  if (fetchError.value) {
+    error.value = 'Failed to load RSVP data. Please try again.'
+  } else if (rsvps.value?.rsvp) {
+    data.value = rsvps.value.rsvp
+  }
+} catch (e) {
+  error.value = 'An unexpected error occurred. Please try again.'
+} finally {
+  loading.value = false
+}
 
 const columns: TableColumn<RSVP>[] = [
   {
@@ -371,18 +414,6 @@ const columns: TableColumn<RSVP>[] = [
 ]
 
 const expanded = ref({})
-
-try {
-  const { status, data: rsvps, error } = await useFetch('/api/data/rsvp')
-
-  if (error.value) {
-    console.error('Failed to fetch RSVPs:', error.value)
-  } else if (rsvps.value?.rsvp) {
-    data.value = rsvps.value.rsvp
-  }
-} catch (e) {
-  console.error('Error fetching RSVPs:', e)
-}
 
 const totalRSVPs = computed(() => data.value.length)
 
@@ -508,28 +539,28 @@ function getRowItems(row: Row<RSVP>) {
 
 async function sendEmail(rsvpId: string) {
   try {
-    const { data, error } = await useFetch(`/api/data/rsvpEmail?rsvpId=${encodeURIComponent(rsvpId)}`, {
+    const response = await useFetch(`/api/data/rsvpEmail?rsvpId=${encodeURIComponent(rsvpId)}`, {
       method: 'GET'
     });
 
-    if (error.value) {
-      console.error('Failed to retrieve email:', error.value);
+    if (response.error.value) {
       return;
     }
 
-    const email = data.value?.data?.email;
-
-    if (!email) {
-      console.error('Email not found in response');
-      return;
-    }
-
-    window.location.href = `mailto:${email}`;
+    // Since we're now masking emails for security, we can't provide direct email access
+    alert(`Email address is masked for security. Please contact the administrator for the full email address.`);
   } catch (err) {
-    console.error('Error sending email:', err);
+    // Handle error silently
   }
 }
 
+const formatJson = (json: string) => {
+  try {
+    return JSON.stringify(JSON.parse(json), null, 2)
+  } catch (e) {
+    return json
+  }
+}
 
 
 </script>
