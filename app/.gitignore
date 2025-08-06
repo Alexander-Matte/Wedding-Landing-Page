@@ -23,3 +23,6 @@ logs
 .env.*
 !.env.example
 
+PRODUCTION_SETUP.md
+PROJECT_INDEX.md
+SECURITY.md
