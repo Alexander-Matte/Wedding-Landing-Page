@@ -20,6 +20,12 @@ const state = reactive<Schema>({
 const loading = ref(false)
 const errorMsg = ref('')
 
+// Check for unauthorized error in URL
+const route = useRoute()
+if (route.query.error === 'unauthorized') {
+  errorMsg.value = 'You are not authorized to access the admin panel. Please contact the administrator.'
+}
+
 const signIn = async (event: FormSubmitEvent<Schema>) => {
   loading.value = true
   errorMsg.value = ''
@@ -30,9 +36,59 @@ const signIn = async (event: FormSubmitEvent<Schema>) => {
   })
 
   if (error) {
+    // Log the authentication error
+    try {
+      await $fetch('/api/log-error', {
+        method: 'POST',
+        body: {
+          level: 'error',
+          source: 'frontend',
+          endpoint: '/admin/login',
+          errorMessage: error.message,
+          errorDetails: {
+            errorCode: error.status,
+            email: event.data.email,
+            timestamp: new Date().toISOString()
+          }
+        }
+      })
+    } catch (logError) {
+      // Silently fail if error logging fails
+    }
+    
     errorMsg.value = error.message
   } else {
-    await navigateTo('/admin/dashboard')
+    // Check if user is authorized after successful login
+    const user = useSupabaseUser()
+    const config = useRuntimeConfig()
+    const adminEmail = config.public.adminEmail || config.adminEmail
+    
+    if (user.value?.email && user.value.email !== adminEmail) {
+      // Log unauthorized access attempt
+      try {
+        await $fetch('/api/log-error', {
+          method: 'POST',
+          body: {
+            level: 'warn',
+            source: 'frontend',
+            endpoint: '/admin/login',
+            errorMessage: 'Unauthorized login attempt',
+            errorDetails: {
+              attemptedEmail: user.value.email,
+              adminEmail: adminEmail,
+              timestamp: new Date().toISOString()
+            }
+          }
+        })
+      } catch (logError) {
+        // Silently fail if error logging fails
+      }
+      
+      errorMsg.value = 'You are not authorized to access the admin panel. Please contact the administrator.'
+      await supabase.auth.signOut()
+    } else {
+      await navigateTo('/admin/dashboard')
+    }
   }
 
   loading.value = false
