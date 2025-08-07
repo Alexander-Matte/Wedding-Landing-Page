@@ -1,4 +1,4 @@
-import { serverSupabaseClient } from '#supabase/server'
+import { serverSupabaseClient, serverSupabaseServiceRole } from '#supabase/server'
 import { z } from 'zod'
 import { useErrorLogger } from '~/composables/useErrorLogger.server'
 
@@ -15,11 +15,40 @@ const rsvpSchema = z.object({
   })).max(10, 'Too many guests').optional()
 })
 
+// Turnstile verification function
+async function verifyTurnstileToken(token: string) {
+  const config = useRuntimeConfig()
+  const secretKey = config.turnstile.secretKey
+  
+  if (!secretKey) {
+    console.error('Turnstile secret key not configured')
+    return { success: false, error: 'Turnstile not configured' }
+  }
+
+  try {
+    const response = await $fetch<{ success: boolean }>('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+        secret: secretKey,
+        response: token,
+      }),
+    })
+
+    return { success: response.success, error: response.success ? null : 'Verification failed' }
+  } catch (error) {
+    console.error('Turnstile verification error:', error)
+    return { success: false, error: 'Verification request failed' }
+  }
+}
+
 export default defineEventHandler(async (event) => {
     const { logErrorLevel } = useErrorLogger()
     
     const { token, rpcPayload } = await readBody(event)
-    const supabase = await serverSupabaseClient(event)
+    const supabase = await serverSupabaseServiceRole(event)
 
     // Validate Turnstile token
     if (!token) {
@@ -52,44 +81,55 @@ export default defineEventHandler(async (event) => {
         }))
       }
 
-      const { data, error } = await supabase
+      // Prepare guests data for JSON column (convert to camelCase to match existing format)
+      const guestsForRsvp = sanitizedData.guests ? sanitizedData.guests.map(g => ({
+        name: g.name,
+        isAdult: Boolean(g.is_adult) // Convert to camelCase to match existing data format
+      })) : null;
+
+      // First, insert the RSVP record
+      const { data: rsvpData, error: rsvpError } = await supabase
         .from('rsvp')
-        .insert([{
+        .insert({
           attending: sanitizedData.attending,
           email: sanitizedData.email.toLowerCase().trim(),
           name: sanitizedData.mainName,
           message: sanitizedData.message,
-          guests: sanitizedData.guests,
-          song: sanitizedData.song
-        }] as any);
+          song: sanitizedData.song,
+          guests: guestsForRsvp
+        } as any)
+        .select()
+        .single();
 
-      if (error) {
+      if (rsvpError) {
         // Log the specific database error with more details
-        await logErrorLevel(event, 'api', 'Database insert failed', { 
+        await logErrorLevel(event, 'api', 'RSVP insert failed', { 
           endpoint: '/api/submitForm',
-          error: error.message,
-          errorCode: error.code,
-          errorDetails: error.details,
-          errorHint: error.hint,
+          error: rsvpError.message,
+          errorCode: rsvpError.code,
+          errorDetails: rsvpError.details,
+          errorHint: rsvpError.hint,
           data: sanitizedData,
           requestData: rpcPayload
         })
         
         // Handle specific error types
-        if (error.code === '23505' || error.message.includes('duplicate key')) { // Unique violation
+        if (rsvpError.code === '23505' || rsvpError.message.includes('duplicate key')) { // Unique violation
           throw createError({ 
             statusCode: 409, 
             statusMessage: 'An RSVP with this email already exists.' 
           })
-        } else if (error.code === '23503') { // Foreign key violation
+        } else if (rsvpError.code === '23503') { // Foreign key violation
           throw createError({ 
-            statusCode: 400, 
+            statusCode: 400,
             statusMessage: 'Invalid data provided.' 
           })
         } else {
-          throw createError({ statusCode: 500, statusMessage: error.message })
+          throw createError({ statusCode: 500, statusMessage: rsvpError.message })
         }
       }
+
+
 
       try {
         const emailResponse = await $fetch('/api/sendEmail', {
