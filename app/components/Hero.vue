@@ -20,7 +20,7 @@
     </div>
 
     <!-- Main Content -->
-    <div class="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <div class="relative z-20 text-center px-4 mt-10 sm:mt-0 sm:px-6 lg:px-8 max-w-4xl mx-auto">
       <!-- Names -->
       <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light italic mb-4 text-gray-800 drop-shadow-lg animate-fade-in-up">
         {{ $t('hero.names') }}
@@ -59,12 +59,6 @@
       </div>
     </div>
 
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <div class="w-6 h-10 border-2 border-gray-600/50 rounded-full flex justify-center">
-        <div class="w-1 h-3 bg-gray-600/70 rounded-full mt-2 animate-pulse"></div>
-      </div>
-    </div>
   </section>
 </template>
 

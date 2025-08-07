@@ -43,17 +43,19 @@
             class="!bg-white"
             >
               <UButton 
-                color="gray" 
-                variant="outline"
+                color="black" 
                 label="Open"
-                trailing-icon="emojione-v1:information" 
                 size="lg"
-                class="rounded-b-none border-wedding-pink/30 hover:bg-wedding-pink/10 hover:border-wedding-pink/50 transition-all duration-200"
-                :ui="{
-                  trailingIcon: 'text-xl ml-auto text-wedding-btn-pink'
-                }"
+                class="bg-yellow-300! rounded-b-none border-wedding-pink/30  transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg transform"
               >
-                {{ $t('weddingDetails.accommodations.info') }}
+                <span class="flex items-center justify-between w-full">
+                  <UIcon name="i-lucide-info" class="w-5 h-5 text-wedding-btn-pink flex-shrink-0" />
+                  <span class="flex items-center gap-2">
+                    {{ $t('weddingDetails.accommodations.info') }}
+                    <UIcon name="i-lucide-chevron-up" class="w-4 h-4 text-wedding-btn-pink animate-bounce" />
+                  </span>
+                  <div class="w-5 h-5"></div> <!-- Spacer to balance the layout -->
+                </span>
             </UButton>
               <template #body>
                 <div class="space-y-4 bg-white">

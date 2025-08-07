@@ -24,7 +24,7 @@
             v-for="item in navigationItems"
             :key="item.key"
             :to="item.href"
-            class="relative text-gray-700 hover:text-wedding-btn-pink transition-colors duration-300 font-medium group"
+            class="relative text-gray-700 transition-colors duration-300 font-medium group"
           >
             <span class="relative z-10">{{ $t(item.key) }}</span>
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-wedding-pink to-wedding-btn-pink transition-all duration-300 group-hover:w-full"></span>
