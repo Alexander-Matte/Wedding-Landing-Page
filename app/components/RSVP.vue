@@ -454,7 +454,7 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     message: state.message || '',
     guests: additionalGuests.value.map(g => ({
       name: g.name,
-      isAdult: g.type === 'adult'
+      is_adult: g.type === 'adult'  // Changed from isAdult to is_adult to match backend schema
     })),
     song: state.song,
   }
