@@ -225,11 +225,14 @@
               <!-- Turnstile Verification -->
               <UFormField>
                 <div class="w-full flex justify-center sm:justify-start px-2">
-                  <NuxtTurnstile
-                    ref="turnstile"
-                    :options="turnstileOptions"
-                    v-model="turnstileToken"
-                  />
+                  <ClientOnly>
+                    <NuxtTurnstile
+                      ref="turnstile"
+                      :options="turnstileOptions"
+                      v-model="turnstileToken"
+                      class="turnstile-container"
+                    />
+                  </ClientOnly>
                 </div>
               </UFormField>
 
@@ -308,17 +311,24 @@ const additionalGuests = ref<{ name: string; type: 'adult' | 'child' }[]>([])
 // Computed property for responsive Turnstile size
 const turnstileSize = computed((): 'compact' | 'normal' => {
   if (import.meta.client) {
-    return window.innerWidth < 370 ? 'compact' : 'normal'
+    return window.innerWidth < 768 ? 'compact' : 'normal'
   }
   return 'normal'
 })
 
-// Optimize Turnstile performance
+// Optimize Turnstile performance for mobile
 const turnstileOptions = computed(() => ({
   theme: 'light' as const,
   language: locale.value,
   size: turnstileSize.value,
-  appearance: 'interaction-only' as const
+  appearance: 'always' as const, // Changed from 'interaction-only' to 'always' for better mobile compatibility
+  callback: (token: string) => {
+    turnstileToken.value = token
+  },
+  'expired-callback': () => {
+    turnstileToken.value = ''
+    turnstile.value?.reset()
+  }
 }))
 
 // Watch for attendance changes
@@ -498,6 +508,28 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
 @media (max-width: 1024px) {
   .card {
     margin: 0 1rem;
+  }
+}
+
+/* Turnstile mobile optimizations */
+.turnstile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 65px;
+}
+
+@media (max-width: 768px) {
+  .turnstile-container {
+    min-height: 60px;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .turnstile-container {
+    transform: scale(0.85);
   }
 }
 
