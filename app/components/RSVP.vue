@@ -26,7 +26,7 @@
 
       <!-- RSVP Form Card -->
       <div class="card max-w-4xl mx-auto overflow-hidden">
-        <div class="grid lg:grid-cols-3">
+        <div class="grid grid-cols-1 lg:grid-cols-3">
           <!-- Form Info Sidebar -->
           <div class="lg:col-span-1 bg-gradient-to-br from-wedding-pink/10 to-wedding-btn-pink/10 p-8 lg:p-12 flex flex-col justify-center">
             <div class="text-center lg:text-left">
@@ -224,18 +224,15 @@
 
               <!-- Turnstile Verification -->
               <UFormField>
-                <div class="flex justify-start">
+                <div class="w-full flex justify-center sm:justify-start px-2">
                   <NuxtTurnstile
                     ref="turnstile"
-                    :options="{ 
-                      theme: 'light', 
-                      language: locale,
-                      size: 'normal'
-                    }"
+                    :options="turnstileOptions"
                     v-model="turnstileToken"
                   />
                 </div>
               </UFormField>
+
 
               <!-- Submit Button -->
               <UButton 
@@ -307,6 +304,22 @@ const guestCountItems = computed(() =>
 const emailError = ref('')
 const formSubmitted = ref(false)
 const additionalGuests = ref<{ name: string; type: 'adult' | 'child' }[]>([])
+
+// Computed property for responsive Turnstile size
+const turnstileSize = computed((): 'compact' | 'normal' => {
+  if (import.meta.client) {
+    return window.innerWidth < 370 ? 'compact' : 'normal'
+  }
+  return 'normal'
+})
+
+// Optimize Turnstile performance
+const turnstileOptions = computed(() => ({
+  theme: 'light' as const,
+  language: locale.value,
+  size: turnstileSize.value,
+  appearance: 'interaction-only' as const
+}))
 
 // Watch for attendance changes
 watch(() => state.attending, (newVal) => {
