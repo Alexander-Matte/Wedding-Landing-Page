@@ -59,7 +59,7 @@
           <!-- Form Section -->
           <div class="lg:col-span-2 p-8 lg:p-12">
             <UForm 
-              :schema="schema" 
+              :schema="getSchema()" 
               :state="state" 
               class="space-y-6" 
               @submit="onSubmit"
@@ -191,7 +191,7 @@
               <UFormField 
                 :label="$t('rsvp.form.song.label')" 
                 name="song" 
-                required 
+                :required="state.attending === 'yes'" 
               >
                 <UInput 
                   v-model="state.song" 
@@ -269,8 +269,8 @@ const turnstileToken = ref('')
 const turnstile = ref()
 const loading = ref(false)
 
-// Form validation schema
-const schema = z.object({
+// Form validation schema function
+const getSchema = () => z.object({
   name: z.string().min(1, t('rsvp.form.name.required')),
   email: z.string()
     .nonempty(t('rsvp.form.email.required'))
@@ -278,14 +278,22 @@ const schema = z.object({
   attending: z.enum(['yes', 'no']),
   guests: z.string().optional(),
   message: z.string().optional(),
-  song: z.string()
-    .min(1, t('rsvp.form.song.required'))
-    .max(200, t('rsvp.form.song.tooLong')) 
+  song: state.attending === 'yes' 
+    ? z.string().min(1, t('rsvp.form.song.required')).max(200, t('rsvp.form.song.tooLong'))
+    : z.string().optional()
 });
 
-type Schema = z.output<typeof schema>
+// Define the base schema type without the computed wrapper
+type BaseSchema = {
+  name: string
+  email: string
+  attending: 'yes' | 'no'
+  guests: string
+  message: string
+  song: string
+}
 
-const state = reactive<Schema>({
+const state = reactive<BaseSchema>({
   name: '',
   email: '',
   attending: 'no',
@@ -321,7 +329,7 @@ const turnstileOptions = computed(() => ({
   theme: 'light' as const,
   language: locale.value,
   size: turnstileSize.value,
-  appearance: 'always' as const, // Changed from 'interaction-only' to 'always' for better mobile compatibility
+  appearance: 'always' as const,
   callback: (token: string) => {
     turnstileToken.value = token
   },
@@ -424,7 +432,7 @@ const checkAdditionalGuests = (): boolean => {
 }
 
 // Form submission
-const onSubmit = async (event: FormSubmitEvent<Schema>) => {
+const onSubmit = async (event: FormSubmitEvent<BaseSchema>) => {
   event.preventDefault()
   formSubmitted.value = true
   loading.value = true
