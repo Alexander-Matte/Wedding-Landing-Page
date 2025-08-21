@@ -89,6 +89,10 @@
         "gettingToVenue": {
           "title": "Getting to the Venue",
           "content": "From Schwäbisch Gmünd to the venue is approx. 10 km.\n\nWe recommend taking a taxi if you are not staying at the venue. We will also try to organize transport with friends and family for you when possible."
+        },
+        "carRental": {
+          "title": "Car Rental Options",
+          "content": "Car rental is available at all major airports and can be a convenient option for exploring the area:\n\n**Stuttgart Airport (STR):**\n• Sixt, Europcar, Hertz, Avis, Budget\n• Approx. €40-80/day for economy cars\n• 50-minute drive to Schwäbisch Gmünd\n• Easy access to A8 highway\n\n**Frankfurt Airport (FRA):**\n• All major rental companies available\n• Approx. €35-70/day for economy cars\n• 3-hour drive via A5 and A8 highways\n• Most international flight connections\n\n**Munich Airport (MUC):**\n• Sixt, Europcar, Hertz, Avis, Budget\n• Approx. €40-75/day for economy cars\n• 2.5-hour drive via A8 highway\n• Scenic route through Bavaria\n\n**Important Notes:**\n• International driving license required for non-EU visitors\n• Automatic transmission available (request in advance)\n• GPS navigation recommended\n• Parking available at most hotels"
         }
       }
     }

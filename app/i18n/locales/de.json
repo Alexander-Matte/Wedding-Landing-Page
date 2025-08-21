@@ -89,6 +89,10 @@
         "gettingToVenue": {
           "title": "Weiter zum Veranstaltungsort",
           "content": "Von Schwäbisch Gmünd zum Veranstaltungsort sind es etwa 10 km.\n\nWenn ihr nicht direkt vor Ort übernachtet, empfehlen wir ein Taxi. Wir versuchen aber auch, bei Bedarf einen Fahrdienst mit Freund:innen oder Familie zu organisieren."
+        },
+        "carRental": {
+          "title": "Mietwagen-Optionen",
+          "content": "Mietwagen sind an allen großen Flughäfen verfügbar und können eine praktische Option für die Erkundung der Gegend sein:\n\n**Flughafen Stuttgart (STR):**\n• Sixt, Europcar, Hertz, Avis, Budget\n• Ca. €40-80/Tag für Kleinwagen\n• 50 Minuten Fahrt nach Schwäbisch Gmünd\n• Einfacher Zugang zur A8 Autobahn\n\n**Flughafen Frankfurt (FRA):**\n• Alle großen Mietwagenfirmen verfügbar\n• Ca. €35-70/Tag für Kleinwagen\n• 3 Stunden Fahrt über A5 und A8 Autobahnen\n• Die meisten internationalen Flugverbindungen\n\n**Flughafen München (MUC):**\n• Sixt, Europcar, Hertz, Avis, Budget\n• Ca. €40-75/Tag für Kleinwagen\n• 2,5 Stunden Fahrt über A8 Autobahn\n• Malerische Route durch Bayern\n\n**Wichtige Hinweise:**\n• Internationaler Führerschein für Nicht-EU-Besucher erforderlich\n• Automatikgetriebe verfügbar (vorher anfragen)\n• GPS-Navigation empfohlen\n• Parkplätze an den meisten Hotels verfügbar"
         }
       }
     }

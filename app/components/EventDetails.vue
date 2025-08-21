@@ -137,6 +137,15 @@ const transportationItems: AccordionItem[] = [
       .replace(/From Munich Airport:/g, '<strong>From Munich Airport:</strong>')
   },
   {
+    label: t('weddingDetails.transportation.accordion.carRental.title'),
+    icon: 'emojione-v1:automobile',
+    content: t('weddingDetails.transportation.accordion.carRental.content')
+      .replace(/\n\n/g, '</p><p>')
+      .replace(/\n/g, '<br/>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/•/g, '• ')
+  },
+  {
     label: t('weddingDetails.transportation.accordion.gettingToVenue.title'),
     icon: 'emojione-v1:automobile',
     content: t('weddingDetails.transportation.accordion.gettingToVenue.content')
@@ -233,5 +242,65 @@ const transportationItems: AccordionItem[] = [
   border-left: 2px solid rgba(240, 215, 209, 0.3);
   margin-bottom: 0.75rem;
 }
+
+/* Car rental specific styling */
+.transportation-content p strong {
+  color: var(--color-wedding-green);
+  font-weight: 600;
+}
+
+.transportation-content p:has(strong) {
+  background: rgba(163, 177, 138, 0.08);
+  border-left: 3px solid var(--color-wedding-green);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+/* Bullet point styling */
+.transportation-content p {
+  position: relative;
+}
+
+.transportation-content p:first-letter {
+  margin-left: 0;
+}
+
+/* Price information highlighting */
+.transportation-content p {
+  color: #374151;
+}
+
+.transportation-content strong + br + br {
+  margin-top: 1rem;
+}
+
+/* Enhanced spacing for car rental sections */
+.transportation-content p + p {
+  margin-top: 0.75rem;
+}
+
+/* Bullet point styling */
+.bullet-point {
+  color: var(--color-wedding-green);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Airport section headers */
+.transportation-content p strong:first-child {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1em;
+}
+
+/* Important notes section */
+.transportation-content p:last-child {
+  background: rgba(212, 175, 55, 0.08) !important;
+  border-left-color: var(--color-wedding-gold) !important;
+  margin-top: 1.5rem;
+}
+
+
 </style>
 
