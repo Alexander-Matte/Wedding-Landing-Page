@@ -9,9 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/i18n',
     '@nuxt/eslint',
-    '@nuxtjs/turnstile',
     '@nuxtjs/supabase',
-    'nuxt-countdown',
     'nuxt-security',
   ],
   security: {
@@ -74,19 +72,11 @@ export default defineNuxtConfig({
   image: {
     dir: 'assets/img'
   },
-  turnstile: {
-    siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
-    addValidateEndpoint: true
-  },
   runtimeConfig: {
     public: {
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
       supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
-      turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
       adminEmail: process.env.ADMIN_EMAIL || '',
-    },
-    turnstile: {
-      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY || '',
     },
     adminEmail: process.env.ADMIN_EMAIL || '',
   },
